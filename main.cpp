@@ -19,6 +19,7 @@
 #include "t_type_conversions.h"
 #include "t_constructor.h"
 #include "t_dp_singleton.h"
+#include "t_boost_asio.h"
 
 int main()
 {
@@ -42,8 +43,11 @@ int main()
     //T_mutex::test2();
     //T_condition_variable::test();
 
+    // boost asio
+    T_boost_asio::test();
+
     // design patterns
-    T_dp_singleton::test();
+    //T_dp_singleton::test();
     //T_dp_factory::test();
     //T_dp_adapter::test();
     //T_dp_facade::test();

@@ -2,7 +2,7 @@
 SHELL = /bin/sh
 
 OBJS =  main.o
-CFLAG = -Wall -g
+CFLAGS = -Wall -g -pthread -lboost_system
 CC = g++
 INCLUDES = -I include
 LIBS = -lm
