@@ -1,11 +1,38 @@
 // https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/tutorial/tuttimer2.html
 // https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/tutorial/tuttimer3.html
+// https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/tutorial/tuttimer4.html
+
 #ifndef T_BOOST_ASIO_H
 #define T_BOOST_ASIO_H
 
 #include <iostream>
 #include <boost/asio.hpp>
 #include <boost/bind/bind.hpp>
+
+class printer
+{
+    boost::asio::steady_timer timer_;
+    int count_;
+public:
+    printer(boost::asio::io_context& io) : timer_(io, boost::asio::chrono::seconds(1)), count_(0) {
+        timer_.async_wait(boost::bind(&printer::print, this));
+    }
+
+    ~printer() {
+        std::cout << "Final count is " << count_ << std::endl;
+    }
+
+    void print() {
+        if (count_ < 5)
+        {
+            std::cout << count_ << std::endl;
+            ++count_;
+
+            timer_.expires_at(timer_.expiry() + boost::asio::chrono::seconds(1));
+            timer_.async_wait(boost::bind(&printer::print, this));
+        }
+    }
+};
 
 class T_boost_asio
 {
@@ -48,9 +75,16 @@ public:
         std::cout << "Final count is " << count << std::endl;
     }
 
+    static void m_timer_4() {
+        boost::asio::io_context io;
+        printer p(io);
+        io.run();
+    }
+
     static void test() {
         //m_async_wait();
-        m_timer_3();
+        //m_timer_3();
+        m_timer_4();
     }
 };
 
