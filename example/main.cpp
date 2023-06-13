@@ -1,5 +1,4 @@
 #include "t_smart_ptr.h"
-#include "t_polymorphism.h"
 #include "t_overloading_operators.h"
 #include "t_copy.h"
 #include "t_move.h"
@@ -37,7 +36,7 @@ int main()
     //T_type_conversions::test();
 
     // basic paradigm
-    //T_polymorphism::test();
+    //T_polymorphism::test(); // DONE
     //T_overloading_operators::test();
     //T_template::test();
     //T_class::test();

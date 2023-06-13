@@ -101,7 +101,7 @@
     <ClInclude Include="include\t_type_conversions.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_polymorphism.h">
+    <ClInclude Include="include\polymorphism.h">
       <Filter>Header Files\basic_paradigm</Filter>
     </ClInclude>
     <ClInclude Include="include\t_test.h">
