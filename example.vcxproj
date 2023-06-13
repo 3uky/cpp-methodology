@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{bebd29c3-c7e9-49d9-b950-ceaf5ae94924}</ProjectGuid>
-    <RootNamespace>example3</RootNamespace>
+    <RootNamespace>example</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>example</ProjectName>
   </PropertyGroup>
@@ -30,28 +30,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -136,31 +136,31 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\examples\include\t_boost_asio.h" />
-    <ClInclude Include="..\..\examples\include\t_boost_signal.h" />
-    <ClInclude Include="..\..\examples\include\t_class.h" />
-    <ClInclude Include="..\..\examples\include\t_condition_variable.h" />
-    <ClInclude Include="..\..\examples\include\t_constructor.h" />
-    <ClInclude Include="..\..\examples\include\t_conteiners.h" />
-    <ClInclude Include="..\..\examples\include\t_copy.h" />
-    <ClInclude Include="..\..\examples\include\t_dp_adapter.h" />
-    <ClInclude Include="..\..\examples\include\t_dp_facade.h" />
-    <ClInclude Include="..\..\examples\include\t_dp_factory.h" />
-    <ClInclude Include="..\..\examples\include\t_dp_observer.h" />
-    <ClInclude Include="..\..\examples\include\t_dp_singleton.h" />
-    <ClInclude Include="..\..\examples\include\t_lambda.h" />
-    <ClInclude Include="..\..\examples\include\t_move.h" />
-    <ClInclude Include="..\..\examples\include\t_mutable.h" />
-    <ClInclude Include="..\..\examples\include\t_mutex.h" />
-    <ClInclude Include="..\..\examples\include\t_overloading_operators.h" />
-    <ClInclude Include="..\..\examples\include\t_polymorphism.h" />
-    <ClInclude Include="..\..\examples\include\t_shared_ptr.h" />
-    <ClInclude Include="..\..\examples\include\t_smart_ptr.h" />
-    <ClInclude Include="..\..\examples\include\t_templacet.h" />
-    <ClInclude Include="..\..\examples\include\t_template.h" />
-    <ClInclude Include="..\..\examples\include\t_test.h" />
-    <ClInclude Include="..\..\examples\include\t_type_conversions.h" />
-    <ClInclude Include="..\..\examples\include\t_unique_ptr.h" />
+    <ClInclude Include="include\t_boost_asio.h" />
+    <ClInclude Include="include\t_boost_signal.h" />
+    <ClInclude Include="include\t_class.h" />
+    <ClInclude Include="include\t_condition_variable.h" />
+    <ClInclude Include="include\t_constructor.h" />
+    <ClInclude Include="include\t_conteiners.h" />
+    <ClInclude Include="include\t_copy.h" />
+    <ClInclude Include="include\t_dp_adapter.h" />
+    <ClInclude Include="include\t_dp_facade.h" />
+    <ClInclude Include="include\t_dp_factory.h" />
+    <ClInclude Include="include\t_dp_observer.h" />
+    <ClInclude Include="include\t_dp_singleton.h" />
+    <ClInclude Include="include\t_lambda.h" />
+    <ClInclude Include="include\t_move.h" />
+    <ClInclude Include="include\t_mutable.h" />
+    <ClInclude Include="include\t_mutex.h" />
+    <ClInclude Include="include\t_overloading_operators.h" />
+    <ClInclude Include="include\t_polymorphism.h" />
+    <ClInclude Include="include\t_shared_ptr.h" />
+    <ClInclude Include="include\t_smart_ptr.h" />
+    <ClInclude Include="include\t_templacet.h" />
+    <ClInclude Include="include\t_template.h" />
+    <ClInclude Include="include\t_test.h" />
+    <ClInclude Include="include\t_type_conversions.h" />
+    <ClInclude Include="include\t_unique_ptr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
