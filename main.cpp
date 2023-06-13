@@ -37,7 +37,7 @@ int main()
     //T_type_conversions::test();
 
     // basic paradigm
-    T_polymorphism::test();
+    //T_polymorphism::test();
     //T_overloading_operators::test();
     //T_template::test();
     //T_class::test();
