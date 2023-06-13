@@ -157,9 +157,7 @@ class T_dp_facade
 
             facilities.submitNetworkRequest();
             /* Keep checking until job is complete */
-            while (!facilities.checkOnStatus())
-            ;
-            cout << "job completed after only " << facilities.getNumberOfCalls() <<
-            " phone calls" << endl;
+            while (!facilities.checkOnStatus());
+            cout << "job completed after only " << facilities.getNumberOfCalls() << " phone calls" << endl;
         }
 };
