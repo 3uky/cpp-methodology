@@ -1,5 +1,4 @@
-#ifndef T_BOOST_SIGNAL_H
-#define T_BOOST_SIGNAL_H
+#pragma once
 
 #include <boost/signals2.hpp>
 
@@ -37,5 +36,3 @@ class T_boost_signal
             s.trigger();
         }
 };
-
-#endif // T_BOOST_SIGNAL_H

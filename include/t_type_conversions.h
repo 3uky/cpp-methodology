@@ -3,8 +3,8 @@
 // This is called upcasting in C++. The opposite process, called downcasting, is not allowed in C++.
 // So, dynamic_cast is used to promote safe downcasting in C++.
 // It is always performed with polymorphic classes having at least one virtual function inside the class.
-#ifndef T_TYPE_CONVERSIONS_H
-#define T_TYPE_CONVERSIONS_H
+
+#pragma once
 
 #include<iostream>
 using namespace std;
@@ -65,5 +65,3 @@ public:
         fn (bar);
     }
 };
-
-#endif // T_TYPE_CONVERSIONS_H

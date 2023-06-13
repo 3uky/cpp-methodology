@@ -1,7 +1,6 @@
 // https://www.cplusplus.com/doc/tutorial/templates/
 
-#ifndef T_OVERLOADING_OPERATORS_H
-#define T_OVERLOADING_OPERATORS_H
+#pragma once
 
 #include <iostream>
 
@@ -31,6 +30,3 @@ class T_overloading_operators
             cout << result.x << ',' << result.y << '\n';
         }
 };
-
-
-#endif // T_OVERLOADING_OPERATORS_H

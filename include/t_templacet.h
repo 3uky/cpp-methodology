@@ -1,6 +1,4 @@
-#ifndef T_TEMPLACET_H
-#define T_TEMPLACET_H
-
+#pragma once
 
 class T_templacet
 {
@@ -8,9 +6,4 @@ class T_templacet
         T_templacet() {}
         virtual ~T_templacet() {}
 
-    protected:
-
-    private:
 };
-
-#endif // T_TEMPLACET_H

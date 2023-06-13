@@ -1,5 +1,4 @@
-#ifndef T_DP_OBSERVER_H
-#define T_DP_OBSERVER_H
+#pragma once
 
 #include <vector>
 
@@ -70,5 +69,3 @@ public:
         subj.set_val(14);
     }
 };
-
-#endif // T_DP_OBSERVER_H

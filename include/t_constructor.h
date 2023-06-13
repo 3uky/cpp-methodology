@@ -1,5 +1,4 @@
-#ifndef T_CONSTRUCTOR_H
-#define T_CONSTRUCTOR_H
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -44,5 +43,3 @@ public:
         cout << foo.content() << endl;
     }
 };
-
-#endif // T_CONSTRUCTOR_H

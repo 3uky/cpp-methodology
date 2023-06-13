@@ -1,5 +1,4 @@
-#ifndef T_DP_SINGLETON_H
-#define T_DP_SINGLETON_H
+#pragma once
 
 class GlobalClass
 {
@@ -96,5 +95,3 @@ public:
         bar();
     }
 };
-
-#endif // T_DP_SINGLETON_H

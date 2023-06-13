@@ -1,5 +1,4 @@
-#ifndef T_DP_FACADE_H
-#define T_DP_FACADE_H
+#pragma once
 
 #include <iostream>
 
@@ -164,5 +163,3 @@ class T_dp_facade
             " phone calls" << endl;
         }
 };
-
-#endif // T_DP_FACADE_H

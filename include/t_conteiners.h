@@ -7,8 +7,7 @@
 // map - association field, binary tree search (log n)
 // unordered_map - association field, hash search (const)
 
-#ifndef T_CONTEINERS_H
-#define T_CONTEINERS_H
+#pragma once
 
 #include <iostream>
 #include <vector>
@@ -107,5 +106,3 @@ public:
         std::list<int> second (4,100);                       // four ints with value 100
     }
 };
-
-#endif // T_CONTEINERS_H

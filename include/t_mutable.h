@@ -1,7 +1,6 @@
 // https://www.educba.com/c-plus-plus-mutable/
 
-#ifndef T_MUTABLE_H
-#define T_MUTABLE_H
+#pragma once
 
 class T_mutable
 {
@@ -14,5 +13,3 @@ public:
         return m_flag;
     }
 };
-
-#endif // T_MUTABLE_H

@@ -1,5 +1,4 @@
-#ifndef T_DP_FACTORY_H
-#define T_DP_FACTORY_H
+#pragma once
 
 #include <memory>
 
@@ -68,5 +67,3 @@ public:
     }
 
 };
-
-#endif // T_DP_FACTORY_H

@@ -1,5 +1,4 @@
-#ifndef T_CLASS_H
-#define T_CLASS_H
+#pragma once
 
 #include <iostream>
 using namespace std;
@@ -62,5 +61,3 @@ public:
         Child obj;
     }
 };
-
-#endif // T_CLASS_H

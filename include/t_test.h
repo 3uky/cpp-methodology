@@ -1,5 +1,4 @@
-#ifndef T_TEST_H
-#define T_TEST_H
+#pragma once
 
 #include <iostream>
 #include <vector>
@@ -70,5 +69,3 @@ public:
     }
 
 };
-
-#endif // T_TEST_H

@@ -1,7 +1,6 @@
 // https://www.cplusplus.com/doc/tutorial/classes2/
 
-#ifndef T_COPY_H
-#define T_COPY_H
+#pragma once
 
 // copy constructor: deep copy
 #include <iostream>
@@ -44,4 +43,3 @@ public:
 /* The deep copy performed by this copy constructor allocates storage for a new string,
  which is initialized to contain a copy of the original object. In this way, both objects (copy and original)
  have distinct copies of the content stored in different locations. */
-#endif // T_COPY_H

@@ -1,5 +1,4 @@
-#ifndef T_MUTEX_H
-#define T_MUTEX_H
+#pragma once
 
 // mutex example
 #include <iostream>       // std::cout
@@ -74,5 +73,3 @@ public:
         test_guard();
     }
 };
-
-#endif // T_MUTEX_H

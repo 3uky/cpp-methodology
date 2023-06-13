@@ -1,5 +1,4 @@
-#ifndef T_DP_ADAPTER_H
-#define T_DP_ADAPTER_H
+#pragma once
 
 #include <iostream>
 
@@ -57,5 +56,3 @@ class T_dp_adapter
             r->draw();
         }
 };
-
-#endif // T_DP_ADAPTER_H

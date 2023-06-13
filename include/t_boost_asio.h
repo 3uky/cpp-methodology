@@ -2,8 +2,7 @@
 // https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/tutorial/tuttimer3.html
 // https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/tutorial/tuttimer4.html
 
-#ifndef T_BOOST_ASIO_H
-#define T_BOOST_ASIO_H
+#pragma once
 
 #include <iostream>
 #include <boost/asio.hpp>
@@ -87,5 +86,3 @@ public:
         m_timer_4();
     }
 };
-
-#endif // T_BOOST_ASIO_H

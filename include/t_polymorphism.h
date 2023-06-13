@@ -1,5 +1,7 @@
 // https://www.cplusplus.com/doc/tutorial/polymorphism/
 
+#pragma once
+
 #include <iostream>
 
 using namespace std;

@@ -1,13 +1,13 @@
 #include <iostream>
 #include <memory>
 
+#pragma once
 
 typedef unsigned int uint;
 
 template<class T>
 class MySharedPtr
 {
-private:
 	T* ptr = nullptr;
 	uint* refCount = nullptr;
 

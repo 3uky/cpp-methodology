@@ -1,10 +1,10 @@
+#pragma once
+
 #include <iostream>
-#include <exception>
 
 template <class T>
 class MyUniquePtr
 {
-private:
 	T * ptr = nullptr;
 
 public:
@@ -74,4 +74,3 @@ class T_unique_ptr
             return 0;
         }
 };
-

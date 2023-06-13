@@ -1,5 +1,4 @@
-#ifndef T_LAMBDA_H
-#define T_LAMBDA_H
+#pragma once
 
 #include <iostream>
 
@@ -29,5 +28,3 @@ public:
         return 0;
     }
 };
-
-#endif // T_LAMBDA_H

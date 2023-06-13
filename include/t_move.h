@@ -1,5 +1,4 @@
-#ifndef T_MOVE_H
-#define T_MOVE_H
+#pragma once
 
 // move constructor/assignment
 #include <iostream>
@@ -43,5 +42,3 @@ class T_move
             return 0;
         }
 };
-
-#endif // T_MOVE_H

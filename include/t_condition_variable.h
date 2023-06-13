@@ -1,5 +1,4 @@
-#ifndef T_CONDITION_VARIABLE_H
-#define T_CONDITION_VARIABLE_H
+#pragma once
 
 #include <iostream>           // std::cout
 #include <thread>             // std::thread
@@ -43,5 +42,3 @@ public:
         return 0;
     }
 };
-
-#endif // T_CONDITION_VARIABLE_H

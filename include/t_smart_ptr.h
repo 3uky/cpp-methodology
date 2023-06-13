@@ -1,5 +1,4 @@
-#ifndef T_SMART_PTR_H
-#define T_SMART_PTR_H
+#pragma once
 
 #include <iostream>
 #include <memory>
@@ -20,5 +19,3 @@ class T_smart_ptr
             return 0;
         }
 };
-
-#endif // T_SMART_PTR_H
