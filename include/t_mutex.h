@@ -7,7 +7,7 @@
 #include <mutex>          // std::mutex
 #include <chrono>         // std::chrono::seconds
 
-namespace mutex {
+namespace m_mutex {
     static std::mutex mtx;           // mutex for critical section
 }
 
@@ -16,10 +16,10 @@ class T_mutex
 public:
     static void print_block (int n, char c) {
         // critical section (exclusive access to std::cout signaled by locking mtx):
-        mutex::mtx.lock();
+        m_mutex::mtx.lock();
         for (int i=0; i<n; ++i) { std::cout << c; }
         std::cout << '\n';
-        mutex::mtx.unlock();
+        m_mutex::mtx.unlock();
     }
 
     static int test_mutex() {
@@ -35,7 +35,7 @@ public:
 
     static void print_block_with_guard (int n, char c) {
         // critical section (exclusive access to std::cout signaled by locking mtx):
-        std::lock_guard<std::mutex> lck (mutex::mtx);
+        std::lock_guard<std::mutex> lck (m_mutex::mtx);
         for (int i=0; i<n; ++i) { std::cout << c; }
         std::cout << '\n';
     }

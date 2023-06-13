@@ -63,7 +63,7 @@ class T_unique_ptr
             MyUniquePtr<int> a(new int(5)); // parametrized constructor
 			std::cout << "a content: " << *a << '\n';
 
-			MyUniquePtr<int> b = MyUniquePtr(new int(3)); // move constructor
+			MyUniquePtr<int> b = MyUniquePtr<int>(new int(3)); // move constructor
 			std::cout << "b content (after move constructor): " << *b << '\n';
 
 			b = std::move(a); // move assigned
