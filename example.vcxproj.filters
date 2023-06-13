@@ -13,6 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\paralel_programming">
+      <UniqueIdentifier>{3f2c745c-11fe-4aa2-92eb-ab3f49c111a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cpp_internals">
+      <UniqueIdentifier>{0b58fdf6-f1c9-426a-95f8-1a391c630b68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\boost_asio">
+      <UniqueIdentifier>{9844385f-09d3-4cb3-b734-9b442ce41931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\basic_paradigm">
+      <UniqueIdentifier>{960099e4-03af-4c0e-bbe4-933aa4514503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\basic_elements">
+      <UniqueIdentifier>{380ab401-165f-4f3c-a0da-291c5aa57d0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\exercises">
+      <UniqueIdentifier>{797ef604-5a4b-4323-b83c-310598b4e738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\design_patterns">
+      <UniqueIdentifier>{ff1592ee-036f-4f6c-8281-891f9f91ed83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -20,80 +41,80 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\examples\include\t_boost_asio.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_dp_observer.h">
+      <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_boost_signal.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_dp_adapter.h">
+      <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_class.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_dp_singleton.h">
+      <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_condition_variable.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_dp_factory.h">
+      <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_constructor.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_dp_facade.h">
+      <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_conteiners.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_boost_signal.h">
+      <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_copy.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_boost_asio.h">
+      <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_dp_adapter.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_condition_variable.h">
+      <Filter>Header Files\paralel_programming</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_dp_facade.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_mutex.h">
+      <Filter>Header Files\paralel_programming</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_dp_factory.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_constructor.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_dp_observer.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_conteiners.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_dp_singleton.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_copy.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_lambda.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_lambda.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_move.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_move.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_mutable.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_mutable.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_mutex.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_overloading_operators.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_overloading_operators.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_smart_ptr.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_polymorphism.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_templacet.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_shared_ptr.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_template.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_smart_ptr.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_type_conversions.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_templacet.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_polymorphism.h">
+      <Filter>Header Files\basic_paradigm</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_template.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_test.h">
+      <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_test.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_class.h">
+      <Filter>Header Files\basic_paradigm</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_type_conversions.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_unique_ptr.h">
+      <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\examples\include\t_unique_ptr.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\t_shared_ptr.h">
+      <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
