@@ -148,7 +148,6 @@
     <ClInclude Include="include\t_dp_factory.h" />
     <ClInclude Include="include\t_dp_observer.h" />
     <ClInclude Include="include\t_dp_singleton.h" />
-    <ClInclude Include="include\t_lambda.h" />
     <ClInclude Include="include\t_move.h" />
     <ClInclude Include="include\t_mutable.h" />
     <ClInclude Include="include\t_mutex.h" />
