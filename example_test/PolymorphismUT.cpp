@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "include\polymorphism.h"
 
-namespace basic_paradigms
+namespace basic_paradigm
 {
     TEST(PolymorphismTest, ShouldBePolymorphicWithStaticInitialization) {
         // GIVEN

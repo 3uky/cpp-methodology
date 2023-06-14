@@ -4,13 +4,16 @@
 
 using namespace std;
 
-class TestClass 
+namespace basic_paradigm
+{
+
+class TestClass
 {
 public:
     TestClass(int x) : var(x) {}
 
-    int get(void) 
-    { 
+    int get(void)
+    {
         return var;
     }
 
@@ -39,3 +42,5 @@ public:
         cout << "Destructor: Inside sub class" << endl;
     }
 };
+
+}

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "include\class.h"
 
-namespace basic_paradigms
+namespace basic_paradigm
 {
     TEST(ClassTest, ShouldBeInitializedStaticaly) {
         // GIVEN        
