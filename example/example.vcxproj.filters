@@ -107,7 +107,7 @@
     <ClInclude Include="include\t_test.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_class.h">
+    <ClInclude Include="include\class.h">
       <Filter>Header Files\basic_paradigm</Filter>
     </ClInclude>
     <ClInclude Include="include\t_unique_ptr.h">

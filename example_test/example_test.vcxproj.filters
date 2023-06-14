@@ -6,13 +6,16 @@
     <ClCompile Include="PolymorphismUT.cpp">
       <Filter>tests</Filter>
     </ClCompile>
+    <ClCompile Include="ClassUT.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
-      <UniqueIdentifier>{775c0e6b-feb3-4c81-83dc-083f367f487a}</UniqueIdentifier>
+      <UniqueIdentifier>{e6750f50-2cab-45a4-86c8-53a75cd46b03}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
