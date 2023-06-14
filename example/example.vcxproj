@@ -138,7 +138,7 @@
   <ItemGroup>
     <ClInclude Include="include\t_boost_asio.h" />
     <ClInclude Include="include\t_boost_signal.h" />
-    <ClInclude Include="include\t_class.h" />
+    <ClInclude Include="include\class.h" />
     <ClInclude Include="include\t_condition_variable.h" />
     <ClInclude Include="include\t_constructor.h" />
     <ClInclude Include="include\t_conteiners.h" />

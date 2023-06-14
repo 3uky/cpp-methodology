@@ -7,7 +7,6 @@
 #include "t_mutex.h"
 #include "t_conteiners.h"
 #include "t_condition_variable.h"
-#include "t_class.h"
 #include "t_lambda.h"
 #include "t_test.h"
 #include "t_dp_factory.h"
