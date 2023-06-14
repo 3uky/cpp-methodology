@@ -1,5 +1,4 @@
 #include "t_smart_ptr.h"
-#include "t_overloading_operators.h"
 #include "t_copy.h"
 #include "t_move.h"
 #include "t_template.h"

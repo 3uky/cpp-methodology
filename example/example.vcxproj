@@ -152,11 +152,10 @@
     <ClInclude Include="include\t_move.h" />
     <ClInclude Include="include\t_mutable.h" />
     <ClInclude Include="include\t_mutex.h" />
-    <ClInclude Include="include\t_overloading_operators.h" />
+    <ClInclude Include="include\overloading_operators.h" />
     <ClInclude Include="include\polymorphism.h" />
     <ClInclude Include="include\t_shared_ptr.h" />
     <ClInclude Include="include\t_smart_ptr.h" />
-    <ClInclude Include="include\t_templacet.h" />
     <ClInclude Include="include\t_template.h" />
     <ClInclude Include="include\t_test.h" />
     <ClInclude Include="include\t_type_conversions.h" />
