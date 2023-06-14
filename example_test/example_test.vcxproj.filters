@@ -2,19 +2,37 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="PolymorphismUT.cpp">
-      <Filter>tests</Filter>
+    <ClCompile Include="classUT.cpp">
+      <Filter>basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="ClassUT.cpp">
-      <Filter>tests</Filter>
+    <ClCompile Include="polymorphismUT.cpp">
+      <Filter>basic_paradigms</Filter>
+    </ClCompile>
+    <ClCompile Include="constructorUT.cpp">
+      <Filter>basic_elements</Filter>
+    </ClCompile>
+    <ClCompile Include="lambdaUT.cpp">
+      <Filter>basic_elements</Filter>
+    </ClCompile>
+    <ClCompile Include="mutableUT.cpp">
+      <Filter>basic_elements</Filter>
+    </ClCompile>
+    <ClCompile Include="overloadingOperatorsUT.cpp">
+      <Filter>basic_paradigms</Filter>
+    </ClCompile>
+    <ClCompile Include="templateUT.cpp">
+      <Filter>basic_elements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="tests">
+    <Filter Include="basic_elements">
       <UniqueIdentifier>{e6750f50-2cab-45a4-86c8-53a75cd46b03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic_paradigms">
+      <UniqueIdentifier>{177fca8d-0f31-46d9-96a2-57a22a8618e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
