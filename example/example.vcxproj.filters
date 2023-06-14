@@ -68,7 +68,7 @@
     <ClInclude Include="include\t_mutex.h">
       <Filter>Header Files\paralel_programming</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_constructor.h">
+    <ClInclude Include="include\constructor.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
     <ClInclude Include="include\t_conteiners.h">
@@ -86,16 +86,10 @@
     <ClInclude Include="include\t_mutable.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_overloading_operators.h">
-      <Filter>Header Files\basic_elements</Filter>
-    </ClInclude>
     <ClInclude Include="include\t_smart_ptr.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
     <ClInclude Include="include\t_templacet.h">
-      <Filter>Header Files\basic_elements</Filter>
-    </ClInclude>
-    <ClInclude Include="include\t_template.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
     <ClInclude Include="include\t_type_conversions.h">
@@ -114,7 +108,13 @@
       <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
     <ClInclude Include="include\class.h">
-      <Filter>Header Files\basic_elements</Filter>
+      <Filter>Header Files\basic_paradigm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\t_template.h">
+      <Filter>Header Files\basic_paradigm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\t_overloading_operators.h">
+      <Filter>Header Files\basic_paradigm</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

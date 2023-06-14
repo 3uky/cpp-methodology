@@ -140,7 +140,7 @@
     <ClInclude Include="include\t_boost_signal.h" />
     <ClInclude Include="include\class.h" />
     <ClInclude Include="include\t_condition_variable.h" />
-    <ClInclude Include="include\t_constructor.h" />
+    <ClInclude Include="include\constructor.h" />
     <ClInclude Include="include\t_conteiners.h" />
     <ClInclude Include="include\t_copy.h" />
     <ClInclude Include="include\t_dp_adapter.h" />

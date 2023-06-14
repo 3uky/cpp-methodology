@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassUT.cpp" />
+    <ClCompile Include="ConstructorUT.cpp" />
     <ClCompile Include="PolymorphismUT.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

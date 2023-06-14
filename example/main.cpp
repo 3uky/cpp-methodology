@@ -14,7 +14,6 @@
 #include "t_dp_facade.h"
 #include "t_dp_observer.h"
 #include "t_type_conversions.h"
-#include "t_constructor.h"
 #include "t_dp_singleton.h"
 #include "t_unique_ptr.h"
 #include "t_shared_ptr.h"
