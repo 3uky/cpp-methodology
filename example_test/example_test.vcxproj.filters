@@ -23,6 +23,9 @@
     <ClCompile Include="templateUT.cpp">
       <Filter>basic_elements</Filter>
     </ClCompile>
+    <ClCompile Include="smartPointerUsageUT.cpp">
+      <Filter>basic_elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
