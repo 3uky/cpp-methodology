@@ -77,7 +77,7 @@
     <ClInclude Include="include\t_conteiners.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_mutable.h">
+    <ClInclude Include="include\mutable.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
     <ClInclude Include="include\t_smart_ptr.h">

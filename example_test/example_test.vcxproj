@@ -39,6 +39,7 @@
     <ClCompile Include="classUT.cpp" />
     <ClCompile Include="constructorUT.cpp" />
     <ClCompile Include="lambdaUT.cpp" />
+    <ClCompile Include="mutableUT.cpp" />
     <ClCompile Include="overloadingOperatorsUT.cpp" />
     <ClCompile Include="polymorphismUT.cpp" />
     <ClCompile Include="pch.cpp">
