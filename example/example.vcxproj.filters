@@ -104,7 +104,7 @@
     <ClInclude Include="include\class.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_template.h">
+    <ClInclude Include="include\template.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
     <ClInclude Include="include\overloading_operators.h">

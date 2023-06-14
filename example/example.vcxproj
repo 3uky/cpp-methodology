@@ -156,7 +156,7 @@
     <ClInclude Include="include\polymorphism.h" />
     <ClInclude Include="include\t_shared_ptr.h" />
     <ClInclude Include="include\t_smart_ptr.h" />
-    <ClInclude Include="include\t_template.h" />
+    <ClInclude Include="include\template.h" />
     <ClInclude Include="include\t_test.h" />
     <ClInclude Include="include\t_type_conversions.h" />
     <ClInclude Include="include\t_unique_ptr.h" />

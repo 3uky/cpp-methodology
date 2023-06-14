@@ -1,7 +1,6 @@
 #include "t_smart_ptr.h"
 #include "t_copy.h"
 #include "t_move.h"
-#include "t_template.h"
 #include "t_mutable.h"
 #include "t_mutex.h"
 #include "t_conteiners.h"
