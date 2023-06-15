@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "include\template.h"
+#include "template.h"
 
 namespace basic_paradigm
 {
