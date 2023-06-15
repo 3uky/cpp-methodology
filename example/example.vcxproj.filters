@@ -77,9 +77,6 @@
     <ClInclude Include="include\constructor.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_conteiners.h">
-      <Filter>Header Files\basic_elements</Filter>
-    </ClInclude>
     <ClInclude Include="include\mutable.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
@@ -115,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="include\binary_search.h">
       <Filter>Header Files\algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="include\containers.h">
+      <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

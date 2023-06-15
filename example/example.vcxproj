@@ -142,7 +142,7 @@
     <ClInclude Include="include\class.h" />
     <ClInclude Include="include\t_condition_variable.h" />
     <ClInclude Include="include\constructor.h" />
-    <ClInclude Include="include\t_conteiners.h" />
+    <ClInclude Include="include\containers.h" />
     <ClInclude Include="include\t_copy.h" />
     <ClInclude Include="include\t_dp_adapter.h" />
     <ClInclude Include="include\t_dp_facade.h" />
