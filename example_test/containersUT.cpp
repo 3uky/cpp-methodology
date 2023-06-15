@@ -20,26 +20,25 @@
 
 using namespace std;
 
+using ::testing::ElementsAre;
+using ::testing::UnorderedElementsAre;
+
 namespace basic_elements
 {
 
 TEST(ContainersVectorTest, ShouldBeInitializedWithRange)
 {
-    // GIVEN
-    std::vector<int> expected_vector{100, 100, 100};
-
-    // WHEN
+    // GIVEN/WHEN
     std::vector<int> tested_vector(3, 100);
 
 
     // THEN
-    EXPECT_TRUE(tested_vector == expected_vector);
+    ASSERT_THAT(tested_vector, ElementsAre(100, 100, 100));
 }
 
 TEST(ContainersVectorTest, ShouldBeInitializedWithIterator)
 {
     // GIVEN
-    std::vector<int> expected_vector{ 300, 300, 200, 100, 100, 100 };
     std::vector<int> tested_vector { 100, 100, 100 };
     std::vector<int>::iterator it = tested_vector.begin();
 
@@ -48,13 +47,12 @@ TEST(ContainersVectorTest, ShouldBeInitializedWithIterator)
     tested_vector.insert(it, 2, 300); // 300 300 200 100 100 1000
 
     // THEN
-    EXPECT_TRUE(tested_vector == expected_vector);
+    ASSERT_THAT(tested_vector, ElementsAre(300, 300, 200, 100, 100, 100));
 }
 
 TEST(ContainersVectorTest, ShouldBeInitializedWithAnotherVector)
 {
     // GIVEN
-    std::vector<int> expected_vector = { 300, 300, 400, 400, 200, 100, 100, 100 };
     std::vector<int> tested_vector = { 300, 300, 200, 100, 100, 100 };
     std::vector<int> tested_vector_2(2, 400);
     std::vector<int>::iterator it = tested_vector.begin();
@@ -63,13 +61,12 @@ TEST(ContainersVectorTest, ShouldBeInitializedWithAnotherVector)
     tested_vector.insert(it + 2, tested_vector_2.begin(), tested_vector_2.end()); // 300 300 400 400 200 100 100 100
 
     // THEN
-    EXPECT_TRUE(tested_vector == expected_vector);
+    ASSERT_THAT(tested_vector, ElementsAre( 300, 300, 400, 400, 200, 100, 100, 100 ));
 }
 
 TEST(ContainersVectorTest, ShouldBeInitializedWithArray)
 {
     // GIVEN
-    std::vector<int> expected_vector = { 501, 502, 503, 400, 400 };
     std::vector<int> tested_vector(2, 400);
     int array[] = { 501, 502, 503 };
 
@@ -77,24 +74,24 @@ TEST(ContainersVectorTest, ShouldBeInitializedWithArray)
     tested_vector.insert(tested_vector.begin(), array, array + 3); // 501 502 503 400 400
 
     // THEN
-    EXPECT_TRUE(tested_vector == expected_vector);
+    ASSERT_THAT(tested_vector, ElementsAre( 501, 502, 503, 400, 400 ));
 }
 
 TEST(ContainersSetTest, ShouldContainUniqueValues)
 {
     // GIVEN
     int myints[] = { 75, 23, 65, 42, 13, 75, 65, 9 };
+
+    // WHEN
     set<int> myset(myints, myints + sizeof(myints) / sizeof(int));
-    set<int> myset2 = { 75, 23, 65, 42, 13, 9 };
 
     // THEN
-    EXPECT_EQ(myset, myset2);
+    ASSERT_THAT(myset, UnorderedElementsAre( 75, 23, 65, 42, 13, 9 ));
 }
 
 TEST(ContainersArrayTest, ShouldInitializeArray)
 {
     // GIVEN
-    std::array<int, 3> expected_array = { 1, 2, 3 };
     std::array<int, 3> tested_array;
 
     // WHEN
@@ -102,9 +99,8 @@ TEST(ContainersArrayTest, ShouldInitializeArray)
         tested_array.at(i) = i + 1;
 
     // THEN
-    EXPECT_TRUE(tested_array == expected_array);
+    ASSERT_THAT(tested_array, ElementsAre(1, 2, 3));
 }
-
 
 TEST(ContainersMapTest, ShouldInitializeMap)
 {
@@ -125,11 +121,10 @@ TEST(ContainersMapTest, ShouldInitializeMap)
 TEST(ContainersListTest, ShouldInitializeList)
 {
     // GIVEN/WHEN
-    std::list<int> expected_list = {100, 100, 100, 100};
     std::list<int> tested_list(4, 100);
 
     // THEN
-    EXPECT_TRUE(tested_list == expected_list);
+    ASSERT_THAT(tested_list, ElementsAre(100, 100, 100, 100));
 }
 
 }

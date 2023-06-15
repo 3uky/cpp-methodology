@@ -11,6 +11,7 @@ TEST(ConstructorTest, ShouldBeInitializedThroughImplicitConstructor)
 
     // THEN
     EXPECT_EQ(foo.content(), "default");
+    
 }
 
 // EXPLICIT CONSTRUCTOR
