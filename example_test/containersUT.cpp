@@ -93,7 +93,7 @@ TEST(ContainersSetTest, ShouldContainUniqueValues)
 
 TEST(ContainersArrayTest, ShouldInitializeArray)
 {
-    std::array<int, 3> expected_array = { 0, 1, 2};
+    std::array<int, 3> expected_array = { 1, 2, 3 };
     std::array<int, 3> tested_array;
 
     for (int i = 0; i < 3; i++)
