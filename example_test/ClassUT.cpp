@@ -33,7 +33,7 @@ namespace basic_paradigm
     TEST(ClassTest, ShouldBeAccessedThroughPointer) {
         // GIVEN        
         TestClass obj(10);
-        TestClass *pobj, * bar;
+        TestClass *pobj;
 
         // WHEN
         pobj = &obj;
