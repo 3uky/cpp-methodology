@@ -37,6 +37,9 @@
     <Filter Include="Header Files\basic_paradigms">
       <UniqueIdentifier>{960099e4-03af-4c0e-bbe4-933aa4514503}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\algorithms">
+      <UniqueIdentifier>{83c55bd5-5e4e-4551-a920-2159e3cdc6ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="include\t_move.h">
       <Filter>Header Files\delete</Filter>
+    </ClInclude>
+    <ClInclude Include="include\binary_search.h">
+      <Filter>Header Files\algorithms</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

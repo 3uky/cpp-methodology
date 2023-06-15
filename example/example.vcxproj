@@ -136,6 +136,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\binary_search.h" />
     <ClInclude Include="include\t_boost_asio.h" />
     <ClInclude Include="include\t_boost_signal.h" />
     <ClInclude Include="include\class.h" />

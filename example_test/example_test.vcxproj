@@ -36,6 +36,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="binary_search_UT.cpp" />
     <ClCompile Include="classUT.cpp" />
     <ClCompile Include="constructorUT.cpp" />
     <ClCompile Include="lambdaUT.cpp" />
