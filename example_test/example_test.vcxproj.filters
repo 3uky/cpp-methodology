@@ -17,13 +17,19 @@
     <ClCompile Include="mutableUT.cpp">
       <Filter>basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="overloadingOperatorsUT.cpp">
-      <Filter>basic_paradigms</Filter>
-    </ClCompile>
     <ClCompile Include="templateUT.cpp">
       <Filter>basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="smartPointerUsageUT.cpp">
+    <ClCompile Include="binary_searchUT.cpp">
+      <Filter>algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="containersUT.cpp">
+      <Filter>basic_elements</Filter>
+    </ClCompile>
+    <ClCompile Include="overloading_operatorsUT.cpp">
+      <Filter>basic_paradigms</Filter>
+    </ClCompile>
+    <ClCompile Include="smartpointer_usageUT.cpp">
       <Filter>basic_elements</Filter>
     </ClCompile>
   </ItemGroup>
@@ -36,6 +42,9 @@
     </Filter>
     <Filter Include="basic_paradigms">
       <UniqueIdentifier>{177fca8d-0f31-46d9-96a2-57a22a8618e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithms">
+      <UniqueIdentifier>{73e62b51-f115-49b2-bfb1-8aea92408c8d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

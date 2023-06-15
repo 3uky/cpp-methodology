@@ -93,28 +93,33 @@ TEST(ContainersSetTest, ShouldContainUniqueValues)
 
 TEST(ContainersArrayTest, ShouldInitializeArray)
 {
+    // GIVEN
     std::array<int, 3> expected_array = { 1, 2, 3 };
     std::array<int, 3> tested_array;
 
+    // WHEN
     for (int i = 0; i < 3; i++)
         tested_array.at(i) = i + 1;
 
+    // THEN
     EXPECT_TRUE(tested_array == expected_array);
 }
 
 
 TEST(ContainersMapTest, ShouldInitializeMap)
 {
+	// GIVEN/WHEN
     std::map<char, int> tested_map;
-
+    std::map<char, int> tested_map_2 = { {'a', 10}, {'b', 30}, {'c', 50}, {'d', 70} };
+    std::map<char, int> tested_map_3(tested_map_2.begin(), tested_map_2.end());
     tested_map['a'] = 10;
     tested_map['b'] = 30;
     tested_map['c'] = 50;
     tested_map['d'] = 70;
 
-    std::map<char, int> tested_map_2(tested_map.begin(), tested_map.end());
-
+    // THEN
     EXPECT_TRUE(tested_map == tested_map_2);
+    EXPECT_TRUE(tested_map == tested_map_3);
 }
 
 TEST(ContainersListTest, ShouldInitializeList)
