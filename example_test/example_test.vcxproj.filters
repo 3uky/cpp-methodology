@@ -2,34 +2,34 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="classUT.cpp">
+    <ClCompile Include="class_UT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="polymorphismUT.cpp">
+    <ClCompile Include="polymorphism_UT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="constructorUT.cpp">
+    <ClCompile Include="constructor_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="lambdaUT.cpp">
+    <ClCompile Include="lambda_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="mutableUT.cpp">
+    <ClCompile Include="mutable_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="templateUT.cpp">
+    <ClCompile Include="template_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="binary_searchUT.cpp">
       <Filter>tests\algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="containersUT.cpp">
+    <ClCompile Include="containers_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="overloading_operatorsUT.cpp">
+    <ClCompile Include="overloading_operators_UT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="smartpointer_usageUT.cpp">
+    <ClCompile Include="smartpointer_usage_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="observer_boost_signal_UT.cpp">
