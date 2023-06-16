@@ -44,6 +44,7 @@
     <ClCompile Include="containers_UT.cpp" />
     <ClCompile Include="lambda_UT.cpp" />
     <ClCompile Include="mutable_UT.cpp" />
+    <ClCompile Include="observer_UT.cpp" />
     <ClCompile Include="overloading_operators_UT.cpp" />
     <ClCompile Include="polymorphism_UT.cpp" />
     <ClCompile Include="pch.cpp">

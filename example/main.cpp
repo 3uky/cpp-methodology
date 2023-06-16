@@ -5,7 +5,6 @@
 #include "t_test.h"
 #include "t_dp_factory.h"
 #include "t_dp_facade.h"
-#include "t_dp_observer.h"
 #include "t_type_conversions.h"
 #include "t_dp_singleton.h"
 #include "t_unique_ptr.h"
