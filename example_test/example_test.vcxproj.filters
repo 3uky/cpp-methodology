@@ -3,47 +3,56 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="classUT.cpp">
-      <Filter>basic_paradigms</Filter>
+      <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
     <ClCompile Include="polymorphismUT.cpp">
-      <Filter>basic_paradigms</Filter>
+      <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
     <ClCompile Include="constructorUT.cpp">
-      <Filter>basic_elements</Filter>
+      <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="lambdaUT.cpp">
-      <Filter>basic_elements</Filter>
+      <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="mutableUT.cpp">
-      <Filter>basic_elements</Filter>
+      <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="templateUT.cpp">
-      <Filter>basic_elements</Filter>
+      <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="binary_searchUT.cpp">
-      <Filter>algorithms</Filter>
+      <Filter>tests\algorithms</Filter>
     </ClCompile>
     <ClCompile Include="containersUT.cpp">
-      <Filter>basic_elements</Filter>
+      <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="overloading_operatorsUT.cpp">
-      <Filter>basic_paradigms</Filter>
+      <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
     <ClCompile Include="smartpointer_usageUT.cpp">
-      <Filter>basic_elements</Filter>
+      <Filter>tests\basic_elements</Filter>
+    </ClCompile>
+    <ClCompile Include="observer_boost_signal_UT.cpp">
+      <Filter>tests\design_patterns</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="basic_elements">
+    <Filter Include="tests">
+      <UniqueIdentifier>{6976f691-dbaf-44c8-9832-b1f79274370a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\design_patterns">
+      <UniqueIdentifier>{ad0bddda-80f9-4d62-b769-3cd64cc2758a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\basic_elements">
       <UniqueIdentifier>{e6750f50-2cab-45a4-86c8-53a75cd46b03}</UniqueIdentifier>
     </Filter>
-    <Filter Include="basic_paradigms">
+    <Filter Include="tests\basic_paradigms">
       <UniqueIdentifier>{177fca8d-0f31-46d9-96a2-57a22a8618e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="algorithms">
+    <Filter Include="tests\algorithms">
       <UniqueIdentifier>{73e62b51-f115-49b2-bfb1-8aea92408c8d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
