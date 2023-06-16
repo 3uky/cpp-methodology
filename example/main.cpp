@@ -4,7 +4,6 @@
 #include "t_condition_variable.h"
 #include "t_test.h"
 #include "t_dp_factory.h"
-#include "t_dp_adapter.h"
 #include "t_dp_facade.h"
 #include "t_dp_observer.h"
 #include "t_type_conversions.h"

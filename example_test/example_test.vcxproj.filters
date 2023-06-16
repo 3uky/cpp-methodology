@@ -35,6 +35,9 @@
     <ClCompile Include="observer_boost_signal_UT.cpp">
       <Filter>tests\design_patterns</Filter>
     </ClCompile>
+    <ClCompile Include="adapter_UT.cpp">
+      <Filter>tests\design_patterns</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

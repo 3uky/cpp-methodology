@@ -15,7 +15,7 @@ public:
 };
 
 
-TEST(BoostSignalTest, ShouldExecuteRegisteredCallbackOnSignalTrigger)
+TEST(AdapterBoostSignalTest, ShouldExecuteRegisteredCallbackOnSignalTrigger)
 {
     // GIVEN
     Subject subject;

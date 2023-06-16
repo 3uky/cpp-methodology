@@ -36,6 +36,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="adapter_UT.cpp" />
     <ClCompile Include="binary_searchUT.cpp" />
     <ClCompile Include="observer_boost_signal_UT.cpp" />
     <ClCompile Include="class_UT.cpp" />

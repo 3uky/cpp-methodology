@@ -50,7 +50,7 @@
     <ClInclude Include="include\t_dp_observer.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_dp_adapter.h">
+    <ClInclude Include="include\adapter.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
     <ClInclude Include="include\t_dp_singleton.h">
