@@ -62,7 +62,7 @@
     <ClInclude Include="include\t_dp_facade.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_boost_signal.h">
+    <ClInclude Include="include\observer_boost_signal.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
     <ClInclude Include="include\t_boost_asio.h">

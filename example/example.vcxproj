@@ -138,7 +138,7 @@
   <ItemGroup>
     <ClInclude Include="include\binary_search.h" />
     <ClInclude Include="include\t_boost_asio.h" />
-    <ClInclude Include="include\t_boost_signal.h" />
+    <ClInclude Include="include\observer_boost_signal.h" />
     <ClInclude Include="include\class.h" />
     <ClInclude Include="include\t_condition_variable.h" />
     <ClInclude Include="include\constructor.h" />
