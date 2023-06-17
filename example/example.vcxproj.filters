@@ -68,7 +68,7 @@
     <ClInclude Include="include\t_boost_asio.h">
       <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_condition_variable.h">
+    <ClInclude Include="include\condition_variable.h">
       <Filter>Header Files\paralel_programming</Filter>
     </ClInclude>
     <ClInclude Include="include\mutex_guard_thread.h">
