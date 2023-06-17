@@ -71,7 +71,7 @@
     <ClInclude Include="include\t_condition_variable.h">
       <Filter>Header Files\paralel_programming</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_mutex.h">
+    <ClInclude Include="include\mutex_guard_thread.h">
       <Filter>Header Files\paralel_programming</Filter>
     </ClInclude>
     <ClInclude Include="include\constructor.h">

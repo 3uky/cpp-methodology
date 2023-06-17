@@ -1,6 +1,5 @@
 #include "t_copy.h"
 #include "t_move.h"
-#include "t_mutex.h"
 #include "t_condition_variable.h"
 #include "t_test.h"
 #include "t_dp_factory.h"
@@ -10,7 +9,6 @@
 #include "t_unique_ptr.h"
 #include "t_shared_ptr.h"
 //#include "t_boost_asio.h"
-//#include "t_boost_signal.h"
 
 int main()
 {
