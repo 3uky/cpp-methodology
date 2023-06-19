@@ -51,6 +51,9 @@
     <ClCompile Include="observer_UT.cpp">
       <Filter>tests\design_patterns\behavioral</Filter>
     </ClCompile>
+    <ClCompile Include="singleton_UT.cpp">
+      <Filter>tests\design_patterns\creational</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

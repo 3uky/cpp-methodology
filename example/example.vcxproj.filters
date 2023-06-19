@@ -40,6 +40,12 @@
     <Filter Include="Header Files\algorithms">
       <UniqueIdentifier>{83c55bd5-5e4e-4551-a920-2159e3cdc6ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\algorithms\search">
+      <UniqueIdentifier>{391bb07b-e8d8-49af-a306-de978b8cbf8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\algorithms\sort">
+      <UniqueIdentifier>{af81cd5d-5f70-4669-83e8-37d1d2300ad2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,7 +59,7 @@
     <ClInclude Include="include\adapter.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_dp_singleton.h">
+    <ClInclude Include="include\singleton.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
     <ClInclude Include="include\factory.h">
@@ -110,11 +116,11 @@
     <ClInclude Include="include\t_move.h">
       <Filter>Header Files\delete</Filter>
     </ClInclude>
-    <ClInclude Include="include\binary_search.h">
-      <Filter>Header Files\algorithms</Filter>
-    </ClInclude>
     <ClInclude Include="include\containers.h">
       <Filter>Header Files\basic_elements</Filter>
+    </ClInclude>
+    <ClInclude Include="include\binary_search.h">
+      <Filter>Header Files\algorithms\search</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
