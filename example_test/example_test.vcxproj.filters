@@ -32,24 +32,24 @@
     <ClCompile Include="smartpointer_usage_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="observer_boost_signal_UT.cpp">
-      <Filter>tests\design_patterns</Filter>
-    </ClCompile>
-    <ClCompile Include="adapter_UT.cpp">
-      <Filter>tests\design_patterns</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gtest\gtest-all.cc" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gmock\gmock-all.cc" />
-    <ClCompile Include="observer_UT.cpp">
-      <Filter>tests\design_patterns</Filter>
-    </ClCompile>
     <ClCompile Include="condition_variable_UT.cpp" />
     <ClCompile Include="mutex_guard_thread_UT.cpp" />
     <ClCompile Include="facade_UT.cpp">
-      <Filter>tests\design_patterns</Filter>
+      <Filter>tests\design_patterns\structural</Filter>
+    </ClCompile>
+    <ClCompile Include="adapter_UT.cpp">
+      <Filter>tests\design_patterns\structural</Filter>
     </ClCompile>
     <ClCompile Include="factory_UT.cpp">
-      <Filter>tests\design_patterns</Filter>
+      <Filter>tests\design_patterns\creational</Filter>
+    </ClCompile>
+    <ClCompile Include="observer_boost_signal_UT.cpp">
+      <Filter>tests\design_patterns\behavioral</Filter>
+    </ClCompile>
+    <ClCompile Include="observer_UT.cpp">
+      <Filter>tests\design_patterns\behavioral</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,7 +77,7 @@
     <Filter Include="tests\design_patterns\behavioral">
       <UniqueIdentifier>{d33b2175-1287-4a02-894e-24c9b86ce391}</UniqueIdentifier>
     </Filter>
-    <Filter Include="tests\design_patterns\NewFilter1">
+    <Filter Include="tests\design_patterns\creational">
       <UniqueIdentifier>{de32fced-edae-4b26-a3a9-6437297cd43d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
