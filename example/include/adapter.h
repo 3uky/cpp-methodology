@@ -1,3 +1,7 @@
+// https://refactoring.guru/design-patterns/adapter
+// Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate.
+// The Adapter pattern lets you create a middle - layer class that serves as a translator between your code and a legacy class, a 3rd - party class or any other class with a weird interface.
+
 #pragma once
 
 #include <iostream>
@@ -12,11 +16,17 @@ namespace design_patterns
 
 class IRectangle
 {
-  public:
+public:
     virtual void Draw() = 0;
 };
 
-class LegacyRectangle
+class ILegacyRectangle
+{
+public:
+    virtual void OldDraw() = 0;
+};
+
+class LegacyRectangle : ILegacyRectangle
 {
   public:
     LegacyRectangle(Coordinate x1, Coordinate y1, Coordinate x2, Coordinate y2) : m_x1(x1), m_y1(y1), m_x2(x2), m_y2(y2)
@@ -24,7 +34,7 @@ class LegacyRectangle
         cout << "LegacyRectangle:  create.  (" << m_x1 << "," << m_y1 << ") => (" << m_x2 << "," << m_y2 << ")" << endl;
     }
 
-    void oldDraw()
+    void OldDraw()
 	{
         cout << "LegacyRectangle:  oldDraw.  (" << m_x1 << "," << m_y1 << ") => (" << m_x2 << "," << m_y2 << ")" << endl;
     }
@@ -48,7 +58,7 @@ class RectangleAdapter: public IRectangle, private LegacyRectangle
     void Draw() override
     {
         cout << "RectangleAdapter: draw." << endl;
-        oldDraw();
+        OldDraw();
     }
 };
 
