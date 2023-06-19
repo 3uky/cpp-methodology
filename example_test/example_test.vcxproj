@@ -39,6 +39,7 @@
     <ClCompile Include="adapter_UT.cpp" />
     <ClCompile Include="binary_searchUT.cpp" />
     <ClCompile Include="condition_variable_UT.cpp" />
+    <ClCompile Include="facade_UT.cpp" />
     <ClCompile Include="mutex_guard_thread_UT.cpp" />
     <ClCompile Include="observer_boost_signal_UT.cpp" />
     <ClCompile Include="class_UT.cpp" />

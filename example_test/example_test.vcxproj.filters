@@ -43,6 +43,11 @@
     <ClCompile Include="observer_UT.cpp">
       <Filter>tests\design_patterns</Filter>
     </ClCompile>
+    <ClCompile Include="condition_variable_UT.cpp" />
+    <ClCompile Include="mutex_guard_thread_UT.cpp" />
+    <ClCompile Include="facade_UT.cpp">
+      <Filter>tests\design_patterns</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

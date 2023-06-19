@@ -145,7 +145,7 @@
     <ClInclude Include="include\containers.h" />
     <ClInclude Include="include\t_copy.h" />
     <ClInclude Include="include\adapter.h" />
-    <ClInclude Include="include\t_dp_facade.h" />
+    <ClInclude Include="include\facade.h" />
     <ClInclude Include="include\t_dp_factory.h" />
     <ClInclude Include="include\observer.h" />
     <ClInclude Include="include\t_dp_singleton.h" />
