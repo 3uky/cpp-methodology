@@ -1,7 +1,6 @@
 #include "t_copy.h"
 #include "t_move.h"
 #include "t_test.h"
-#include "t_dp_factory.h"
 #include "t_type_conversions.h"
 #include "t_dp_singleton.h"
 #include "t_unique_ptr.h"

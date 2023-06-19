@@ -48,6 +48,9 @@
     <ClCompile Include="facade_UT.cpp">
       <Filter>tests\design_patterns</Filter>
     </ClCompile>
+    <ClCompile Include="factory_UT.cpp">
+      <Filter>tests\design_patterns</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -67,6 +70,15 @@
     </Filter>
     <Filter Include="tests\algorithms">
       <UniqueIdentifier>{73e62b51-f115-49b2-bfb1-8aea92408c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\design_patterns\structural">
+      <UniqueIdentifier>{e383c9b9-1c08-469e-ae72-6d8b5096c31d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\design_patterns\behavioral">
+      <UniqueIdentifier>{d33b2175-1287-4a02-894e-24c9b86ce391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\design_patterns\NewFilter1">
+      <UniqueIdentifier>{de32fced-edae-4b26-a3a9-6437297cd43d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

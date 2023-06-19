@@ -56,7 +56,7 @@
     <ClInclude Include="include\t_dp_singleton.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_dp_factory.h">
+    <ClInclude Include="include\factory.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
     <ClInclude Include="include\facade.h">
