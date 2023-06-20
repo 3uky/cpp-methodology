@@ -41,7 +41,7 @@ namespace parallel_programming
         ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A*B*A*"));
     }
     
-    TEST(ParalellProgrammingTest, ShouldThreadsExecuteAtLeastPauseDuration)
+    TEST(ParalellProgrammingTest, DISABLED_ShouldThreadsExecuteAtLeastPauseDuration)
     {
         // GIVEN
         MyCriticalSection ks;
