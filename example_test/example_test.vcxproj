@@ -60,6 +60,7 @@
     <ClCompile Include="singleton_UT.cpp" />
     <ClCompile Include="smartpointer_usage_UT.cpp" />
     <ClCompile Include="template_UT.cpp" />
+    <ClCompile Include="async_wait_UT.cpp" />
     <ClCompile Include="type_conversions_UT.cpp" />
   </ItemGroup>
   <ItemGroup>

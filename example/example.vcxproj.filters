@@ -71,7 +71,7 @@
     <ClInclude Include="include\observer_boost_signal.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_boost_asio.h">
+    <ClInclude Include="include\async_wait.h">
       <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
     <ClInclude Include="include\condition_variable.h">
