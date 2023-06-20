@@ -1,9 +1,9 @@
 #include "pch.h"
-#include "constructor.h"
+#include "move_copy_assign.h"
 
 namespace basic_elements
 {
-// IMPLICIT CONSTRUCTOR
+
 TEST(ConstructorTest, ShouldBeInitializedThroughImplicitConstructor)
 {
     // GIVEN/WHEN
@@ -14,7 +14,6 @@ TEST(ConstructorTest, ShouldBeInitializedThroughImplicitConstructor)
     
 }
 
-// EXPLICIT CONSTRUCTOR
 TEST(ConstructorTest, ShouldBeInitializedThroughExplicitConstructor)
 {
     // GIVEN/WHEN
@@ -24,21 +23,41 @@ TEST(ConstructorTest, ShouldBeInitializedThroughExplicitConstructor)
     EXPECT_EQ(foo.content(), "foo");
 }
 
-// COPY CONSTRUCTOR
 TEST(ConstructorTest, ShouldBeInitializedThroughCopyConstructor)
 {
     // GIVEN
-    Constructor foo("foo"); // default constructor
+    Constructor foo("foo");
 
-    // WHEN
-    Constructor bar = foo; // copy constructor
+    // WHEN - copy constructor
+    Constructor bar = foo;
 
     // THEN 
     EXPECT_EQ(foo.content(), "foo");
     EXPECT_EQ(bar.content(), "foo");
 }
 
-// COPY ASSIGNMENT
+
+TEST(ConstructorTest, ShouldBeInitializedTroughMoveConstructor)
+{
+    // GIVEN/WHEN
+    Constructor foo = Constructor("foo"); // assignment constructor
+
+    // THEN
+    EXPECT_EQ(foo.content(), "foo");
+}
+
+TEST(ConstructorTest, ShouldBeInitializedTroughMoveConstructorWithStdMove)
+{
+    // GIVEN
+    Constructor foo("foo");
+
+    // WHEN - move constructor
+    Constructor bar = std::move(foo);
+
+    // THEN
+    EXPECT_EQ(bar.content(), "foo");
+}
+
 TEST(ConstructorTest, ShouldBeInitializedTroughCopyAssignment)
 {
     // GIVENT
@@ -53,17 +72,6 @@ TEST(ConstructorTest, ShouldBeInitializedTroughCopyAssignment)
     EXPECT_EQ(bar.content(), "bar");
 }
 
-// MOVE CONSTRUCTOR
-TEST(ConstructorTest, ShouldBeInitializedTroughMoveConstructor)
-{
-    // GIVEN/WHEN
-    Constructor foo = Constructor("foo"); // move constructor
-
-    // THEN
-    EXPECT_EQ(foo.content(), "foo");
-}
-
-// MOVE ASSIGNMENT
 TEST(ConstructorTest, ShouldBeInitializedTroughMoveAssignment)
 {
     // GIVEN

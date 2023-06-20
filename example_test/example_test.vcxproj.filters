@@ -8,7 +8,7 @@
     <ClCompile Include="polymorphism_UT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="constructor_UT.cpp">
+    <ClCompile Include="mvove_copy_assign_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="lambda_UT.cpp">

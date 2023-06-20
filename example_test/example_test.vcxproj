@@ -44,7 +44,7 @@
     <ClCompile Include="mutex_guard_thread_UT.cpp" />
     <ClCompile Include="observer_boost_signal_UT.cpp" />
     <ClCompile Include="class_UT.cpp" />
-    <ClCompile Include="constructor_UT.cpp" />
+    <ClCompile Include="mvove_copy_assign_UT.cpp" />
     <ClCompile Include="containers_UT.cpp" />
     <ClCompile Include="lambda_UT.cpp" />
     <ClCompile Include="mutable_UT.cpp" />
