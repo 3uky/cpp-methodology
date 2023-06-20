@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "move_copy_assign.h"
+#include "move_copy.h"
 
 namespace basic_elements
 {
@@ -92,7 +92,7 @@ TEST(ConstructorTest, ShouldBeInitializedTroughMoveAssignmentAndOverload)
     Constructor bar("bar");
 
     // WHEN
-    foo = foo + bar; // move-assignment + overloaded operator
+    foo = foo + bar; // overloaded plus operator + move-assignment
 
     // THEN
     EXPECT_EQ(foo.content(), "foobar");

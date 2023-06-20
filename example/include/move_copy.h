@@ -1,3 +1,8 @@
+// https://www.cplusplus.com/doc/tutorial/classes2/
+/* The deep copy performed by this copy constructor allocates storage for a new string,
+ which is initialized to contain a copy of the original object. In this way, both objects (copy and original)
+ have distinct copies of the content stored in different locations. */
+
 #pragma once
 
 #include <string>
@@ -36,11 +41,11 @@ public:
     Constructor(Constructor&& x)
 	{
         ptr = x.ptr;
-        x.ptr=nullptr;
+        x.ptr = nullptr;
     }
 
     // copy assignment
-    Constructor& operator= (const Constructor& x)
+    Constructor& operator=(const Constructor& x)
 	{
         delete ptr;                      // delete currently pointed string
         ptr = new string(x.content());   // allocate space for new string, and copy
@@ -48,7 +53,7 @@ public:
     }
     
     // move assignment
-    Constructor& operator= (Constructor&& x)
+    Constructor& operator=(Constructor&& x)
 	{
         delete ptr;
         ptr = x.ptr;
