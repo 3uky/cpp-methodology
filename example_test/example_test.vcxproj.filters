@@ -8,7 +8,7 @@
     <ClCompile Include="polymorphism_UT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="mvove_copy_assign_UT.cpp">
+    <ClCompile Include="move_copy_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="lambda_UT.cpp">
@@ -25,9 +25,6 @@
     </ClCompile>
     <ClCompile Include="containers_UT.cpp">
       <Filter>tests\basic_elements</Filter>
-    </ClCompile>
-    <ClCompile Include="overloading_operators_UT.cpp">
-      <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
     <ClCompile Include="smartpointer_usage_UT.cpp">
       <Filter>tests\basic_elements</Filter>
@@ -65,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="unique_ptr_UT.cpp">
       <Filter>tests\cpp_internals</Filter>
+    </ClCompile>
+    <ClCompile Include="overloading_operators_UT.cpp">
+      <Filter>tests\basic_elements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

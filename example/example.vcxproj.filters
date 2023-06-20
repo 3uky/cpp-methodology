@@ -77,7 +77,7 @@
     <ClInclude Include="include\mutex_guard_thread.h">
       <Filter>Header Files\paralel_programming</Filter>
     </ClInclude>
-    <ClInclude Include="include\move_copy_assign.h">
+    <ClInclude Include="include\move_copy.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
     <ClInclude Include="include\mutable.h">
@@ -101,22 +101,16 @@
     <ClInclude Include="include\class.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="include\template.h">
-      <Filter>Header Files\basic_paradigms</Filter>
-    </ClInclude>
-    <ClInclude Include="include\overloading_operators.h">
-      <Filter>Header Files\basic_paradigms</Filter>
-    </ClInclude>
     <ClInclude Include="include\containers.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
     <ClInclude Include="include\binary_search.h">
       <Filter>Header Files\algorithms\search</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_copy.h">
+    <ClInclude Include="include\overloading_operators.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_move.h">
+    <ClInclude Include="include\template.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
   </ItemGroup>

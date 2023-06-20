@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "overloading_operators.h"
 
-namespace basic_paradigm
+namespace basic_elements
 {
     TEST(OverloadingOperators, ShouldOverloadVectorOperator) 
     {

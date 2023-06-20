@@ -2,12 +2,9 @@
 
 #pragma once
 
-
-#include <iostream>
-
 using namespace std;
 
-namespace basic_paradigm
+namespace basic_elements
 {
 
 class MyVector {

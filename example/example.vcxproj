@@ -141,15 +141,13 @@
     <ClInclude Include="include\observer_boost_signal.h" />
     <ClInclude Include="include\class.h" />
     <ClInclude Include="include\condition_variable.h" />
-    <ClInclude Include="include\move_copy_assign.h" />
+    <ClInclude Include="include\move_copy.h" />
     <ClInclude Include="include\containers.h" />
-    <ClInclude Include="include\t_copy.h" />
     <ClInclude Include="include\adapter.h" />
     <ClInclude Include="include\facade.h" />
     <ClInclude Include="include\factory.h" />
     <ClInclude Include="include\observer.h" />
     <ClInclude Include="include\singleton.h" />
-    <ClInclude Include="include\t_move.h" />
     <ClInclude Include="include\mutable.h" />
     <ClInclude Include="include\mutex_guard_thread.h" />
     <ClInclude Include="include\overloading_operators.h" />
