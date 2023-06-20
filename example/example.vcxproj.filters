@@ -86,7 +86,7 @@
     <ClInclude Include="include\mutable.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_type_conversions.h">
+    <ClInclude Include="include\type_conversions.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
     <ClInclude Include="include\polymorphism.h">

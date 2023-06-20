@@ -54,6 +54,9 @@
     <ClCompile Include="singleton_UT.cpp">
       <Filter>tests\design_patterns\creational</Filter>
     </ClCompile>
+    <ClCompile Include="type_conversions_UT.cpp">
+      <Filter>tests\basic_elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
