@@ -58,7 +58,10 @@
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="async_wait_UT.cpp">
-      <Filter>tests\boost_asio_UT</Filter>
+      <Filter>tests\boost_asio</Filter>
+    </ClCompile>
+    <ClCompile Include="shared_ptr_UT.cpp">
+      <Filter>tests\cpp_internals</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,7 +92,10 @@
     <Filter Include="tests\design_patterns\creational">
       <UniqueIdentifier>{de32fced-edae-4b26-a3a9-6437297cd43d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="tests\boost_asio_UT">
+    <Filter Include="tests\cpp_internals">
+      <UniqueIdentifier>{d51e6f09-c259-4097-8ebe-3920f2a23abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\boost_asio">
       <UniqueIdentifier>{0eb51039-aa2d-47a0-89c4-89f01868c411}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

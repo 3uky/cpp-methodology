@@ -7,7 +7,6 @@ using ::testing::Return;
 namespace design_patterns
 {
 
-
 class MockObserver : public IObserver
 {
 public:

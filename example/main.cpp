@@ -2,7 +2,6 @@
 #include "t_move.h"
 #include "t_test.h"
 #include "t_unique_ptr.h"
-#include "t_shared_ptr.h"
 //#include "t_boost_asio.h"
 
 int main()

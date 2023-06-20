@@ -98,7 +98,7 @@
     <ClInclude Include="include\t_unique_ptr.h">
       <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_shared_ptr.h">
+    <ClInclude Include="include\shared_ptr.h">
       <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
     <ClInclude Include="include\class.h">
