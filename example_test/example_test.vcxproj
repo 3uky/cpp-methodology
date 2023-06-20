@@ -63,6 +63,7 @@
     <ClCompile Include="template_UT.cpp" />
     <ClCompile Include="async_wait_UT.cpp" />
     <ClCompile Include="type_conversions_UT.cpp" />
+    <ClCompile Include="unique_ptr_UT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\example\example.vcxproj">

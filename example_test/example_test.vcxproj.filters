@@ -63,6 +63,9 @@
     <ClCompile Include="shared_ptr_UT.cpp">
       <Filter>tests\cpp_internals</Filter>
     </ClCompile>
+    <ClCompile Include="unique_ptr_UT.cpp">
+      <Filter>tests\cpp_internals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
