@@ -66,6 +66,12 @@
     <ClCompile Include="overloading_operators_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
+    <ClCompile Include="unique_names_UT.cpp">
+      <Filter>tests\exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="character_filter_UT.cpp">
+      <Filter>tests\exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -100,6 +106,9 @@
     </Filter>
     <Filter Include="tests\boost_asio">
       <UniqueIdentifier>{0eb51039-aa2d-47a0-89c4-89f01868c411}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\exercises">
+      <UniqueIdentifier>{fa091055-f8d8-4211-8767-7ad4ef8da607}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

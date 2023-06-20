@@ -38,6 +38,7 @@
   <ItemGroup>
     <ClCompile Include="adapter_UT.cpp" />
     <ClCompile Include="binary_searchUT.cpp" />
+    <ClCompile Include="character_filter_UT.cpp" />
     <ClCompile Include="condition_variable_UT.cpp" />
     <ClCompile Include="facade_UT.cpp" />
     <ClCompile Include="factory_UT.cpp" />
@@ -63,6 +64,7 @@
     <ClCompile Include="template_UT.cpp" />
     <ClCompile Include="async_wait_UT.cpp" />
     <ClCompile Include="type_conversions_UT.cpp" />
+    <ClCompile Include="unique_names_UT.cpp" />
     <ClCompile Include="unique_ptr_UT.cpp" />
   </ItemGroup>
   <ItemGroup>

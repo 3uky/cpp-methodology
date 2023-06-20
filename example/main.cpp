@@ -1,6 +1,3 @@
-#include "t_test.h"
-
-int main()
+void main()
 {
-    return 0;
 }

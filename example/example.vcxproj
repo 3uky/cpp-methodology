@@ -154,8 +154,9 @@
     <ClInclude Include="include\polymorphism.h" />
     <ClInclude Include="include\shared_ptr.h" />
     <ClInclude Include="include\template.h" />
-    <ClInclude Include="include\t_test.h" />
+    <ClInclude Include="include\character_filter.h" />
     <ClInclude Include="include\type_conversions.h" />
+    <ClInclude Include="include\unique_names.h" />
     <ClInclude Include="include\unique_ptr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

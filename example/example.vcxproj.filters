@@ -89,7 +89,7 @@
     <ClInclude Include="include\polymorphism.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="include\t_test.h">
+    <ClInclude Include="include\character_filter.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
     <ClInclude Include="include\unique_ptr.h">
@@ -112,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="include\template.h">
       <Filter>Header Files\basic_elements</Filter>
+    </ClInclude>
+    <ClInclude Include="include\unique_names.h">
+      <Filter>Header Files\exercises</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
