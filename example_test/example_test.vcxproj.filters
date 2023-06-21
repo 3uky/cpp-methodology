@@ -20,9 +20,6 @@
     <ClCompile Include="template_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="binary_searchUT.cpp">
-      <Filter>tests\algorithms</Filter>
-    </ClCompile>
     <ClCompile Include="containers_UT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
@@ -73,6 +70,10 @@
       <Filter>tests\exercises</Filter>
     </ClCompile>
     <ClCompile Include="fibonacci_UT.cpp">
+      <Filter>tests\exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="binary_search_UT.cpp" />
+    <ClCompile Include="reverse_string_UT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
   </ItemGroup>

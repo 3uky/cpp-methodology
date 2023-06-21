@@ -148,6 +148,7 @@
     <ClInclude Include="include\facade.h" />
     <ClInclude Include="include\factory.h" />
     <ClInclude Include="include\observer.h" />
+    <ClInclude Include="include\reverse_string.h" />
     <ClInclude Include="include\singleton.h" />
     <ClInclude Include="include\mutable.h" />
     <ClInclude Include="include\mutex_guard_thread.h" />

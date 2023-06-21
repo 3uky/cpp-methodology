@@ -37,7 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="adapter_UT.cpp" />
-    <ClCompile Include="binary_searchUT.cpp" />
+    <ClCompile Include="binary_search_UT.cpp" />
     <ClCompile Include="character_filter_UT.cpp" />
     <ClCompile Include="condition_variable_UT.cpp" />
     <ClCompile Include="facade_UT.cpp" />
@@ -59,6 +59,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="reverse_string_UT.cpp" />
     <ClCompile Include="shared_ptr_UT.cpp" />
     <ClCompile Include="singleton_UT.cpp" />
     <ClCompile Include="smartpointer_usage_UT.cpp" />
