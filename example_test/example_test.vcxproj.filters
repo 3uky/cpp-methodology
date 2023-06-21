@@ -72,6 +72,9 @@
     <ClCompile Include="character_filter_UT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
+    <ClCompile Include="fibonacci_UT.cpp">
+      <Filter>tests\exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

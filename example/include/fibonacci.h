@@ -12,6 +12,9 @@ public:
 	virtual int GetNumber(int nth) = 0;
 
 };
+
+// Time complexity : O(n)
+// Auxiliary space : O(n)
 class FibonacciVector : IFibonacci
 {
 public:
@@ -36,6 +39,8 @@ public:
 	}
 };
 
+// Time Complexity : O(n)
+// Auxiliary Space : O(1)
 class Fibonacci : IFibonacci
 {
 public:

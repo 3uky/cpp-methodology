@@ -42,6 +42,7 @@
     <ClCompile Include="condition_variable_UT.cpp" />
     <ClCompile Include="facade_UT.cpp" />
     <ClCompile Include="factory_UT.cpp" />
+    <ClCompile Include="fibonacci_UT.cpp" />
     <ClCompile Include="mutex_guard_thread_UT.cpp" />
     <ClCompile Include="observer_boost_signal_UT.cpp" />
     <ClCompile Include="class_UT.cpp" />
