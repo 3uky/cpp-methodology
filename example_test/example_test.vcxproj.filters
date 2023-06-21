@@ -76,6 +76,12 @@
     <ClCompile Include="reverse_string_UT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
+    <ClCompile Include="shuffle_UT.cpp">
+      <Filter>tests\algorithms\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="unique_characters_UT.cpp">
+      <Filter>tests\exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -113,6 +119,9 @@
     </Filter>
     <Filter Include="tests\exercises">
       <UniqueIdentifier>{fa091055-f8d8-4211-8767-7ad4ef8da607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\algorithms\sort">
+      <UniqueIdentifier>{c3edae3c-1b84-49d5-9c33-5eeb7cc8cfc0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

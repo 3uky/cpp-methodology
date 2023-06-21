@@ -61,11 +61,13 @@
     </ClCompile>
     <ClCompile Include="reverse_string_UT.cpp" />
     <ClCompile Include="shared_ptr_UT.cpp" />
+    <ClCompile Include="shuffle_UT.cpp" />
     <ClCompile Include="singleton_UT.cpp" />
     <ClCompile Include="smartpointer_usage_UT.cpp" />
     <ClCompile Include="template_UT.cpp" />
     <ClCompile Include="async_wait_UT.cpp" />
     <ClCompile Include="type_conversions_UT.cpp" />
+    <ClCompile Include="unique_characters_UT.cpp" />
     <ClCompile Include="unique_names_UT.cpp" />
     <ClCompile Include="unique_ptr_UT.cpp" />
   </ItemGroup>

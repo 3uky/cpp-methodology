@@ -149,6 +149,7 @@
     <ClInclude Include="include\factory.h" />
     <ClInclude Include="include\observer.h" />
     <ClInclude Include="include\reverse_string.h" />
+    <ClInclude Include="include\shuffle.h" />
     <ClInclude Include="include\singleton.h" />
     <ClInclude Include="include\mutable.h" />
     <ClInclude Include="include\mutex_guard_thread.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="include\template.h" />
     <ClInclude Include="include\character_filter.h" />
     <ClInclude Include="include\type_conversions.h" />
+    <ClInclude Include="include\unique_characters.h" />
     <ClInclude Include="include\unique_names.h" />
     <ClInclude Include="include\unique_ptr.h" />
   </ItemGroup>

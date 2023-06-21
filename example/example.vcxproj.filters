@@ -122,5 +122,11 @@
     <ClInclude Include="include\reverse_string.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
+    <ClInclude Include="include\shuffle.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="include\unique_characters.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
