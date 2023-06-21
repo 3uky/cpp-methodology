@@ -116,5 +116,8 @@
     <ClInclude Include="include\unique_names.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
+    <ClInclude Include="include\fibonacci.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
