@@ -18,4 +18,18 @@ TEST(ReverseStringTest, ShouldReverseString)
     EXPECT_EQ(str, "Hello, World!");
 }
 
+
+TEST(ReverseStringTest, ShouldReverseCString)
+{
+    // GIVEN
+    char str[14] = "!dlroW ,olleH";
+
+    // WHEN
+    UtilString::ReverseC(str);
+
+    // THEN
+    EXPECT_EQ(std::string(str), "Hello, World!");
+}
+
+
 }
