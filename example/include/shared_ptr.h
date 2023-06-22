@@ -31,7 +31,7 @@ public:
 
 	MySharedPtr& operator=(const MySharedPtr& obj) // copy assignment: foo = bar;
 	{
-		__cleanup__(); // cleanup any existing data
+		Reset(); // cleanup any existing data
 
 		// Assign incoming object's data to this object
 		this->ptr = obj.ptr; // share the underlying pointer
@@ -53,7 +53,7 @@ public:
 
 	MySharedPtr& operator=(MySharedPtr&& dyingObj) // move assignment: bar = std::move(foo);
 	{
-		__cleanup__(); // cleanup any existing data
+		Reset(); // cleanup any existing data
 
 		this->ptr = dyingObj.ptr; // share the underlying pointer
 		this->refCount = dyingObj.refCount;
@@ -87,11 +87,11 @@ public:
 
 	~MySharedPtr() // destructor
 	{
-		__cleanup__();
+		Reset();
 	}
 
 private:
-	void __cleanup__()
+	void Reset()
 	{
 		if (refCount != nullptr)
 		{

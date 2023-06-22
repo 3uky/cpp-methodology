@@ -172,5 +172,16 @@ TEST(SharedPointerTest, ShouldHaveSameBehaviorAsSmartPointerOnCopyAssignment)
     EXPECT_EQ(implemented_ptr_2.use_count(), reference_ptr_2.use_count());
 }
 
+TEST(SharedPointerTest, ShouldResetSharedPointer)
+{
+    // GIVEN
+    std::shared_ptr<int> reference_ptr_1 = std::make_shared<int>(10);
+    std::shared_ptr<int> reference_ptr_2 = reference_ptr_1;
+
+    reference_ptr_1.reset();
+
+    EXPECT_EQ(*reference_ptr_2, 10);
+    EXPECT_EQ(reference_ptr_2.use_count(), 1);
+}
 }
 
