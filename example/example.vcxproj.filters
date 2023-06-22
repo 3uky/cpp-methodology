@@ -128,5 +128,8 @@
     <ClInclude Include="include\unique_characters.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
+    <ClInclude Include="include\linked_list.h">
+      <Filter>Header Files\cpp_internals</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

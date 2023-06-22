@@ -82,6 +82,9 @@
     <ClCompile Include="unique_characters_UT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
+    <ClCompile Include="linked_list_UT.cpp">
+      <Filter>tests\cpp_internals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
