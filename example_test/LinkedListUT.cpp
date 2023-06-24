@@ -116,4 +116,17 @@ TEST(LinkedLIstTest, ShouldReverseElements)
 	EXPECT_EQ(test_list.Get(3), 5);
 }
 
+TEST(LinkedLIstTest, ShouldRetrunLastElement)
+{
+	// GIVEN
+	LinkedList<int> test_list;
+	test_list.Insert(5);
+	test_list.Insert(6);
+	test_list.Insert(7);
+	test_list.Insert(8);
+
+	// WHEN/THEN
+	EXPECT_EQ(test_list.Back(), 8);
+}
+
 }
