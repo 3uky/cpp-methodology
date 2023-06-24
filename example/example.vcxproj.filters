@@ -146,5 +146,8 @@
     <ClInclude Include="include\InsertionSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
+    <ClInclude Include="include\SelectionSort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

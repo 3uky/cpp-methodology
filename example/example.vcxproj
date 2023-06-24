@@ -154,6 +154,7 @@
     <ClInclude Include="include\Observer.h" />
     <ClInclude Include="include\QuickSort.h" />
     <ClInclude Include="include\ReverseString.h" />
+    <ClInclude Include="include\SelectionSort.h" />
     <ClInclude Include="include\Shuffle.h" />
     <ClInclude Include="include\Singleton.h" />
     <ClInclude Include="include\Mutable.h" />

@@ -64,6 +64,7 @@
     </ClCompile>
     <ClCompile Include="QuickSortUT.cpp" />
     <ClCompile Include="ReverseStringUT.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="SharedPtrUT.cpp" />
     <ClCompile Include="ShuffleUT.cpp" />
     <ClCompile Include="SingletonUT.cpp" />
