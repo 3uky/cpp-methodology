@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="include\BinarySearch.h" />
     <ClInclude Include="include\async_wait.h" />
+    <ClInclude Include="include\BubbleSort.h" />
     <ClInclude Include="include\Fibonacci.h" />
     <ClInclude Include="include\ILinkedList.h" />
     <ClInclude Include="include\LinkedList.h" />
