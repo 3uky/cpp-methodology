@@ -141,6 +141,7 @@
     <ClInclude Include="include\BubbleSort.h" />
     <ClInclude Include="include\Fibonacci.h" />
     <ClInclude Include="include\ILinkedList.h" />
+    <ClInclude Include="include\InsertionSort.h" />
     <ClInclude Include="include\LinkedList.h" />
     <ClInclude Include="include\ObserverBoostSignal.h" />
     <ClInclude Include="include\Class.h" />

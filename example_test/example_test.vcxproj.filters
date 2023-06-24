@@ -97,6 +97,9 @@
     <ClCompile Include="BubbleSortUT.cpp">
       <Filter>tests\algorithms\sort</Filter>
     </ClCompile>
+    <ClCompile Include="InsertionSortUT.cpp">
+      <Filter>tests\algorithms\sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

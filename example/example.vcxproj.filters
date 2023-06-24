@@ -143,5 +143,8 @@
     <ClInclude Include="include\BubbleSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
+    <ClInclude Include="include\InsertionSort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
