@@ -91,6 +91,9 @@
     <ClCompile Include="MutexGuardThreadUT.cpp">
       <Filter>tests\parallel_programming</Filter>
     </ClCompile>
+    <ClCompile Include="QuickSortUT.cpp">
+      <Filter>tests\algorithms\sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

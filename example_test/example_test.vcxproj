@@ -60,6 +60,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="QuickSortUT.cpp" />
     <ClCompile Include="ReverseStringUT.cpp" />
     <ClCompile Include="SharedPtrUT.cpp" />
     <ClCompile Include="ShuffleUT.cpp" />
