@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "binary_search.h"
+#include "BinarySearch.h"
 
 using namespace std;
 

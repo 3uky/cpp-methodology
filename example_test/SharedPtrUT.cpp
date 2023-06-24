@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "shared_ptr.h"
+#include "SharedPtr.h"
 
 using namespace std;
 

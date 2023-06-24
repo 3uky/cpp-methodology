@@ -2,88 +2,94 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="class_UT.cpp">
+    <ClCompile Include="ClassUT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="polymorphism_UT.cpp">
+    <ClCompile Include="PolymorphismUT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="move_copy_UT.cpp">
+    <ClCompile Include="MoveCopyUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="lambda_UT.cpp">
+    <ClCompile Include="LambdaUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="mutable_UT.cpp">
+    <ClCompile Include="MutableUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="template_UT.cpp">
+    <ClCompile Include="TemplateUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="containers_UT.cpp">
+    <ClCompile Include="ContainersUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="smartpointer_usage_UT.cpp">
+    <ClCompile Include="SmartpointerUsageUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gtest\gtest-all.cc" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gmock\gmock-all.cc" />
-    <ClCompile Include="condition_variable_UT.cpp" />
-    <ClCompile Include="mutex_guard_thread_UT.cpp" />
-    <ClCompile Include="facade_UT.cpp">
+    <ClCompile Include="FacadeUT.cpp">
       <Filter>tests\design_patterns\structural</Filter>
     </ClCompile>
-    <ClCompile Include="adapter_UT.cpp">
+    <ClCompile Include="AdapterUT.cpp">
       <Filter>tests\design_patterns\structural</Filter>
     </ClCompile>
-    <ClCompile Include="factory_UT.cpp">
+    <ClCompile Include="FactoryUT.cpp">
       <Filter>tests\design_patterns\creational</Filter>
     </ClCompile>
-    <ClCompile Include="observer_boost_signal_UT.cpp">
+    <ClCompile Include="ObserverBoostSignalUT.cpp">
       <Filter>tests\design_patterns\behavioral</Filter>
     </ClCompile>
-    <ClCompile Include="observer_UT.cpp">
+    <ClCompile Include="ObserverUT.cpp">
       <Filter>tests\design_patterns\behavioral</Filter>
     </ClCompile>
-    <ClCompile Include="singleton_UT.cpp">
+    <ClCompile Include="SingletonUT.cpp">
       <Filter>tests\design_patterns\creational</Filter>
     </ClCompile>
-    <ClCompile Include="type_conversions_UT.cpp">
+    <ClCompile Include="TypeConversionsUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="async_wait_UT.cpp">
       <Filter>tests\boost_asio</Filter>
     </ClCompile>
-    <ClCompile Include="shared_ptr_UT.cpp">
+    <ClCompile Include="SharedPtrUT.cpp">
       <Filter>tests\cpp_internals</Filter>
     </ClCompile>
-    <ClCompile Include="unique_ptr_UT.cpp">
+    <ClCompile Include="UniquePtrUT.cpp">
       <Filter>tests\cpp_internals</Filter>
     </ClCompile>
-    <ClCompile Include="overloading_operators_UT.cpp">
+    <ClCompile Include="OverloadingOperatorsUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
-    <ClCompile Include="unique_names_UT.cpp">
+    <ClCompile Include="UniqueNamesUT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
-    <ClCompile Include="character_filter_UT.cpp">
+    <ClCompile Include="CharacterFilterUT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
-    <ClCompile Include="fibonacci_UT.cpp">
+    <ClCompile Include="FibonacciUT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
-    <ClCompile Include="binary_search_UT.cpp" />
-    <ClCompile Include="reverse_string_UT.cpp">
+    <ClCompile Include="ReverseStringUT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
-    <ClCompile Include="shuffle_UT.cpp">
+    <ClCompile Include="ShuffleUT.cpp">
       <Filter>tests\algorithms\sort</Filter>
     </ClCompile>
-    <ClCompile Include="unique_characters_UT.cpp">
+    <ClCompile Include="UniqueCharactersUT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
-    <ClCompile Include="linked_list_UT.cpp">
+    <ClCompile Include="LinkedListUT.cpp">
       <Filter>tests\cpp_internals</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchUT.cpp">
+      <Filter>tests\algorithms\search</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionVariableUT.cpp">
+      <Filter>tests\parallel_programming</Filter>
+    </ClCompile>
+    <ClCompile Include="MutexGuardThreadUT.cpp">
+      <Filter>tests\parallel_programming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +131,12 @@
     </Filter>
     <Filter Include="tests\algorithms\sort">
       <UniqueIdentifier>{c3edae3c-1b84-49d5-9c33-5eeb7cc8cfc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\algorithms\search">
+      <UniqueIdentifier>{a00091a7-bf58-4186-a2ea-66af73c0af7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\parallel_programming">
+      <UniqueIdentifier>{8399dbf9-55cf-4187-bd07-975a32db8c13}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "fibonacci.h"
+#include "Fibonacci.h"
 
 using namespace std;
 using ::testing::ElementsAre;

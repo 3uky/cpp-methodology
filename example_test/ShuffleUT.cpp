@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "shuffle.h"
+#include "Shuffle.h"
 
 using namespace std;
 using ::testing::ElementsAre;

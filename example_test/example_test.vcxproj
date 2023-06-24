@@ -36,41 +36,41 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="adapter_UT.cpp" />
-    <ClCompile Include="binary_search_UT.cpp" />
-    <ClCompile Include="character_filter_UT.cpp" />
-    <ClCompile Include="condition_variable_UT.cpp" />
-    <ClCompile Include="facade_UT.cpp" />
-    <ClCompile Include="factory_UT.cpp" />
-    <ClCompile Include="fibonacci_UT.cpp" />
-    <ClCompile Include="linked_list_UT.cpp" />
-    <ClCompile Include="mutex_guard_thread_UT.cpp" />
-    <ClCompile Include="observer_boost_signal_UT.cpp" />
-    <ClCompile Include="class_UT.cpp" />
-    <ClCompile Include="move_copy_UT.cpp" />
-    <ClCompile Include="containers_UT.cpp" />
-    <ClCompile Include="lambda_UT.cpp" />
-    <ClCompile Include="mutable_UT.cpp" />
-    <ClCompile Include="observer_UT.cpp" />
-    <ClCompile Include="overloading_operators_UT.cpp" />
-    <ClCompile Include="polymorphism_UT.cpp" />
+    <ClCompile Include="AdapterUT.cpp" />
+    <ClCompile Include="BinarySearchUT.cpp" />
+    <ClCompile Include="CharacterFilterUT.cpp" />
+    <ClCompile Include="ConditionVariableUT.cpp" />
+    <ClCompile Include="FacadeUT.cpp" />
+    <ClCompile Include="FactoryUT.cpp" />
+    <ClCompile Include="FibonacciUT.cpp" />
+    <ClCompile Include="LinkedListUT.cpp" />
+    <ClCompile Include="MutexGuardThreadUT.cpp" />
+    <ClCompile Include="ObserverBoostSignalUT.cpp" />
+    <ClCompile Include="ClassUT.cpp" />
+    <ClCompile Include="MoveCopyUT.cpp" />
+    <ClCompile Include="ContainersUT.cpp" />
+    <ClCompile Include="LambdaUT.cpp" />
+    <ClCompile Include="MutableUT.cpp" />
+    <ClCompile Include="ObserverUT.cpp" />
+    <ClCompile Include="OverloadingOperatorsUT.cpp" />
+    <ClCompile Include="PolymorphismUT.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="reverse_string_UT.cpp" />
-    <ClCompile Include="shared_ptr_UT.cpp" />
-    <ClCompile Include="shuffle_UT.cpp" />
-    <ClCompile Include="singleton_UT.cpp" />
-    <ClCompile Include="smartpointer_usage_UT.cpp" />
-    <ClCompile Include="template_UT.cpp" />
+    <ClCompile Include="ReverseStringUT.cpp" />
+    <ClCompile Include="SharedPtrUT.cpp" />
+    <ClCompile Include="ShuffleUT.cpp" />
+    <ClCompile Include="SingletonUT.cpp" />
+    <ClCompile Include="SmartpointerUsageUT.cpp" />
+    <ClCompile Include="TemplateUT.cpp" />
     <ClCompile Include="async_wait_UT.cpp" />
-    <ClCompile Include="type_conversions_UT.cpp" />
-    <ClCompile Include="unique_characters_UT.cpp" />
-    <ClCompile Include="unique_names_UT.cpp" />
-    <ClCompile Include="unique_ptr_UT.cpp" />
+    <ClCompile Include="TypeConversionsUT.cpp" />
+    <ClCompile Include="UniqueCharactersUT.cpp" />
+    <ClCompile Include="UniqueNamesUT.cpp" />
+    <ClCompile Include="UniquePtrUT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\example\example.vcxproj">

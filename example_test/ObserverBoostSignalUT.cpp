@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "observer_boost_signal.h"
+#include "ObserverBoostSignal.h"
 
 using namespace std;
 using ::testing::Return;
