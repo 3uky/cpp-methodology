@@ -68,4 +68,52 @@ TEST(LinkedListTest, ShouldReverseValuesOfStdList)
 
 }
 
+TEST(LinkedLIstTest, ShouldSwapElements)
+{
+	// GIVEN
+	LinkedList<int> test_list;
+	test_list.Insert(5);
+	test_list.Insert(6);
+	test_list.Insert(7);
+
+	// WHEN
+	test_list.Swap(0, 2);
+	
+	// THEN
+	EXPECT_EQ(test_list.Get(0), 7);
+	EXPECT_EQ(test_list.Get(1), 6);
+	EXPECT_EQ(test_list.Get(2), 5);
+}
+
+TEST(LinkedLIstTest, ShouldReturnExactCountOfElements)
+{	// GIVEN
+	LinkedList<int> test_list;
+	test_list.Insert(5);
+	test_list.Insert(6);
+	test_list.Insert(7);
+
+	// WHEN
+	EXPECT_EQ(test_list.Count(), 3);
+}
+
+
+TEST(LinkedLIstTest, ShouldReverseElements)
+{
+	// GIVEN
+	LinkedList<int> test_list;
+	test_list.Insert(5);
+	test_list.Insert(6);
+	test_list.Insert(7);
+	test_list.Insert(8);
+
+	// WHEN
+	test_list.Reverse();
+
+	// THEN
+	EXPECT_EQ(test_list.Get(0), 8);
+	EXPECT_EQ(test_list.Get(1), 7);
+	EXPECT_EQ(test_list.Get(2), 6);
+	EXPECT_EQ(test_list.Get(3), 5);
+}
+
 }

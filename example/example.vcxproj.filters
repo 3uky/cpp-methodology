@@ -43,6 +43,9 @@
     <Filter Include="Header Files\algorithms\sort">
       <UniqueIdentifier>{af81cd5d-5f70-4669-83e8-37d1d2300ad2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\cpp_internals\list">
+      <UniqueIdentifier>{990ce789-24cd-4a6d-8ff0-6e98c808c142}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -129,7 +132,10 @@
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
     <ClInclude Include="include\linked_list.h">
-      <Filter>Header Files\cpp_internals</Filter>
+      <Filter>Header Files\cpp_internals\list</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ILinkedList.h">
+      <Filter>Header Files\cpp_internals\list</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
