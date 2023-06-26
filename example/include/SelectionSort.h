@@ -6,6 +6,10 @@
 // time complexity: O(n^2) worst/best
 // space complexity: O(1)
 
+// In this sorting algorithm, we assume that the first element is the minimum element.
+// Then we check to see if an element lower than the assumed minimum is present in the rest of the array.
+// If there is, we swap the assumed minimum and the actual minimum. Otherwise, we move on to the next element.
+
 namespace algorithms
 {
 
