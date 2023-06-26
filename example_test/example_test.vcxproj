@@ -45,6 +45,7 @@
     <ClCompile Include="FacadeUT.cpp" />
     <ClCompile Include="FactoryUT.cpp" />
     <ClCompile Include="FibonacciUT.cpp" />
+    <ClCompile Include="FrequencySortUT.cpp" />
     <ClCompile Include="InsertionSortUT.cpp" />
     <ClCompile Include="LinkedListUT.cpp" />
     <ClCompile Include="MergeSortUT.cpp" />

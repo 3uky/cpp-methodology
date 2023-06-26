@@ -158,5 +158,8 @@
     <ClInclude Include="include\BinaryTree.h">
       <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClInclude>
+    <ClInclude Include="include\FrequencySort.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

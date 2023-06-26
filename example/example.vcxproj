@@ -142,6 +142,7 @@
     <ClInclude Include="include\BinaryTree.h" />
     <ClInclude Include="include\BubbleSort.h" />
     <ClInclude Include="include\Fibonacci.h" />
+    <ClInclude Include="include\FrequencySort.h" />
     <ClInclude Include="include\ILinkedList.h" />
     <ClInclude Include="include\InsertionSort.h" />
     <ClInclude Include="include\LinkedList.h" />

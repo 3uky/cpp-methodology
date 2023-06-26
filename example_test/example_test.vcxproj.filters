@@ -109,6 +109,9 @@
     <ClCompile Include="BinaryTreeUT.cpp">
       <Filter>tests\algorithms\binary_tree</Filter>
     </ClCompile>
+    <ClCompile Include="FrequencySortUT.cpp">
+      <Filter>tests\exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
