@@ -46,6 +46,9 @@
     <Filter Include="Header Files\parallel_programming">
       <UniqueIdentifier>{3f2c745c-11fe-4aa2-92eb-ab3f49c111a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\algorithms\binary_tree">
+      <UniqueIdentifier>{92b686fe-3057-460e-b74e-d636866a0def}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -151,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="include\SelectionSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree.h">
+      <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

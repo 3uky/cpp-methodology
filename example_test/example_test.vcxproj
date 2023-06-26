@@ -38,6 +38,7 @@
   <ItemGroup>
     <ClCompile Include="AdapterUT.cpp" />
     <ClCompile Include="BinarySearchUT.cpp" />
+    <ClCompile Include="BinaryTreeUT.cpp" />
     <ClCompile Include="BubbleSortUT.cpp" />
     <ClCompile Include="CharacterFilterUT.cpp" />
     <ClCompile Include="ConditionVariableUT.cpp" />
