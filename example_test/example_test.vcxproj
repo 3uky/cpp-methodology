@@ -46,6 +46,7 @@
     <ClCompile Include="FibonacciUT.cpp" />
     <ClCompile Include="InsertionSortUT.cpp" />
     <ClCompile Include="LinkedListUT.cpp" />
+    <ClCompile Include="MergeSortUT.cpp" />
     <ClCompile Include="MutexGuardThreadUT.cpp" />
     <ClCompile Include="ObserverBoostSignalUT.cpp" />
     <ClCompile Include="ClassUT.cpp" />

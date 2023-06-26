@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\MergeSort.h" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

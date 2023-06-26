@@ -103,6 +103,9 @@
     <ClCompile Include="SelectionSort.cpp">
       <Filter>tests\algorithms\sort</Filter>
     </ClCompile>
+    <ClCompile Include="MergeSortUT.cpp">
+      <Filter>tests\algorithms\sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
