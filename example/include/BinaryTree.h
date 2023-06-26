@@ -51,13 +51,24 @@ public:
         GetInOrder(node->right, sequence);
     }
 
-    void GetPostOrder(std::unique_ptr<Node>& node, std::list<int>& sequence)
+    void GetPostOrder(const std::unique_ptr<Node>& node, std::list<int>& sequence)
     {
         if (node == nullptr)
             return;
         GetPostOrder(node->left, sequence);
         GetPostOrder(node->right, sequence);
     	sequence.push_back(node->Get());    
+    }
+
+    int GetHeight(const std::unique_ptr<Node>& node) const
+    {
+        if (node == nullptr)
+            return 0;
+            
+        int leftHeight = GetHeight(node->left);
+        int rightHeight = GetHeight(node->left);
+        
+        return std::max(leftHeight, rightHeight) + 1;
     }
 };
 

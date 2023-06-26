@@ -63,4 +63,28 @@ namespace algorithms
         // THEN
         EXPECT_THAT(postorder_sequence, ElementsAre(4, 5, 2, 3, 1));
     }
+
+    TEST(BinaryTreeTest, ShouldReturnHeight)
+    {
+        // GIVEN
+        BinaryTree tree;
+        std::unique_ptr<Node> root = tree.NewNode(1);
+        root->left = tree.NewNode(2);
+        root->right = tree.NewNode(3);
+
+        // WHEN/THEN
+    	EXPECT_THAT(tree.GetHeight(root), 2);
+
+        // GIVEN
+    	root->left->left = tree.NewNode(4);
+
+        // WHEN/THEN
+        EXPECT_THAT(tree.GetHeight(root), 3);
+
+        // GIVEN
+        root->left->right = tree.NewNode(5);
+
+        // WHEN/THEN
+        EXPECT_THAT(tree.GetHeight(root), 3);
+    }
 }
