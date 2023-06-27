@@ -13,8 +13,8 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnPreOrderSequence)
     {
         // GIVEN
-    	BinaryTree tree;
-        std::unique_ptr<Node> root = tree.NewNode(1);
+    	BinaryTree tree(1);
+        const auto& root = tree.GetRoot();
         root->left = tree.NewNode(2);
         root->right = tree.NewNode(3);
         root->left->left = tree.NewNode(4);
@@ -31,8 +31,8 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnInOrderSequence)
     {
         // GIVEN
-        BinaryTree tree;
-        std::unique_ptr<Node> root = tree.NewNode(1);
+        BinaryTree tree(1);
+        const auto& root = tree.GetRoot();
         root->left = tree.NewNode(2);
         root->right = tree.NewNode(3);
         root->left->left = tree.NewNode(4);
@@ -49,8 +49,8 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnPostOrderSequence)
     {
         // GIVEN
-        BinaryTree tree;
-        std::unique_ptr<Node> root = tree.NewNode(1);
+        BinaryTree tree(1);
+        const auto& root = tree.GetRoot();
         root->left = tree.NewNode(2);
         root->right = tree.NewNode(3);
         root->left->left = tree.NewNode(4);
@@ -67,24 +67,24 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnHeight)
     {
         // GIVEN
-        BinaryTree tree;
-        std::unique_ptr<Node> root = tree.NewNode(1);
+        BinaryTree tree(1);
+        const auto& root = tree.GetRoot();
         root->left = tree.NewNode(2);
         root->right = tree.NewNode(3);
 
         // WHEN/THEN
-    	EXPECT_THAT(tree.GetHeight(root), 2);
+    	EXPECT_THAT(tree.GetHeight(), 2);
 
         // GIVEN
-    	root->left->left = tree.NewNode(4);
+        root->left->left = tree.NewNode(4);
 
         // WHEN/THEN
-        EXPECT_THAT(tree.GetHeight(root), 3);
+        EXPECT_THAT(tree.GetHeight(), 3);
 
         // GIVEN
         root->left->right = tree.NewNode(5);
 
         // WHEN/THEN
-        EXPECT_THAT(tree.GetHeight(root), 3);
+        EXPECT_THAT(tree.GetHeight(), 3);
     }
 }

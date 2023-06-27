@@ -28,12 +28,14 @@ private:
 class BinaryTree
 {
 public:
+    BinaryTree() {}
+    BinaryTree(int root_value) { SetRoot(root_value); }
     std::unique_ptr<Node> NewNode(int data)
     {
         return std::make_unique<Node>(data);
     }
 
-    void GetPreOrder(std::unique_ptr<Node>& node, std::list<int>& sequence)
+    void GetPreOrder(const std::unique_ptr<Node>& node, std::list<int>& sequence)
     {
         if (node == nullptr)
             return;
@@ -42,7 +44,7 @@ public:
         GetPreOrder(node->right, sequence);
     }
 
-    void GetInOrder(std::unique_ptr<Node>& node, std::list<int>& sequence)
+    void GetInOrder(const std::unique_ptr<Node>& node, std::list<int>& sequence)
     {
         if (node == nullptr)
             return;
@@ -60,6 +62,11 @@ public:
     	sequence.push_back(node->Get());    
     }
 
+    int GetHeight() const
+    {
+        return GetHeight(m_root);
+    }
+
     int GetHeight(const std::unique_ptr<Node>& node) const
     {
         if (node == nullptr)
@@ -70,6 +77,19 @@ public:
         
         return std::max(leftHeight, rightHeight) + 1;
     }
+
+    const std::unique_ptr<Node>& GetRoot()
+    {
+        return m_root;
+    }
+
+    void SetRoot(int value)
+    {
+	    m_root = NewNode(1);
+    }
+
+private:
+    std::unique_ptr<Node> m_root;
 };
 
 }
