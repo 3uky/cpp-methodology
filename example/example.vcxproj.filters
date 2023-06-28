@@ -49,6 +49,9 @@
     <Filter Include="Header Files\algorithms\binary_tree">
       <UniqueIdentifier>{92b686fe-3057-460e-b74e-d636866a0def}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\basic_elements\containers">
+      <UniqueIdentifier>{cd37e51d-e9ef-4d8b-b7d1-923c2bc36cc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -110,9 +113,6 @@
     <ClInclude Include="include\Class.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="include\Containers.h">
-      <Filter>Header Files\basic_elements</Filter>
-    </ClInclude>
     <ClInclude Include="include\BinarySearch.h">
       <Filter>Header Files\algorithms\search</Filter>
     </ClInclude>
@@ -160,6 +160,12 @@
     </ClInclude>
     <ClInclude Include="include\FrequencySort.h">
       <Filter>Header Files\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Containers.h">
+      <Filter>Header Files\basic_elements\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stack.h">
+      <Filter>Header Files\basic_elements\containers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

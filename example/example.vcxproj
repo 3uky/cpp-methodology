@@ -165,6 +165,7 @@
     <ClInclude Include="include\OverloadingOperators.h" />
     <ClInclude Include="include\Polymorphism.h" />
     <ClInclude Include="include\SharedPtr.h" />
+    <ClInclude Include="include\Stack.h" />
     <ClInclude Include="include\Template.h" />
     <ClInclude Include="include\CharacterFilter.h" />
     <ClInclude Include="include\TypeConversions.h" />
