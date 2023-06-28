@@ -30,7 +30,7 @@ class BinaryTree
 {
 public:
     BinaryTree() {}
-    BinaryTree(std::vector<int>& arr) { BuildInLevelOrder(arr); }
+    BinaryTree(std::vector<int>&& arr) { BuildInLevelOrder(arr); }
 
     std::list<int> GetPreOrder()
     {

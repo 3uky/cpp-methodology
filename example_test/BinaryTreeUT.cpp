@@ -13,7 +13,7 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnPreOrderSequence)
     {
         // GIVEN
-        BinaryTree tree(std::vector<int>{1, 2, 3, 4, 5});
+        BinaryTree tree(std::vector{1, 2, 3, 4, 5});
 
         // WHEN
         auto preorder_sequence = tree.GetPreOrder();
@@ -25,7 +25,7 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnInOrderSequence)
     {
         // GIVEN
-        BinaryTree tree(std::vector<int>{1, 2, 3, 4, 5});
+        BinaryTree tree(std::vector{1, 2, 3, 4, 5});
 
         // WHEN
         auto inorder_sequence = tree.GetInOrder();
@@ -37,7 +37,7 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnPostOrderSequence)
     {
         // GIVEN
-        BinaryTree tree(std::vector<int>{1, 2, 3, 4, 5});
+        BinaryTree tree(std::vector{1, 2, 3, 4, 5});
 
         // WHEN
         auto postorder_sequence = tree.GetPostOrder();
@@ -49,8 +49,8 @@ namespace algorithms
     TEST(BinaryTreeTest, ShouldReturnHeight)
     {
         // GIVEN
-        BinaryTree tree_1(std::vector<int>{1, 2, 3});
-        BinaryTree tree_2(std::vector<int>{1, 2, 3, 4, 5});
+        BinaryTree tree_1(std::vector{1, 2, 3});
+        BinaryTree tree_2(std::vector{1, 2, 3, 4, 5});
 
         // WHEN/THEN
     	EXPECT_THAT(tree_1.GetHeight(), 2);
