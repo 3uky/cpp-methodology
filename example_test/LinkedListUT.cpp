@@ -6,9 +6,9 @@
 using namespace std;
 using ::testing::ElementsAre;
 
-namespace cpp_internals
+namespace containers
 {
-TEST(LinkedLIstTest, ShouldAccessFirstElement)
+TEST(LinkedListTest, ShouldAccessFirstElement)
 {
 	// GIVEN
 	LinkedList<int> test_list;
@@ -22,7 +22,7 @@ TEST(LinkedLIstTest, ShouldAccessFirstElement)
 	EXPECT_EQ(test_list.Front(), 5);
 }
 
-TEST(LinkedLIstTest, ShouldDeleteValueOnSpecifiedPosition)
+TEST(LinkedListTest, ShouldDeleteValueOnSpecifiedPosition)
 {
 	// GIVEN
 	LinkedList<int> test_list;
@@ -38,7 +38,7 @@ TEST(LinkedLIstTest, ShouldDeleteValueOnSpecifiedPosition)
 	EXPECT_EQ(test_list.Get(1), 7);
 }
 
-TEST(LinkedLIstTest, ShouldInsertValues)
+TEST(LinkedListTest, ShouldInsertValues)
 {
 	// GIVEN
 	LinkedList<int> test_list;
@@ -68,7 +68,7 @@ TEST(LinkedListTest, ShouldReverseValuesOfStdList)
 
 }
 
-TEST(LinkedLIstTest, ShouldSwapElements)
+TEST(LinkedListTest, ShouldSwapElements)
 {
 	// GIVEN
 	LinkedList<int> test_list;
@@ -85,7 +85,7 @@ TEST(LinkedLIstTest, ShouldSwapElements)
 	EXPECT_EQ(test_list.Get(2), 5);
 }
 
-TEST(LinkedLIstTest, ShouldReturnExactCountOfElements)
+TEST(LinkedListTest, ShouldReturnExactCountOfElements)
 {	// GIVEN
 	LinkedList<int> test_list;
 	test_list.Insert(5);
@@ -97,7 +97,7 @@ TEST(LinkedLIstTest, ShouldReturnExactCountOfElements)
 }
 
 
-TEST(LinkedLIstTest, ShouldReverseElements)
+TEST(LinkedListTest, ShouldReverseElements)
 {
 	// GIVEN
 	LinkedList<int> test_list;
@@ -116,7 +116,7 @@ TEST(LinkedLIstTest, ShouldReverseElements)
 	EXPECT_EQ(test_list.Get(3), 5);
 }
 
-TEST(LinkedLIstTest, ShouldRetrunLastElement)
+TEST(LinkedListTest, ShouldRetrunLastElement)
 {
 	// GIVEN
 	LinkedList<int> test_list;

@@ -1,5 +1,8 @@
 #pragma once
 
+namespace containers
+{
+
 template<typename T>
 class ILinkedList
 {
@@ -13,3 +16,5 @@ public:
 	virtual void Reverse() = 0;
 	virtual unsigned int Count() const = 0;
 };
+
+}

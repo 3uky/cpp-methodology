@@ -6,7 +6,7 @@
 
 #include <ranges>
 
-namespace basic_elements
+namespace containers
 {
 
 TEST(StackTest, ShouldBeEmptyAfterPopAllElements)

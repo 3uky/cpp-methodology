@@ -3,7 +3,7 @@
 #include <deque>
 #include <vector>
 
-namespace basic_elements
+namespace containers
 {
 	class IStack
 	{
@@ -71,12 +71,12 @@ namespace basic_elements
 	};
 
 
-	class Element
+	class StackElement
 	{
 	public:
-		Element(int value) : data(value) {}
+		StackElement(int value) : data(value) {}
 		int data;
-		std::unique_ptr<Element> next = nullptr;
+		std::unique_ptr<StackElement> next = nullptr;
 	};
 
 	class Stack : public IStack
@@ -85,7 +85,7 @@ namespace basic_elements
 		Stack() {};
 		void Push(int value) override
 		{
-			auto new_element = std::make_unique<Element>(value);
+			auto new_element = std::make_unique<StackElement>(value);
 			if (m_top == nullptr)
 				m_top = std::move(new_element);
 			else
@@ -112,6 +112,6 @@ namespace basic_elements
 		}
 
 	private:
-		std::unique_ptr<Element> m_top;
+		std::unique_ptr<StackElement> m_top;
 	};
 }

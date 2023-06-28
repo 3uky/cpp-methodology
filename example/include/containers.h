@@ -18,13 +18,16 @@
 
 using namespace std;
 
+namespace containers
+{
+
 class MyArray
 {
     array<int, 10> m_array;
 
-	void Initialization()
+    void Initialization()
     {
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
             m_array.at(i) = i + 1;
     }
 
@@ -32,31 +35,31 @@ class MyArray
     {
         // print content:
         cout << "Array contains:";
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
             cout << ' ' << m_array.at(i);
         cout << '\n';
     }
-
 };
+
 class MyVector
 {
     void Init() {
-        std::vector<int> myvector (3,100); // 100 100 100
+        std::vector<int> myvector(3, 100); // 100 100 100
         std::vector<int>::iterator it;
 
         it = myvector.begin();
-        it = myvector.insert ( it , 200 ); // 200 100 100 100
+        it = myvector.insert(it, 200); // 200 100 100 100
 
-        myvector.insert (it,2,300); // 300 300 200 100 100 1000
+        myvector.insert(it, 2, 300); // 300 300 200 100 100 1000
 
         // "it" no longer valid, get a new one:
         it = myvector.begin();
 
-        std::vector<int> anothervector (2,400);
-        myvector.insert (it+2,anothervector.begin(),anothervector.end()); // 300 300 400 400 200 100 100 100
+        std::vector<int> anothervector(2, 400);
+        myvector.insert(it + 2, anothervector.begin(), anothervector.end()); // 300 300 400 400 200 100 100 100
 
-        int myarray [] = { 501,502,503 };
-        myvector.insert (myvector.begin(), myarray, myarray+3); // 501 502 503 300 300 400 400 200 100 100 100
+        int myarray[] = { 501,502,503 };
+        myvector.insert(myvector.begin(), myarray, myarray + 3); // 501 502 503 300 300 400 400 200 100 100 100
     }
 
     void Print(vector<int>& vec) const
@@ -112,7 +115,7 @@ class MyMap
 
     void Init() {
         // initialization with value
-    	m_map['a'] = 10;
+        m_map['a'] = 10;
         m_map['b'] = 30;
         m_map['c'] = 50;
         m_map['d'] = 70;
@@ -122,8 +125,6 @@ class MyMap
 
         std::cout << "second['a'] is " << new_map['a'] << '\n';
     }
-
- 
 };
 
-    
+}

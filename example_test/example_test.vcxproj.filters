@@ -76,9 +76,6 @@
     <ClCompile Include="UniqueCharactersUT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedListUT.cpp">
-      <Filter>tests\cpp_internals</Filter>
-    </ClCompile>
     <ClCompile Include="BinarySearchUT.cpp">
       <Filter>tests\algorithms\search</Filter>
     </ClCompile>
@@ -110,10 +107,16 @@
       <Filter>tests\exercises</Filter>
     </ClCompile>
     <ClCompile Include="ContainersUT.cpp">
-      <Filter>tests\basic_elements\containers</Filter>
+      <Filter>tests\containers</Filter>
     </ClCompile>
     <ClCompile Include="StackUT.cpp">
-      <Filter>tests\basic_elements\containers</Filter>
+      <Filter>tests\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListUT.cpp">
+      <Filter>tests\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueUT.cpp">
+      <Filter>tests\containers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -165,7 +168,7 @@
     <Filter Include="tests\algorithms\binary_tree">
       <UniqueIdentifier>{87d1ea73-caa2-4725-ad78-ef6ca8a9004e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="tests\basic_elements\containers">
+    <Filter Include="tests\containers">
       <UniqueIdentifier>{c079d569-8ec7-4581-a893-872b35aecd75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

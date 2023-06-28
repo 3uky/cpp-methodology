@@ -40,17 +40,17 @@
     <Filter Include="Header Files\algorithms\sort">
       <UniqueIdentifier>{af81cd5d-5f70-4669-83e8-37d1d2300ad2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\cpp_internals\list">
-      <UniqueIdentifier>{990ce789-24cd-4a6d-8ff0-6e98c808c142}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\parallel_programming">
       <UniqueIdentifier>{3f2c745c-11fe-4aa2-92eb-ab3f49c111a4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\algorithms\binary_tree">
       <UniqueIdentifier>{92b686fe-3057-460e-b74e-d636866a0def}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\basic_elements\containers">
+    <Filter Include="Header Files\containers">
       <UniqueIdentifier>{cd37e51d-e9ef-4d8b-b7d1-923c2bc36cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\containers\list">
+      <UniqueIdentifier>{990ce789-24cd-4a6d-8ff0-6e98c808c142}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -138,10 +138,10 @@
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
     <ClInclude Include="include\LinkedList.h">
-      <Filter>Header Files\cpp_internals\list</Filter>
+      <Filter>Header Files\containers\list</Filter>
     </ClInclude>
     <ClInclude Include="include\ILinkedList.h">
-      <Filter>Header Files\cpp_internals\list</Filter>
+      <Filter>Header Files\containers\list</Filter>
     </ClInclude>
     <ClInclude Include="include\QuickSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
@@ -162,10 +162,13 @@
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
     <ClInclude Include="include\Containers.h">
-      <Filter>Header Files\basic_elements\containers</Filter>
+      <Filter>Header Files\containers</Filter>
     </ClInclude>
     <ClInclude Include="include\Stack.h">
-      <Filter>Header Files\basic_elements\containers</Filter>
+      <Filter>Header Files\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Queue.h">
+      <Filter>Header Files\containers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

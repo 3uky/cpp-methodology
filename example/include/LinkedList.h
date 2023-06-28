@@ -2,6 +2,9 @@
 
 #include "ILinkedList.h"
 
+namespace containers
+{
+
 template<typename T>
 class ListElement
 {
@@ -71,7 +74,7 @@ public:
 	void Reverse() override
 	{
 		const int count = Count();
-		for (int i = 0, j = count - 1 ; i < count / 2; i++, j--)
+		for (int i = 0, j = count - 1; i < count / 2; i++, j--)
 			Swap(i, j);
 	}
 
@@ -106,3 +109,5 @@ private:
 
 	std::shared_ptr<ListElement<T>> m_head = nullptr; // first element
 };
+
+}
