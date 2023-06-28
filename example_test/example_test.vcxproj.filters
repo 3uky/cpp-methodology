@@ -118,6 +118,9 @@
     <ClCompile Include="QueueUT.cpp">
       <Filter>tests\containers</Filter>
     </ClCompile>
+    <ClCompile Include="PriorityQueueGreatestUT.cpp">
+      <Filter>tests\exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
