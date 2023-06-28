@@ -106,7 +106,7 @@
     <ClCompile Include="FrequencySortUT.cpp">
       <Filter>tests\exercises</Filter>
     </ClCompile>
-    <ClCompile Include="ContainersUT.cpp">
+    <ClCompile Include="ContainersUsageUT.cpp">
       <Filter>tests\containers</Filter>
     </ClCompile>
     <ClCompile Include="StackUT.cpp">

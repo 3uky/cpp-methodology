@@ -150,7 +150,7 @@
     <ClInclude Include="include\Class.h" />
     <ClInclude Include="include\ConditionVariable.h" />
     <ClInclude Include="include\MoveCopy.h" />
-    <ClInclude Include="include\Containers.h" />
+    <ClInclude Include="include\ContainersUsage.h" />
     <ClInclude Include="include\Adapter.h" />
     <ClInclude Include="include\Facade.h" />
     <ClInclude Include="include\Factory.h" />

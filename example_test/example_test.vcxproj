@@ -53,7 +53,7 @@
     <ClCompile Include="ObserverBoostSignalUT.cpp" />
     <ClCompile Include="ClassUT.cpp" />
     <ClCompile Include="MoveCopyUT.cpp" />
-    <ClCompile Include="ContainersUT.cpp" />
+    <ClCompile Include="ContainersUsageUT.cpp" />
     <ClCompile Include="LambdaUT.cpp" />
     <ClCompile Include="MutableUT.cpp" />
     <ClCompile Include="ObserverUT.cpp" />

@@ -161,13 +161,13 @@
     <ClInclude Include="include\FrequencySort.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\Containers.h">
-      <Filter>Header Files\containers</Filter>
-    </ClInclude>
     <ClInclude Include="include\Stack.h">
       <Filter>Header Files\containers</Filter>
     </ClInclude>
     <ClInclude Include="include\Queue.h">
+      <Filter>Header Files\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ContainersUsage.h">
       <Filter>Header Files\containers</Filter>
     </ClInclude>
   </ItemGroup>
