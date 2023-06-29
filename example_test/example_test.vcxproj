@@ -36,51 +36,51 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdapterUT.cpp" />
-    <ClCompile Include="BinarySearchUT.cpp" />
-    <ClCompile Include="BinaryTreeUT.cpp" />
-    <ClCompile Include="BubbleSortUT.cpp" />
-    <ClCompile Include="CharacterFilterUT.cpp" />
-    <ClCompile Include="ConditionVariableUT.cpp" />
-    <ClCompile Include="FacadeUT.cpp" />
-    <ClCompile Include="FactoryUT.cpp" />
-    <ClCompile Include="FibonacciUT.cpp" />
-    <ClCompile Include="FrequencySortUT.cpp" />
-    <ClCompile Include="PriorityQueueGreatestUT.cpp" />
-    <ClCompile Include="InsertionSortUT.cpp" />
-    <ClCompile Include="LinkedListUT.cpp" />
-    <ClCompile Include="MergeSortUT.cpp" />
-    <ClCompile Include="MutexGuardThreadUT.cpp" />
-    <ClCompile Include="ObserverBoostSignalUT.cpp" />
-    <ClCompile Include="ClassUT.cpp" />
-    <ClCompile Include="MoveCopyUT.cpp" />
-    <ClCompile Include="ContainersUsageUT.cpp" />
-    <ClCompile Include="LambdaUT.cpp" />
-    <ClCompile Include="MutableUT.cpp" />
-    <ClCompile Include="ObserverUT.cpp" />
-    <ClCompile Include="OverloadingOperatorsUT.cpp" />
-    <ClCompile Include="PolymorphismUT.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="QueueUT.cpp" />
-    <ClCompile Include="QuickSortUT.cpp" />
-    <ClCompile Include="ReverseStringUT.cpp" />
-    <ClCompile Include="SelectionSort.cpp" />
-    <ClCompile Include="SharedPtrUT.cpp" />
-    <ClCompile Include="ShuffleUT.cpp" />
-    <ClCompile Include="SingletonUT.cpp" />
-    <ClCompile Include="SmartpointerUsageUT.cpp" />
-    <ClCompile Include="StackUT.cpp" />
-    <ClCompile Include="TemplateUT.cpp" />
-    <ClCompile Include="async_wait_UT.cpp" />
-    <ClCompile Include="TypeConversionsUT.cpp" />
-    <ClCompile Include="UniqueCharactersUT.cpp" />
-    <ClCompile Include="UniqueNamesUT.cpp" />
-    <ClCompile Include="UniquePtrUT.cpp" />
+    <ClCompile Include="src\algorithms\BinarySearchUT.cpp" />
+    <ClCompile Include="src\algorithms\BinaryTreeUT.cpp" />
+    <ClCompile Include="src\algorithms\BubbleSortUT.cpp" />
+    <ClCompile Include="src\algorithms\InsertionSortUT.cpp" />
+    <ClCompile Include="src\algorithms\MergeSortUT.cpp" />
+    <ClCompile Include="src\algorithms\QuickSortUT.cpp" />
+    <ClCompile Include="src\algorithms\SelectionSortUT.cpp" />
+    <ClCompile Include="src\algorithms\ShuffleUT.cpp" />
+    <ClCompile Include="src\basic_elements\LambdaUT.cpp" />
+    <ClCompile Include="src\basic_elements\MoveCopyUT.cpp" />
+    <ClCompile Include="src\basic_elements\MutableUT.cpp" />
+    <ClCompile Include="src\basic_elements\OverloadingOperatorsUT.cpp" />
+    <ClCompile Include="src\basic_elements\SmartpointerUsageUT.cpp" />
+    <ClCompile Include="src\basic_elements\TemplateUT.cpp" />
+    <ClCompile Include="src\basic_elements\TypeConversionsUT.cpp" />
+    <ClCompile Include="src\basic_paradigms\ClassUT.cpp" />
+    <ClCompile Include="src\basic_paradigms\PolymorphismUT.cpp" />
+    <ClCompile Include="src\boost\async_wait_UT.cpp" />
+    <ClCompile Include="src\containers\ContainersUsageUT.cpp" />
+    <ClCompile Include="src\containers\LinkedListUT.cpp" />
+    <ClCompile Include="src\containers\PriorityQueueUT.cpp" />
+    <ClCompile Include="src\containers\QueueUT.cpp" />
+    <ClCompile Include="src\containers\StackUT.cpp" />
+    <ClCompile Include="src\cpp_internals\SharedPtrUT.cpp" />
+    <ClCompile Include="src\cpp_internals\UniquePtrUT.cpp" />
+    <ClCompile Include="src\design_patterns\AdapterUT.cpp" />
+    <ClCompile Include="src\design_patterns\FacadeUT.cpp" />
+    <ClCompile Include="src\design_patterns\FactoryUT.cpp" />
+    <ClCompile Include="src\design_patterns\ObserverBoostSignalUT.cpp" />
+    <ClCompile Include="src\design_patterns\ObserverUT.cpp" />
+    <ClCompile Include="src\design_patterns\SingletonUT.cpp" />
+    <ClCompile Include="src\exercises\CharacterFilterUT.cpp" />
+    <ClCompile Include="src\exercises\FibonacciUT.cpp" />
+    <ClCompile Include="src\exercises\FrequencySortUT.cpp" />
+    <ClCompile Include="src\exercises\ReverseStringUT.cpp" />
+    <ClCompile Include="src\exercises\UniqueCharactersUT.cpp" />
+    <ClCompile Include="src\exercises\UniqueNamesUT.cpp" />
+    <ClCompile Include="src\paralle_programming\ConditionVariableUT.cpp" />
+    <ClCompile Include="src\paralle_programming\MutexGuardThreadUT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\example\example.vcxproj">
@@ -106,7 +106,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -123,7 +123,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -139,7 +139,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,7 +157,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\example\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>

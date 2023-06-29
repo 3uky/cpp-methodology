@@ -16,9 +16,6 @@
     <Filter Include="Header Files\cpp_internals">
       <UniqueIdentifier>{0b58fdf6-f1c9-426a-95f8-1a391c630b68}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\boost_asio">
-      <UniqueIdentifier>{9844385f-09d3-4cb3-b734-9b442ce41931}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\basic_elements">
       <UniqueIdentifier>{380ab401-165f-4f3c-a0da-291c5aa57d0a}</UniqueIdentifier>
     </Filter>
@@ -52,6 +49,9 @@
     <Filter Include="Header Files\containers\list">
       <UniqueIdentifier>{990ce789-24cd-4a6d-8ff0-6e98c808c142}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\boost">
+      <UniqueIdentifier>{9844385f-09d3-4cb3-b734-9b442ce41931}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -81,7 +81,7 @@
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
     <ClInclude Include="include\async_wait.h">
-      <Filter>Header Files\boost_asio</Filter>
+      <Filter>Header Files\boost</Filter>
     </ClInclude>
     <ClInclude Include="include\ConditionVariable.h">
       <Filter>Header Files\parallel_programming</Filter>
