@@ -2,6 +2,7 @@
 
 #include <list>
 #include <queue>
+#include <memory>
 
 // Time Complexity : O(N)
 // Space Complexity: O(1)/O(n)

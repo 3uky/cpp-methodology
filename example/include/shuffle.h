@@ -1,6 +1,5 @@
 #pragma once
 
-#include <array>
 #include <random>
 
 namespace algorithms

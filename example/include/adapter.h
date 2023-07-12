@@ -1,6 +1,7 @@
 // https://refactoring.guru/design-patterns/adapter
 // Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate.
 // The Adapter pattern lets you create a middle - layer class that serves as a translator between your code and a legacy class, a 3rd - party class or any other class with a weird interface.
+// When the adapter receives a call to any of its methods, it translates parameters to the appropriate format and then directs the call to one or several methods of the wrapped object.
 
 #pragma once
 

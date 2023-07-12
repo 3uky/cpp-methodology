@@ -6,6 +6,8 @@
 // Time Complexity : O(N*logN)/O(N2)
 // Space Complexity : O(1) as no extra space is used
 
+#include <vector>
+
 using namespace std;
 
 namespace algorithms

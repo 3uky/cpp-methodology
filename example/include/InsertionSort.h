@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include <vector>
 
 // https://builtin.com/machine-learning/fastest-sorting-algorithm
 // time complexity: O(n^2)/O(n) worst/best

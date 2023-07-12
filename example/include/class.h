@@ -12,7 +12,7 @@ class TestClass
 public:
     TestClass(int x) : var(x) {}
 
-    int get(void)
+    int get()
     {
         return var;
     }
