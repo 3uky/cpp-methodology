@@ -3,51 +3,56 @@
 
 namespace basic_paradigm
 {
-    TEST(PolymorphismTest, ShouldBePolymorphicWithStaticInitialization) {
-        // GIVEN
-        Rectangle rectangle;
-        Triangle triangle;
-        Polygon* polymorphic_rectangle = &rectangle;
-        Polygon* polymorphic_triangle = &triangle;
 
-        // WHEN
-        polymorphic_rectangle->set_values(4, 5);
-        polymorphic_triangle->set_values(4, 5);
+TEST(PolymorphismTest, ShouldBePolymorphicWithStaticInitialization)
+{
+    // GIVEN
+    Rectangle rectangle;
+    Triangle triangle;
+    Polygon* polymorphic_rectangle = &rectangle;
+    Polygon* polymorphic_triangle = &triangle;
 
-        // THEN
-        EXPECT_EQ(polymorphic_rectangle->area(), 20);
-        EXPECT_EQ(polymorphic_triangle->area(), 10);
+    // WHEN
+    polymorphic_rectangle->set_values(4, 5);
+    polymorphic_triangle->set_values(4, 5);
 
-        //cout << "static init rect(4x5): " << ppoly1->area() << endl;
-        //cout << "static init trgl(4x5): " << ppoly2->area() << endl;
-    }
-    TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicInitialization) {
-        // GIVEN
-        Polygon* polygon = new Rectangle();
+    // THEN
+    EXPECT_EQ(polymorphic_rectangle->area(), 20);
+    EXPECT_EQ(polymorphic_triangle->area(), 10);
 
-        // WHEN
-        polygon->set_values(4, 5);
+    //cout << "static init rect(4x5): " << ppoly1->area() << endl;
+    //cout << "static init trgl(4x5): " << ppoly2->area() << endl;
+}
 
-        // THEN
-        EXPECT_EQ(polygon->area(), 20);
+TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicInitialization)
+{
+    // GIVEN
+    Polygon* polygon = new Rectangle();
 
-        // cout << "dynamic init rect(4x5): " << polymorphic_rectangle->area() << endl;
+    // WHEN
+    polygon->set_values(4, 5);
 
-        // CLEANUP
-        delete polygon;
-    }
+    // THEN
+    EXPECT_EQ(polygon->area(), 20);
 
+    // cout << "dynamic init rect(4x5): " << polymorphic_rectangle->area() << endl;
 
-    TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicSmartInitialization) {
-        // GIVEN
-        std::shared_ptr<Polygon> polygon = std::make_shared<Rectangle>();
+    // CLEANUP
+    delete polygon;
+}
 
-        // WHEN
-        polygon->set_values(4, 5);
+TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicSmartInitialization)
+{
+    // GIVEN
+    std::shared_ptr<Polygon> polygon = std::make_shared<Rectangle>();
 
-        // THEN
-        EXPECT_EQ(polygon->area(), 20);
+    // WHEN
+    polygon->set_values(4, 5);
 
-        //cout << "shared ptr rect(4x5): " << polygon->area() << endl;
-    }
+    // THEN
+    EXPECT_EQ(polygon->area(), 20);
+
+    //cout << "shared ptr rect(4x5): " << polygon->area() << endl;
+}
+
 }

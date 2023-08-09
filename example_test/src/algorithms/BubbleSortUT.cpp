@@ -11,49 +11,51 @@ using namespace std;
 
 namespace algorithms
 {
-	TEST(BubbleSortTest, ShouldSortSequence)
-	{
-		// GIVEN
-		std::vector<int> tested_arr = { 10, 7, 8, 9, 1, 5 };
 
-		// make array copy and sort it
-		auto sorted_arr = tested_arr;
-		sort(std::begin(sorted_arr), std::end(sorted_arr));
+TEST(BubbleSortTest, ShouldSortSequence)
+{
+	// GIVEN
+	std::vector tested_arr = { 10, 7, 8, 9, 1, 5 };
 
-		// WHEN
-		BubbleSort::Sort(tested_arr);
+	// make array copy and sort it
+	auto sorted_arr = tested_arr;
+	sort(std::begin(sorted_arr), std::end(sorted_arr));
 
-		// THEN
-		EXPECT_EQ(tested_arr, sorted_arr);
-	}
+	// WHEN
+	BubbleSort::Sort(tested_arr);
 
-	TEST(BubbleSortTest, ShouldNotSortSortedSequence)
-	{
-		// GIVEN
-		std::vector<int> tested_arr = { 10, 7, 8, 9, 1, 5 };
-		sort(std::begin(tested_arr), std::end(tested_arr));
-		const auto sorted_arr = tested_arr;
+	// THEN
+	EXPECT_EQ(tested_arr, sorted_arr);
+}
 
-		// WHEN
-		BubbleSort::Sort(tested_arr);
+TEST(BubbleSortTest, ShouldNotSortSortedSequence)
+{
+	// GIVEN
+	std::vector tested_arr = { 10, 7, 8, 9, 1, 5 };
+	sort(std::begin(tested_arr), std::end(tested_arr));
+	const auto sorted_arr = tested_arr;
 
-		// THEN
-		EXPECT_EQ(tested_arr, sorted_arr);
-	}
+	// WHEN
+	BubbleSort::Sort(tested_arr);
 
-	TEST(BubbleSortTest, ShouldSortSequenceWithRevisedAlgorihm)
-	{
-		// GIVEN
-		std::vector<int> tested_arr = { 10, 7, 8, 9, 1, 5 };
+	// THEN
+	EXPECT_EQ(tested_arr, sorted_arr);
+}
 
-		// make array copy and sort it
-		auto sorted_arr = tested_arr;
-		sort(std::begin(sorted_arr), std::end(sorted_arr));
+TEST(BubbleSortTest, ShouldSortSequenceWithRevisedAlgorihm)
+{
+	// GIVEN
+	std::vector tested_arr = { 10, 7, 8, 9, 1, 5 };
 
-		// WHEN
-		BubbleSort::RevisedSort(tested_arr);
+	// make array copy and sort it
+	auto sorted_arr = tested_arr;
+	sort(std::begin(sorted_arr), std::end(sorted_arr));
 
-		// THEN
-		EXPECT_EQ(tested_arr, sorted_arr);
-	}
+	// WHEN
+	BubbleSort::RevisedSort(tested_arr);
+
+	// THEN
+	EXPECT_EQ(tested_arr, sorted_arr);
+}
+
 }

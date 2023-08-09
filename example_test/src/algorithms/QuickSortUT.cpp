@@ -12,7 +12,7 @@ namespace algorithms
 TEST(QuickSortTest, ShouldSortSequence)
 {
 	// GIVEN
-    std::vector<int> tested_arr = { 10, 7, 8, 9, 1, 5 };
+    std::vector tested_arr = { 10, 7, 8, 9, 1, 5 };
 
 	// make array copy and sort it
 	auto sorted_arr = tested_arr;
@@ -28,7 +28,7 @@ TEST(QuickSortTest, ShouldSortSequence)
 TEST(QuickSortTest, ShouldNotSortSortedSequence)
 {
 	// GIVEN
-	std::vector<int> tested_arr = { 10, 7, 8, 9, 1, 5 };
+	std::vector tested_arr = { 10, 7, 8, 9, 1, 5 };
 	sort(std::begin(tested_arr), std::end(tested_arr));
 	const auto sorted_arr = tested_arr;
 

@@ -11,8 +11,8 @@ namespace algorithms
 TEST(BinarySearchTest, ShouldFindElement)
 {
 	// GIVEN
-	vector<int> arr = { 2, 3, 4, 10, 40 };
-	int x = 10;
+	const vector arr = { 2, 3, 4, 10, 40 };
+	constexpr int x = 10;
 
 
 	// WHEN
@@ -25,8 +25,8 @@ TEST(BinarySearchTest, ShouldFindElement)
 TEST(BinarySearchTest, ShouldFindElementWithRecursiveSearch)
 {
 	// GIVEN
-	vector<int> arr = { 2, 3, 4, 10, 40 };
-	int x = 10;
+	const vector arr = { 2, 3, 4, 10, 40 };
+	constexpr int x = 10;
 
 	// WHEN
 	int result = BinarySearch::RecursiveSearch(arr, 0, int(arr.size()) - 1, x);
@@ -34,6 +34,5 @@ TEST(BinarySearchTest, ShouldFindElementWithRecursiveSearch)
 	// THEN
 	EXPECT_EQ(result, 3);
 }
-
 
 }

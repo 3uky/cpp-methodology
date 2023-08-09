@@ -4,8 +4,8 @@
 #include <array>
 
 using namespace std;
-using ::testing::ElementsAre;
-using ::testing::Not;
+using testing::ElementsAre;
+using testing::Not;
 
 namespace algorithms
 {
