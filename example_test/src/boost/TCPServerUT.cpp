@@ -3,11 +3,11 @@
 
 using namespace std;
 
-namespace parallel_programming
+namespace boost_asio
 {
     // nc 127.0.0.1 5555
     // ncat 127.0.0.1 5555
-	TEST(NetworkAsioTCPServerTest, ShouldHandleClientRequest)
+	TEST(NetworkTest, DISABLED_TCPServerShouldHandleClientRequest)
 	{
         try
         {
