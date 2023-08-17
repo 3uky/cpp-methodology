@@ -49,7 +49,10 @@
     <Filter Include="Header Files\containers\list">
       <UniqueIdentifier>{990ce789-24cd-4a6d-8ff0-6e98c808c142}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\boost">
+    <Filter Include="Header Files\network">
+      <UniqueIdentifier>{5a1d6fa5-a38f-4dc0-9990-6f0dc36b9ae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\boost_asio">
       <UniqueIdentifier>{9844385f-09d3-4cb3-b734-9b442ce41931}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -80,8 +83,8 @@
     <ClInclude Include="include\ObserverBoostSignal.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\async_wait.h">
-      <Filter>Header Files\boost</Filter>
+    <ClInclude Include="include\AsyncWait.h">
+      <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
     <ClInclude Include="include\ConditionVariable.h">
       <Filter>Header Files\parallel_programming</Filter>
@@ -169,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="include\ContainersUsage.h">
       <Filter>Header Files\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TCPServer.h">
+      <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
