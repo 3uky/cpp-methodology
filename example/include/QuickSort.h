@@ -43,10 +43,10 @@ private:
 // of pivot and all greater elements to right of pivot
     static int Partition(std::vector<int>& arr, int low, int high)
     {
-        // Choosing the pivot
+        // Choosing the pivot - there could be more strategy e.g. higher index
         const int pivot = arr[high];
 
-        // i: Index of smaller element and indicates the right position of pivot found so far
+        // i: Index of smaller element and indicates the correct position of pivot found so far
         int i = low;
 
         for (int j = low; j < high; j++)
