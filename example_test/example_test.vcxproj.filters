@@ -73,9 +73,6 @@
     <ClCompile Include="src\basic_paradigms\PolymorphismUT.cpp">
       <Filter>tests\basic_paradigms</Filter>
     </ClCompile>
-    <ClCompile Include="src\boost\async_wait_UT.cpp">
-      <Filter>tests\boost</Filter>
-    </ClCompile>
     <ClCompile Include="src\containers\ContainersUsageUT.cpp">
       <Filter>tests\containers</Filter>
     </ClCompile>
@@ -120,6 +117,12 @@
     </ClCompile>
     <ClCompile Include="src\exercises\UniqueNamesUT.cpp">
       <Filter>tests\exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="src\boost\AsyncWaitUT.cpp">
+      <Filter>tests\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="src\boost\TCPServerUT.cpp">
+      <Filter>tests\boost</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +176,9 @@
     </Filter>
     <Filter Include="tests\boost">
       <UniqueIdentifier>{0eb51039-aa2d-47a0-89c4-89f01868c411}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\network">
+      <UniqueIdentifier>{73fdbace-ab79-4e4c-9c3f-25339ae759c8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
