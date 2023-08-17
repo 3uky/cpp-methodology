@@ -15,11 +15,9 @@ class BubbleSort
 public:
     static void Sort(std::vector<int>& arr)
     {
-        int n = static_cast<int>(arr.size());
-
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < arr.size(); i++)
         {
-            for (int j = 1; j < n; j++)
+            for (int j = 1; j < arr.size(); j++)
             {
                 if (arr[j - 1] > arr[j])
                 {
@@ -31,12 +29,10 @@ public:
 
     static void RevisedSort(std::vector<int>& arr)
     {
-        int n = static_cast<int>(arr.size());
-
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < arr.size(); i++)
         {
             bool isSwapped = false;
-            for (int j = 0; j < n - 1; j++)
+            for (int j = 0; j < arr.size() - 1; j++)
             {
                 if (arr[j] > arr[j + 1])
                 {
