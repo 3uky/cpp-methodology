@@ -23,10 +23,10 @@ public:
 	/*** Copy Semantics ***/
 	MySharedPtr(const MySharedPtr& obj) // copy constructor: MySharedPtr<int> bar = foo;
 	{
-		this->ptr = obj.ptr; // share the underlying pointer
-		this->refCount = obj.refCount;
+		ptr = obj.ptr; // share the underlying pointer
+		refCount = obj.refCount;
 		if (obj.ptr != nullptr)
-			(*this->refCount)++; // if the pointer is not null, increment the refCount
+			(*refCount)++; // if the pointer is not null, increment the refCount
 	}
 
 	MySharedPtr& operator=(const MySharedPtr& obj) // copy assignment: foo = bar;
@@ -34,18 +34,18 @@ public:
 		Reset(); // cleanup any existing data
 
 		// Assign incoming object's data to this object
-		this->ptr = obj.ptr; // share the underlying pointer
-		this->refCount = obj.refCount;
+		ptr = obj.ptr; // share the underlying pointer
+		refCount = obj.refCount;
 		if (obj.ptr != nullptr)
-			(*this->refCount)++; // if the pointer is not null, increment the refCount
+			(*refCount)++; // if the pointer is not null, increment the refCount
 		return *this;
 	}
 
 	/*** Move Semantics ***/
 	MySharedPtr(MySharedPtr&& dyingObj) // move constructor: MySharedPtr<int> b = MySharedPtr(new int(3));
 	{
-		this->ptr = dyingObj.ptr; // share the underlying pointer
-		this->refCount = dyingObj.refCount;
+		ptr = dyingObj.ptr; // share the underlying pointer
+		refCount = dyingObj.refCount;
 
 		dyingObj.ptr = nullptr;
 		dyingObj.refCount = nullptr; // clean the dying object
@@ -55,8 +55,8 @@ public:
 	{
 		Reset(); // cleanup any existing data
 
-		this->ptr = dyingObj.ptr; // share the underlying pointer
-		this->refCount = dyingObj.refCount;
+		ptr = dyingObj.ptr; // share the underlying pointer
+		refCount = dyingObj.refCount;
 
 		dyingObj.ptr = nullptr; // clean the dying object
 		dyingObj.refCount = nullptr;
@@ -65,24 +65,24 @@ public:
 
 	uint use_count() const
 	{
-		if (this->refCount == nullptr)
+		if (refCount == nullptr)
 			return 0;
-		return *refCount; // *this->refCount
+		return *refCount;
 	}
 
 	T* get() const
 	{
-		return this->ptr;
+		return ptr;
 	}
 
 	T* operator->() const
 	{
-		return this->ptr;
+		return ptr;
 	}
 
 	T& operator*() const
 	{
-		return *(this->ptr);
+		return *ptr;
 	}
 
 	~MySharedPtr() // destructor
