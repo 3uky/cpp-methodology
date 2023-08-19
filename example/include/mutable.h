@@ -7,7 +7,7 @@ class Mutable
 public:
     void ChangeMutableVariable() const 
     {
-        m_mutable_var++;
+        m_mutable_var++; // mutable variables could be changed in const method
     }
 
     int GetValue() const
