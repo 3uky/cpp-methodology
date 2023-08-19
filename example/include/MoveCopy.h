@@ -45,6 +45,9 @@ public:
     }
 
     // copy assignment
+    // Constructor foo("foo");
+    // Constructor bar("bar");
+    // foo = bar;
     Constructor& operator=(const Constructor& x)
 	{
         delete ptr;                      // delete currently pointed string
@@ -53,6 +56,8 @@ public:
     }
     
     // move assignment
+    // Constructor foo("foo");
+    // foo = Constructor("baz");
     Constructor& operator=(Constructor&& x)
 	{
         delete ptr;
