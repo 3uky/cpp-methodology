@@ -76,7 +76,6 @@ TEST(ConstructorTest, ShouldBeInitializedTroughMoveAssignment)
 {
     // GIVEN
     Constructor foo("foo");
-    Constructor bar("bar");
 
     // WHEN
     foo = Constructor("baz"); // move assignment
