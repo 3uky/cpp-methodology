@@ -41,7 +41,7 @@ TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicInitialization)
     delete polygon;
 }
 
-TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicSmartInitialization)
+TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicSharedPointerInitialization)
 {
     // GIVEN
     std::shared_ptr<Polygon> polygon = std::make_shared<Rectangle>();
@@ -53,6 +53,21 @@ TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicSmartInitialization)
     EXPECT_EQ(polygon->area(), 20);
 
     //cout << "shared ptr rect(4x5): " << polygon->area() << endl;
+}
+
+TEST(PolymorphismTest, ShouldBePolymorphicWithDynamicUniquePointerInitialization)
+{
+    // GIVEN
+    std::unique_ptr<Polygon> polygonA = std::make_unique<Rectangle>();
+    std::unique_ptr<Polygon> polygonB = std::make_unique<Triangle>();
+
+    // WHEN
+    polygonA->set_values(4, 5);
+    polygonB->set_values(4, 5);
+
+    // THEN
+    EXPECT_EQ(polygonA->area(), 20);
+    EXPECT_EQ(polygonB->area(), 10);
 }
 
 }
