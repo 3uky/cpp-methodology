@@ -62,7 +62,7 @@ public:
 	{
         delete ptr;
         ptr = x.ptr;
-        x.ptr = nullptr;
+        x.ptr = nullptr; // free of memory is not necessary because this->ptr (or just ptr in this context) is pointing on it now
         return *this;
     }
 

@@ -84,6 +84,20 @@ TEST(ConstructorTest, ShouldBeInitializedTroughMoveAssignment)
     EXPECT_EQ(foo.content(), "baz");
 }
 
+TEST(ConstructorTest, ShouldBeInitializedTroughMoveAssignment2)
+{
+    // GIVEN
+    Constructor foo("foo");
+    Constructor baz("baz");
+
+    // WHEN
+    foo = std::move(baz); // move assignment
+
+    // THEN
+    EXPECT_EQ(foo.content(), "baz");
+}
+
+
 TEST(ConstructorTest, ShouldBeInitializedTroughMoveAssignmentAndOverload)
 {
     // GIVEN
