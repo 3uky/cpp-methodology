@@ -65,13 +65,13 @@ private:
         return std::make_unique<Node>(data);
     }
 
-    void BuildInLevelOrder(std::vector<int> arr)
+    void BuildInLevelOrder(std::vector<int> values)
     {
         std::queue<Node*> q;
-        for (auto value : arr)
+        for (auto value : values)
         {
             auto node = NewNode(value);
-
+            
             q.push(node.get());
 
             if (m_root == nullptr)
