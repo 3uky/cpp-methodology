@@ -16,7 +16,7 @@ public:
 	MyUniquePtr(MyUniquePtr&& dyingObj) // move constructor
 	{
 		// Transfer ownership of the memory pointed by dyingObj to this object
-		this->ptr = dyingObj.ptr;
+		ptr = dyingObj.ptr;
 		dyingObj.ptr = nullptr; 
 	}
 
@@ -25,19 +25,19 @@ public:
 		__cleanup__(); // cleanup any existing data
 
 		// Transfer ownership of the memory pointed by dyingObj to this object
-		this->ptr = dyingObj.ptr;
+		ptr = dyingObj.ptr;
 		dyingObj.ptr = nullptr;
 	}
 
 	T* operator->()
 	{
-		return this->ptr;
+		return ptr;
 	}
 
 	T& operator*()
 	{
 		// if(ptr != nullptr)
-		return *(this->ptr);
+		return *ptr;
 	}
 
 	~MyUniquePtr()
