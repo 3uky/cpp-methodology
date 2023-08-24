@@ -24,6 +24,13 @@ public:
 			str[i] = c;
 		}
 	}
+
+	static void ReverseC_swap(char str[])
+	{
+		auto len = int(strlen(str) - 1); // last symbol is terminating symbol '\0'
+		for (int i = 0, j = len; i < len / 2; i++, j--)
+			std::swap(str[i], str[j]);
+	}
 };
 
 }
