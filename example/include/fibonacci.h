@@ -46,17 +46,15 @@ class Fibonacci : IFibonacci
 public:
 	std::vector<int> GetSequence(int n) override
 	{
-		if (n == 0)
-			return {};
-
-		std::vector<int> fib = { 0 };
-		int a = 0, b = 1;
-		for (int i = 1; i < n; i++)
+		std::vector<int> fib;
+		int a = 0, b = 1, c;
+		for (int i = 0; i < n; i++)
 		{
-			auto c = a + b;
+			fib.push_back(a);
+			c = a + b;
 			a = b;
 			b = c;
-			fib.push_back(a);
+			
 		}
 		return fib;
 	}
