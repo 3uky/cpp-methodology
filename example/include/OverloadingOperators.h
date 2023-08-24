@@ -13,7 +13,8 @@ public:
     MyVector() {}
     MyVector(int a, int b) : x(a), y(b) {}
 
-    MyVector operator + (const MyVector& param) {
+    MyVector operator+(const MyVector& param)
+    {
         MyVector temp;
         temp.x = x + param.x;
         temp.y = y + param.y;

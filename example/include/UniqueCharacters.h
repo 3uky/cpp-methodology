@@ -17,7 +17,7 @@ public:
 		for (auto c : s) 
 		{
 			if (temp.find(c) == string::npos)
-				temp = temp + c;
+				temp += c;
 		}
 		return temp;
 	}
