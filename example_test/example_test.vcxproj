@@ -50,6 +50,7 @@
     <ClCompile Include="src\algorithms\QuickSortUT.cpp" />
     <ClCompile Include="src\algorithms\SelectionSortUT.cpp" />
     <ClCompile Include="src\algorithms\ShuffleUT.cpp" />
+    <ClCompile Include="src\basic_elements\FindIfUT.cpp" />
     <ClCompile Include="src\basic_elements\LambdaUT.cpp" />
     <ClCompile Include="src\basic_elements\MoveCopyUT.cpp" />
     <ClCompile Include="src\basic_elements\MutableUT.cpp" />

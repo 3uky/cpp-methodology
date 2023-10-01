@@ -124,6 +124,9 @@
     <ClCompile Include="src\boost\TCPServerUT.cpp">
       <Filter>tests\boost</Filter>
     </ClCompile>
+    <ClCompile Include="src\basic_elements\FindIfUT.cpp">
+      <Filter>tests\basic_elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
