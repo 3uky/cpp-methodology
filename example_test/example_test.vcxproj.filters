@@ -127,6 +127,9 @@
     <ClCompile Include="src\basic_elements\FindIfUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
+    <ClCompile Include="src\basic_elements\SpanUT.cpp">
+      <Filter>tests\basic_elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
