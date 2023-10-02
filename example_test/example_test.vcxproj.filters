@@ -124,7 +124,7 @@
     <ClCompile Include="src\boost\TCPServerUT.cpp">
       <Filter>tests\boost</Filter>
     </ClCompile>
-    <ClCompile Include="src\basic_elements\FindIfUT.cpp">
+    <ClCompile Include="src\basic_elements\FindUT.cpp">
       <Filter>tests\basic_elements</Filter>
     </ClCompile>
     <ClCompile Include="src\basic_elements\SpanUT.cpp">
