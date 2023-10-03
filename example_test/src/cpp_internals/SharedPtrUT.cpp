@@ -24,7 +24,7 @@ TEST(SharedPointerTest, ShouldIncrementReferenceOnParametrizedConstructor)
     constexpr int expected_reference_count = 1;
 
     // WHEN
-    const MySharedPtr implemented_ptr(new int(10));
+    const MySharedPtr implemented_ptr(10);
 
     // THEN
     EXPECT_EQ(implemented_ptr.use_count(), expected_reference_count);
@@ -36,9 +36,9 @@ TEST(SharedPointerTest, ShouldChangeReferenceCountOnCopyConstructor)
     // GIVEN
     constexpr int expected_reference_count = 2;
 
-    // WHEN - copy constructor
-    const MySharedPtr<int> implemented_ptr_1(new int(10));
-    const MySharedPtr<int> implemented_ptr_2 = implemented_ptr_1;
+    // WHEN
+    const MySharedPtr<int> implemented_ptr_1(10);
+    const MySharedPtr<int> implemented_ptr_2 = implemented_ptr_1; // copy constructor
 
     // THEN
     EXPECT_EQ(implemented_ptr_2.use_count(), expected_reference_count);
@@ -50,7 +50,7 @@ TEST(SharedPointerTest, ShouldChangeReferenceCountOnMoveConstructor)
     constexpr int expected_reference_count = 1;
 
     // WHEN - move constructor
-    const MySharedPtr<int> implemented_ptr = MySharedPtr(new int(10));
+    const MySharedPtr<int> implemented_ptr = MySharedPtr(10);
 
     // THEN
     EXPECT_EQ(implemented_ptr.use_count(), expected_reference_count);
@@ -60,8 +60,8 @@ TEST(SharedPointerTest, ShouldChangeReferenceCountOnCopyAssignment)
 {
     // GIVEN
     constexpr int expected_reference_count = 2;
-    MySharedPtr implemented_ptr_1(new int(21));
-    MySharedPtr implemented_ptr_2(new int(22));
+    MySharedPtr implemented_ptr_1(21);
+    MySharedPtr implemented_ptr_2(22);
 
     // WHEN - copy assignment
     implemented_ptr_1 = implemented_ptr_2;
@@ -74,8 +74,8 @@ TEST(SharedPointerTest, ShouldChangeReferenceCountOnCopyAssignment)
 TEST(SharedPointerTest, ShouldChangeReferenceCountOnMoveAssignment)
 {
     // GIVEN
-    MySharedPtr implemented_ptr_1(new int(21));
-    MySharedPtr implemented_ptr_2(new int(21));
+    MySharedPtr implemented_ptr_1(21);
+    MySharedPtr implemented_ptr_2(21);
 
     // WHEN - move assignment
     implemented_ptr_1 = std::move(implemented_ptr_2);
@@ -90,10 +90,10 @@ TEST(SharedPointerTest, ShouldChangeReferenceCountOnMoveAssignment)
 TEST(SharedPointerTest, ShouldHaveSameBehaviorAsSmartPointerOnParametrizedConstructor)
 {
     // GIVEN
-    const std::shared_ptr<int> reference_ptr(new int(10));
+    const std::shared_ptr<int> reference_ptr = std::make_shared<int>(10);
 
     // WHEN - move constructor
-    const MySharedPtr implemented_ptr(new int(10));
+    const MySharedPtr implemented_ptr(10);
 
     // THEN
     EXPECT_EQ(implemented_ptr.use_count(), reference_ptr.use_count());
@@ -114,12 +114,12 @@ TEST(SharedPointerTest, ShouldHaveSameBehaviorAsSmartPointerOnDefaultConstructor
 TEST(SharedPointerTest, ShouldhaveSameBehaviorAsSmartPointerOnCopyConstructor)
 {
     // GIVEN
-    const std::shared_ptr<int> reference_ptr_1(new int(10));
+    const std::shared_ptr<int> reference_ptr_1 = std::make_shared<int>(10);
     const std::shared_ptr<int> reference_ptr_2 = reference_ptr_1;
 
     // WHEN - copy constructor
-    const MySharedPtr<int> implemented_ptr_1(new int(20));
-    const MySharedPtr<int> implemented_ptr_2 = implemented_ptr_1;
+    const MySharedPtr<int> implemented_ptr_1(20);
+    const MySharedPtr<int> implemented_ptr_2 = implemented_ptr_1; // copy constructor
 
     // THEN
     EXPECT_EQ(implemented_ptr_2.use_count(), reference_ptr_2.use_count());
@@ -131,7 +131,7 @@ TEST(SharedPointerTest, ShouldhaveSameBehaviorAsSmartPointerOnMoveConstructor)
     const std::shared_ptr<int> reference_ptr = std::make_shared<int>(10);
 
     // WHEN - move constructor
-    const MySharedPtr<int> implemented_ptr = MySharedPtr<int>(new int(10));
+    const MySharedPtr<int> implemented_ptr = MySharedPtr(10);
 
     // THEN
     EXPECT_EQ(implemented_ptr.use_count(), reference_ptr.use_count());
@@ -140,11 +140,11 @@ TEST(SharedPointerTest, ShouldhaveSameBehaviorAsSmartPointerOnMoveConstructor)
 TEST(SharedPointerTest, ShouldHaveSameBehaviorAsSmartPointerOnMoveAssignment)
 {
     // GIVEN
-    std::shared_ptr<int> reference_ptr_1(new int(11));
-    std::shared_ptr<int> reference_ptr_2(new int(12));
+    std::shared_ptr<int> reference_ptr_1 = std::make_shared<int>(11);
+    std::shared_ptr<int> reference_ptr_2 = std::make_shared<int>(12);
 
-    MySharedPtr implemented_ptr_1(new int(21));
-    MySharedPtr implemented_ptr_2(new int(21));
+    MySharedPtr implemented_ptr_1(21);
+    MySharedPtr implemented_ptr_2(21);
 
     // WHEN - move assignment
     reference_ptr_1 = std::move(reference_ptr_2);
@@ -158,10 +158,10 @@ TEST(SharedPointerTest, ShouldHaveSameBehaviorAsSmartPointerOnMoveAssignment)
 TEST(SharedPointerTest, ShouldHaveSameBehaviorAsSmartPointerOnCopyAssignment)
 {
     // GIVEN
-    std::shared_ptr<int> reference_ptr_1(new int(11));
-    std::shared_ptr<int> reference_ptr_2(new int(21));
-    MySharedPtr implemented_ptr_1(new int(21));
-    MySharedPtr implemented_ptr_2(new int(22));
+    std::shared_ptr<int> reference_ptr_1 = std::make_shared<int>(11);
+    std::shared_ptr<int> reference_ptr_2 = std::make_shared<int>(21);
+    MySharedPtr implemented_ptr_1(21);
+    MySharedPtr implemented_ptr_2(22);
 
     // WHEN - copy assignment
     reference_ptr_1 = reference_ptr_2;
@@ -184,4 +184,3 @@ TEST(SharedPointerTest, ShouldResetSharedPointer)
     EXPECT_EQ(reference_ptr_2.use_count(), 1);
 }
 }
-

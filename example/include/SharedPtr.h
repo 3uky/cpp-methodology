@@ -16,6 +16,10 @@ public:
 	{
 	}
 
+	MySharedPtr(T val) : ptr(new T(val)), refCount(new uint(1)) // constructor
+	{
+	}
+
 	MySharedPtr(T* ptr) : ptr(ptr), refCount(new uint(1)) // constructor
 	{
 	}

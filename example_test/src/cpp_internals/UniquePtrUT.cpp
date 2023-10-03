@@ -10,20 +10,33 @@ namespace cpp_internals
 		// GIVEN
 		constexpr int expected_value = 1;
 
-		// WHEN - parametrized constructor
-		MyUniquePtr<int> implemented_ptr(new int(expected_value));
+		// WHEN - parametrized constructor (template typename is deducted from value type)
+		MyUniquePtr implemented_ptr(expected_value);
 		
 		// THEN
 		EXPECT_EQ(*implemented_ptr, expected_value);
 	}
 
-	TEST(UniquePointerTest, ShouldInitializedThroughMoveConstructor)
+	TEST(UniquePointerTest, ShouldInitializeThroughParametrizedConstructor2)
 	{
 		// GIVEN
 		constexpr int expected_value = 1;
 
-		// WHEN - move  constructor
-		MyUniquePtr<int> implemented_ptr = MyUniquePtr<int>(new int(expected_value));
+		// WHEN - param. ctor (move ctor is not used probably because compiler optimization)
+		MyUniquePtr<int> implemented_ptr = MyUniquePtr(expected_value); 
+
+		// THEN
+		EXPECT_EQ(*implemented_ptr, expected_value);
+	}
+
+	TEST(UniquePointerTest, ShouldInitializedThroughMoveConstructor2)
+	{
+		// GIVEN
+		constexpr int expected_value = 1;
+
+		// WHEN - move constructor
+		MyUniquePtr dyingObject(expected_value);
+		MyUniquePtr<int> implemented_ptr = std::move(dyingObject);
 
 		// THEN
 		EXPECT_EQ(*implemented_ptr, expected_value);
@@ -33,7 +46,7 @@ namespace cpp_internals
 	{
 		// GIVEN
 		constexpr int expected_value = 1;
-		MyUniquePtr<int> implemented_ptr_1 = MyUniquePtr<int>(new int(expected_value));
+		MyUniquePtr<int> implemented_ptr_1(expected_value);
 		MyUniquePtr<int> implemented_ptr_2;
 
 		// WHEN - move assignment

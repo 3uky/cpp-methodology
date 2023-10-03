@@ -13,7 +13,7 @@ public:
 	MyUniquePtr(T val) : ptr(new T(val)) {}
 
 	MyUniquePtr(const MyUniquePtr& obj) = delete; // copy constructor is prohibited
-	MyUniquePtr& operator=(const MyUniquePtr& obj) = delete; // copy assignment is prohibited
+	MyUniquePtr& operator=(const MyUniquePtr& obj) = delete; // copy assignment i
 
 	MyUniquePtr(MyUniquePtr&& dyingObj) // move constructor: MyUniquePtr object = std::move(dyingObject);
 	{
