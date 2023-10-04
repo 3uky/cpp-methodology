@@ -21,7 +21,8 @@ namespace algorithms
         static void Sort(std::vector<int>& arr, int l, int r)
         {
             if (l < r) {
-                int m = l + (r - l) / 2;
+                //int m = l + (r - l) / 2;
+                int m = (l + r) / 2;
                 Sort(arr, l, m);
                 Sort(arr, m + 1, r);
                 Merge(arr, l, m, r);
