@@ -10,7 +10,7 @@ namespace design_patterns
 class MockObserver : public IObserver
 {
 public:
-    MOCK_METHOD(std::string, Handler, (), (override));
+    MOCK_METHOD(std::string, Handler, (int eventValue), (override));
 };
 
 
@@ -19,13 +19,14 @@ TEST(AdapterBoostSignalTest, ShouldExecuteRegisteredCallbackOnSignalTrigger)
     // GIVEN
     Subject subject;
     MockObserver observer;
+    constexpr int eventValue = 1;
 
     // THEN
-    EXPECT_CALL(observer, Handler()).Times(1).WillOnce(Return(string("Hello, World!")));
+    EXPECT_CALL(observer, Handler(eventValue)).Times(1).WillOnce(Return(string()));
 
     // WHEN
-    subject.Subscribe([&]() { return observer.Handler(); });
-    subject.Trigger();
+    subject.Subscribe([&](int val) { return observer.Handler(val); });
+    subject.Trigger(eventValue);
 }
 
 }
