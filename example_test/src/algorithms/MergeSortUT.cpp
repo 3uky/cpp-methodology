@@ -9,14 +9,30 @@ using namespace std;
 namespace algorithms
 {
 
-TEST(MergeSortTest, ShouldSortSequence)
+TEST(MergeSortTest, ShouldSortSequenceWithEvenNumberOfElements)
 {
 	// GIVEN
-	std::vector tested_arr = { 10, 7, 8, 9, 1, 5 };
+	vector tested_arr = { 10, 7, 8, 9, 1, 5 };
 
 	// make array copy and sort it
 	auto sorted_arr = tested_arr;
-	sort(std::begin(sorted_arr), std::end(sorted_arr));
+	sort(begin(sorted_arr), end(sorted_arr));
+
+	// WHEN
+	MergeSort::Sort(tested_arr);
+
+	// THEN
+	EXPECT_EQ(tested_arr, sorted_arr);
+}
+
+TEST(MergeSortTest, ShouldSortSequenceWithOddNumberOfElements)
+{
+	// GIVEN
+	vector tested_arr = { 10, 7, 8, 9, 1 };
+
+	// make array copy and sort it
+	auto sorted_arr = tested_arr;
+	sort(begin(sorted_arr), end(sorted_arr));
 
 	// WHEN
 	MergeSort::Sort(tested_arr);
