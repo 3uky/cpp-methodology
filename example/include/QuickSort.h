@@ -29,10 +29,8 @@ public:
             // is now at right place
             int pi = Partition(arr, low, high);
 
-            // Separately sort elements before
-            // partition and after partition
-            Sort(arr, low, pi - 1);
-            Sort(arr, pi + 1, high);
+            Sort(arr, low, pi - 1); // separately sort elements left from pivot
+            Sort(arr, pi + 1, high); // separately sort elements right from pivot
         }
     }
 
