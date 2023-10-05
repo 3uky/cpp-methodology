@@ -30,13 +30,13 @@ namespace algorithms
         }
 
         // After that, we store these sub-arrays in two new arrays. Now, we can start merging them based on their order,
-        // and store them into our input array. After all these subarrays are merged, our input array will be sorted.
+        // and store them into our input array. After all these sub-arrays are merged, our input array will be sorted.
         static void Merge(int* arr, int l, int m, int r)
     	{
             const int n1 = m - l + 1;
             const int n2 = r - m;
-            int* L = new int(n1);
-            int* R = new int(n2);
+            int* L = new int[n1];
+            int* R = new int[n2];
 
         	for (int i = 0; i < n1; i++)
             {
@@ -68,6 +68,9 @@ namespace algorithms
             {
                 arr[k++] = R[j++];
             }
+
+            delete [] L;
+            delete [] R;
         }
     };
 
