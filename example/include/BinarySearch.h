@@ -26,7 +26,8 @@ binarySearch(arr, x, low, high)
 class BinarySearch
 {
 public:
-	static int Search(std::vector<int> arr, int l, int r, int x)
+	// static int SearchCLikeArray(const int* arr, int l, int r, int x)
+	static int Search(const std::vector<int>& arr, int l, int r, int x)
 	{
 		while (l <= r) {
 			int m = l + (r - l) / 2;
@@ -44,7 +45,7 @@ public:
 		return -1;
 	}
 
-	static int RecursiveSearch(std::vector<int> arr, int l, int r, int x)
+	static int RecursiveSearch(const std::vector<int>& arr, int l, int r, int x)
 	{
 		if (r >= l) 
 		{
