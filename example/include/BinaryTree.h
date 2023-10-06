@@ -15,7 +15,7 @@ class Node
 public:
     Node(int data) : m_data(data) {}
 
-    int Value() const
+    int GetValue() const
     {
         return m_data;
     }
@@ -91,7 +91,7 @@ private:
         if (node == nullptr)
             return;
 
-        sequence.push_back(node->Value());
+        sequence.push_back(node->GetValue());
         GetPreOrder(node->left, sequence);
         GetPreOrder(node->right, sequence);
     }
@@ -102,7 +102,7 @@ private:
             return;
 
         GetInOrder(node->left, sequence);
-        sequence.push_back(node->Value());
+        sequence.push_back(node->GetValue());
         GetInOrder(node->right, sequence);
     }
 
@@ -113,7 +113,7 @@ private:
 
         GetPostOrder(node->left, sequence);
         GetPostOrder(node->right, sequence);
-        sequence.push_back(node->Value());
+        sequence.push_back(node->GetValue());
     }
 
     int GetHeight(const std::unique_ptr<Node>& node) const
