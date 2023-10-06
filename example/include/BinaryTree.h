@@ -65,7 +65,7 @@ private:
         return std::make_unique<Node>(data);
     }
 
-    void BuildInLevelOrder(std::vector<int> values)
+    void BuildInLevelOrder(const std::vector<int>& values)
     {
         std::queue<Node*> q;
         for (auto value : values)
@@ -122,7 +122,7 @@ private:
             return 0;
 
         int leftHeight = GetHeight(node->left);
-        int rightHeight = GetHeight(node->left);
+        int rightHeight = GetHeight(node->right);
 
         return std::max(leftHeight, rightHeight) + 1;
     }
