@@ -22,13 +22,15 @@ public:
 		dyingObj.ptr = nullptr; 
 	}
 
-	void operator=(MyUniquePtr&& dyingObj) // move assignment: object = std::move(dyingObject);
+	MyUniquePtr& operator=(MyUniquePtr&& dyingObj) // move assignment: object = std::move(dyingObject);
 	{
 		__cleanup__(); // cleanup any existing data
 
 		// Transfer ownership of the memory pointed by dyingObj to this object
 		ptr = dyingObj.ptr;
 		dyingObj.ptr = nullptr;
+
+		return *this;
 	}
 
 	T* operator->()
