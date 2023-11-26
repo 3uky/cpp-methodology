@@ -1,0 +1,2 @@
+# C++ methodology
+This methodology is used for practical study of C++. Project contains code examples of language elements, paradigms, design patterns. Some more advanced elements are re-implemenented for better understanding. Additionaly there could be found usage of boost library, implementation of sorting and searching algorithms, exercises and applications. Usage is demonstrated with unit tests. Recompile, run and debug is best way to understand. Project could be usefull for study of language or during preparation for exam or interview.
