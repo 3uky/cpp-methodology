@@ -3,24 +3,22 @@
 namespace cpp_internals
 {
 
-typedef unsigned int uint;
-
 template<class T>
 class MySharedPtr
 {
 	T* ptr = nullptr;
-	uint* refCount = nullptr;
+	unsigned int* refCount = nullptr;
 
 public:
-	MySharedPtr() : ptr(nullptr), refCount(new uint(0)) // default constructor
+	MySharedPtr() : ptr(nullptr), refCount(new unsigned int(0)) // default constructor
 	{
 	}
 
-	MySharedPtr(T val) : ptr(new T(val)), refCount(new uint(1)) // constructor
+	MySharedPtr(T val) : ptr(new T(val)), refCount(new unsigned int(1)) // constructor
 	{
 	}
 
-	MySharedPtr(T* ptr) : ptr(ptr), refCount(new uint(1)) // constructor
+	MySharedPtr(T* ptr) : ptr(ptr), refCount(new unsigned int(1)) // constructor
 	{
 	}
 
@@ -67,7 +65,7 @@ public:
 		return *this;
 	}
 
-	uint use_count() const
+	unsigned int use_count() const
 	{
 		if (refCount == nullptr)
 			return 0;
