@@ -66,117 +66,117 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\MergeSort.h">
+    <ClCompile Include="src\MergeSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Observer.h">
+    <ClInclude Include="src\Observer.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\Adapter.h">
+    <ClInclude Include="src\Adapter.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\Singleton.h">
+    <ClInclude Include="src\Singleton.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\Factory.h">
+    <ClInclude Include="src\Factory.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\Facade.h">
+    <ClInclude Include="src\Facade.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\ObserverBoostSignal.h">
+    <ClInclude Include="src\ObserverBoostSignal.h">
       <Filter>Header Files\design_patterns</Filter>
     </ClInclude>
-    <ClInclude Include="include\AsyncWait.h">
+    <ClInclude Include="src\AsyncWait.h">
       <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
-    <ClInclude Include="include\ConditionVariable.h">
+    <ClInclude Include="src\ConditionVariable.h">
       <Filter>Header Files\parallel_programming</Filter>
     </ClInclude>
-    <ClInclude Include="include\MutexGuardThread.h">
+    <ClInclude Include="src\MutexGuardThread.h">
       <Filter>Header Files\parallel_programming</Filter>
     </ClInclude>
-    <ClInclude Include="include\MoveCopy.h">
+    <ClInclude Include="src\MoveCopy.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\Mutable.h">
+    <ClInclude Include="src\Mutable.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\TypeConversions.h">
+    <ClInclude Include="src\TypeConversions.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\Polymorphism.h">
+    <ClInclude Include="src\Polymorphism.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="include\CharacterFilter.h">
+    <ClInclude Include="src\CharacterFilter.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\UniquePtr.h">
+    <ClInclude Include="src\UniquePtr.h">
       <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
-    <ClInclude Include="include\SharedPtr.h">
+    <ClInclude Include="src\SharedPtr.h">
       <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
-    <ClInclude Include="include\Class.h">
+    <ClInclude Include="src\Class.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="include\BinarySearch.h">
+    <ClInclude Include="src\BinarySearch.h">
       <Filter>Header Files\algorithms\search</Filter>
     </ClInclude>
-    <ClInclude Include="include\OverloadingOperators.h">
+    <ClInclude Include="src\OverloadingOperators.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\Template.h">
+    <ClInclude Include="src\Template.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
-    <ClInclude Include="include\UniqueNames.h">
+    <ClInclude Include="src\UniqueNames.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\Fibonacci.h">
+    <ClInclude Include="src\Fibonacci.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\ReverseString.h">
+    <ClInclude Include="src\ReverseString.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\Shuffle.h">
+    <ClInclude Include="src\Shuffle.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
-    <ClInclude Include="include\UniqueCharacters.h">
+    <ClInclude Include="src\UniqueCharacters.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\LinkedList.h">
+    <ClInclude Include="src\LinkedList.h">
       <Filter>Header Files\containers\list</Filter>
     </ClInclude>
-    <ClInclude Include="include\QuickSort.h">
+    <ClInclude Include="src\QuickSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
-    <ClInclude Include="include\BubbleSort.h">
+    <ClInclude Include="src\BubbleSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
-    <ClInclude Include="include\InsertionSort.h">
+    <ClInclude Include="src\InsertionSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
-    <ClInclude Include="include\SelectionSort.h">
+    <ClInclude Include="src\SelectionSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
-    <ClInclude Include="include\BinaryTree.h">
+    <ClInclude Include="src\BinaryTree.h">
       <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClInclude>
-    <ClInclude Include="include\FrequencySort.h">
+    <ClInclude Include="src\FrequencySort.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\ContainersUsage.h">
+    <ClInclude Include="src\ContainersUsage.h">
       <Filter>Header Files\containers</Filter>
     </ClInclude>
-    <ClInclude Include="include\TCPServer.h">
+    <ClInclude Include="src\TCPServer.h">
       <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
-    <ClInclude Include="include\QueueFromVector.h">
+    <ClInclude Include="src\QueueFromVector.h">
       <Filter>Header Files\containers\queue</Filter>
     </ClInclude>
-    <ClInclude Include="include\QueueFromSharedPointer.h">
+    <ClInclude Include="src\QueueFromSharedPointer.h">
       <Filter>Header Files\containers\queue</Filter>
     </ClInclude>
     <ClInclude Include="shared\IQueue.h">
@@ -185,7 +185,7 @@
     <ClInclude Include="shared\ILinkedList.h">
       <Filter>Header Files\containers\list</Filter>
     </ClInclude>
-    <ClInclude Include="include\Stack.h">
+    <ClInclude Include="src\Stack.h">
       <Filter>Header Files\containers\Stack</Filter>
     </ClInclude>
     <ClInclude Include="shared\IStack.h">

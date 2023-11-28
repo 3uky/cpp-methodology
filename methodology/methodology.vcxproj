@@ -77,7 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,7 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -107,7 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +123,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,47 +133,47 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="include\MergeSort.h" />
+    <ClCompile Include="src\MergeSort.h" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\BinarySearch.h" />
-    <ClInclude Include="include\AsyncWait.h" />
-    <ClInclude Include="include\BinaryTree.h" />
-    <ClInclude Include="include\BubbleSort.h" />
-    <ClInclude Include="include\Fibonacci.h" />
-    <ClInclude Include="include\FrequencySort.h" />
-    <ClInclude Include="include\InsertionSort.h" />
-    <ClInclude Include="include\LinkedList.h" />
-    <ClInclude Include="include\ObserverBoostSignal.h" />
-    <ClInclude Include="include\Class.h" />
-    <ClInclude Include="include\ConditionVariable.h" />
-    <ClInclude Include="include\MoveCopy.h" />
-    <ClInclude Include="include\ContainersUsage.h" />
-    <ClInclude Include="include\Adapter.h" />
-    <ClInclude Include="include\Facade.h" />
-    <ClInclude Include="include\Factory.h" />
-    <ClInclude Include="include\Observer.h" />
-    <ClInclude Include="include\QueueFromSharedPointer.h" />
-    <ClInclude Include="include\QueueFromVector.h" />
-    <ClInclude Include="include\QuickSort.h" />
-    <ClInclude Include="include\ReverseString.h" />
-    <ClInclude Include="include\SelectionSort.h" />
-    <ClInclude Include="include\TCPServer.h" />
-    <ClInclude Include="include\Shuffle.h" />
-    <ClInclude Include="include\Singleton.h" />
-    <ClInclude Include="include\Mutable.h" />
-    <ClInclude Include="include\MutexGuardThread.h" />
-    <ClInclude Include="include\OverloadingOperators.h" />
-    <ClInclude Include="include\Polymorphism.h" />
-    <ClInclude Include="include\SharedPtr.h" />
-    <ClInclude Include="include\Stack.h" />
-    <ClInclude Include="include\Template.h" />
-    <ClInclude Include="include\CharacterFilter.h" />
-    <ClInclude Include="include\TypeConversions.h" />
-    <ClInclude Include="include\UniqueCharacters.h" />
-    <ClInclude Include="include\UniqueNames.h" />
-    <ClInclude Include="include\UniquePtr.h" />
+    <ClInclude Include="src\BinarySearch.h" />
+    <ClInclude Include="src\AsyncWait.h" />
+    <ClInclude Include="src\BinaryTree.h" />
+    <ClInclude Include="src\BubbleSort.h" />
+    <ClInclude Include="src\Fibonacci.h" />
+    <ClInclude Include="src\FrequencySort.h" />
+    <ClInclude Include="src\InsertionSort.h" />
+    <ClInclude Include="src\LinkedList.h" />
+    <ClInclude Include="src\ObserverBoostSignal.h" />
+    <ClInclude Include="src\Class.h" />
+    <ClInclude Include="src\ConditionVariable.h" />
+    <ClInclude Include="src\MoveCopy.h" />
+    <ClInclude Include="src\ContainersUsage.h" />
+    <ClInclude Include="src\Adapter.h" />
+    <ClInclude Include="src\Facade.h" />
+    <ClInclude Include="src\Factory.h" />
+    <ClInclude Include="src\Observer.h" />
+    <ClInclude Include="src\QueueFromSharedPointer.h" />
+    <ClInclude Include="src\QueueFromVector.h" />
+    <ClInclude Include="src\QuickSort.h" />
+    <ClInclude Include="src\ReverseString.h" />
+    <ClInclude Include="src\SelectionSort.h" />
+    <ClInclude Include="src\TCPServer.h" />
+    <ClInclude Include="src\Shuffle.h" />
+    <ClInclude Include="src\Singleton.h" />
+    <ClInclude Include="src\Mutable.h" />
+    <ClInclude Include="src\MutexGuardThread.h" />
+    <ClInclude Include="src\OverloadingOperators.h" />
+    <ClInclude Include="src\Polymorphism.h" />
+    <ClInclude Include="src\SharedPtr.h" />
+    <ClInclude Include="src\Stack.h" />
+    <ClInclude Include="src\Template.h" />
+    <ClInclude Include="src\CharacterFilter.h" />
+    <ClInclude Include="src\TypeConversions.h" />
+    <ClInclude Include="src\UniqueCharacters.h" />
+    <ClInclude Include="src\UniqueNames.h" />
+    <ClInclude Include="src\UniquePtr.h" />
     <ClInclude Include="shared\ILinkedList.h" />
     <ClInclude Include="shared\IQueue.h" />
     <ClInclude Include="shared\IStack.h" />
