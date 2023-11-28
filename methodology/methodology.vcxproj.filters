@@ -69,6 +69,9 @@
     <ClCompile Include="src\MergeSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClCompile>
+    <ClCompile Include="src\QueueFromCArray.cpp">
+      <Filter>Header Files\containers\queue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Observer.h">
@@ -190,6 +193,9 @@
     </ClInclude>
     <ClInclude Include="shared\IStack.h">
       <Filter>Header Files\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QueueFromCArray.h">
+      <Filter>Header Files\containers\queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
 
 #include "QueueFromVector.h"
 #include "QueueFromSharedPointer.h"
+#include "QueueFromCArray.h"
 
 #include <ranges>
 
@@ -15,7 +16,7 @@ namespace containers
 TEST(QueueTest, ShouldReturnFrontElement)
 {
     // GIVEN
-    unique_ptr<IQueue> q = std::make_unique<QueueFromSharedPointer>();
+    unique_ptr<IQueue> q = std::make_unique<QueueFromCArray>();
     const vector incoming_values{ 1, 2, 3, 4, 5 };
 
     // WHEN
@@ -30,7 +31,7 @@ TEST(QueueTest, ShouldReturnFrontElement)
 TEST(QueueTest, ShouldReturnSize)
 {
     // GIVEN
-    unique_ptr<IQueue> q = std::make_unique<QueueFromSharedPointer>();
+    unique_ptr<IQueue> q = std::make_unique<QueueFromCArray>();
     const vector incoming_values{ 1, 2, 3, 4, 5 };
 
 	// WHEN
@@ -44,7 +45,7 @@ TEST(QueueTest, ShouldReturnSize)
 TEST(QueueTest, ShouldNotBeEmptyAfterQueue)
 {
     // GIVEN
-    unique_ptr<IQueue> q = std::make_unique<QueueFromSharedPointer>();
+    unique_ptr<IQueue> q = std::make_unique<QueueFromCArray>();
     const vector incoming_values{ 1, 2, 3, 4, 5 };
 
     // WHEN
@@ -58,7 +59,7 @@ TEST(QueueTest, ShouldNotBeEmptyAfterQueue)
 TEST(QueueTest, ShouldBeEmptyAfterDeque)
 {
     // GIVEN
-    unique_ptr<IQueue> q = std::make_unique<QueueFromSharedPointer>();
+    unique_ptr<IQueue> q = std::make_unique<QueueFromCArray>();
     const vector incoming_values{ 1, 2, 3, 4, 5 };
 
     // WHEN
@@ -75,7 +76,7 @@ TEST(QueueTest, ShouldBeEmptyAfterDeque)
 TEST(QueueTest, ShouldEnqueuElement)
 {
     // GIVEN
-    unique_ptr<IQueue> q = std::make_unique<QueueFromSharedPointer>();
+    unique_ptr<IQueue> q = std::make_unique<QueueFromCArray>();
     constexpr int first = 1, second = 2;
 
     // WHEN
@@ -89,7 +90,7 @@ TEST(QueueTest, ShouldEnqueuElement)
 TEST(QueueTest, ShouldDequeuElement)
 {
     // GIVEN
-    unique_ptr<IQueue> q = std::make_unique<QueueFromSharedPointer>();
+    unique_ptr<IQueue> q = std::make_unique<QueueFromCArray>();
     constexpr int first = 1, second = 2;
     q->Enqueue(first);
     q->Enqueue(second);
