@@ -55,6 +55,9 @@
     <Filter Include="Header Files\boost_asio">
       <UniqueIdentifier>{9844385f-09d3-4cb3-b734-9b442ce41931}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\containers\queue">
+      <UniqueIdentifier>{664daf7f-bda9-4363-9971-608d78157ca7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -167,14 +170,20 @@
     <ClInclude Include="include\Stack.h">
       <Filter>Header Files\containers</Filter>
     </ClInclude>
-    <ClInclude Include="include\Queue.h">
-      <Filter>Header Files\containers</Filter>
-    </ClInclude>
     <ClInclude Include="include\ContainersUsage.h">
       <Filter>Header Files\containers</Filter>
     </ClInclude>
     <ClInclude Include="include\TCPServer.h">
       <Filter>Header Files\boost_asio</Filter>
+    </ClInclude>
+    <ClInclude Include="include\QueueFromVector.h">
+      <Filter>Header Files\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="include\QueueFromSharedPointer.h">
+      <Filter>Header Files\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IQueue.h">
+      <Filter>Header Files\containers\queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
