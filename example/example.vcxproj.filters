@@ -58,6 +58,9 @@
     <Filter Include="Header Files\containers\queue">
       <UniqueIdentifier>{664daf7f-bda9-4363-9971-608d78157ca7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\containers\Stack">
+      <UniqueIdentifier>{360bcf77-54ef-45a4-8374-0167e977a4bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -146,9 +149,6 @@
     <ClInclude Include="include\LinkedList.h">
       <Filter>Header Files\containers\list</Filter>
     </ClInclude>
-    <ClInclude Include="include\ILinkedList.h">
-      <Filter>Header Files\containers\list</Filter>
-    </ClInclude>
     <ClInclude Include="include\QuickSort.h">
       <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
@@ -167,9 +167,6 @@
     <ClInclude Include="include\FrequencySort.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="include\Stack.h">
-      <Filter>Header Files\containers</Filter>
-    </ClInclude>
     <ClInclude Include="include\ContainersUsage.h">
       <Filter>Header Files\containers</Filter>
     </ClInclude>
@@ -182,8 +179,17 @@
     <ClInclude Include="include\QueueFromSharedPointer.h">
       <Filter>Header Files\containers\queue</Filter>
     </ClInclude>
-    <ClInclude Include="include\IQueue.h">
+    <ClInclude Include="shared\IQueue.h">
       <Filter>Header Files\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\ILinkedList.h">
+      <Filter>Header Files\containers\list</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stack.h">
+      <Filter>Header Files\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\IStack.h">
+      <Filter>Header Files\containers\Stack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
