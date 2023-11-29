@@ -136,6 +136,7 @@
     <ClCompile Include="src\MergeSort.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\QueueFromCArray.cpp" />
+    <ClCompile Include="src\Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BinarySearch.h" />
@@ -161,6 +162,9 @@
     <ClInclude Include="src\QuickSort.h" />
     <ClInclude Include="src\ReverseString.h" />
     <ClInclude Include="src\SelectionSort.h" />
+    <ClInclude Include="src\StackElement.h" />
+    <ClInclude Include="src\StackFromDeque.h" />
+    <ClInclude Include="src\StackFromVector.h" />
     <ClInclude Include="src\TCPServer.h" />
     <ClInclude Include="src\Shuffle.h" />
     <ClInclude Include="src\Singleton.h" />

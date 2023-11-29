@@ -72,6 +72,9 @@
     <ClCompile Include="src\QueueFromCArray.cpp">
       <Filter>Header Files\containers\queue</Filter>
     </ClCompile>
+    <ClCompile Include="src\Stack.cpp">
+      <Filter>Header Files\containers\Stack</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Observer.h">
@@ -196,6 +199,15 @@
     </ClInclude>
     <ClInclude Include="src\QueueFromCArray.h">
       <Filter>Header Files\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StackFromDeque.h">
+      <Filter>Header Files\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StackFromVector.h">
+      <Filter>Header Files\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StackElement.h">
+      <Filter>Header Files\containers\Stack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
