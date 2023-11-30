@@ -125,7 +125,7 @@
     <ClInclude Include="src\SharedPtr.h">
       <Filter>Header Files\cpp_internals</Filter>
     </ClInclude>
-    <ClInclude Include="src\Class.h">
+    <ClInclude Include="src\MyClass.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
     <ClInclude Include="src\BinarySearch.h">

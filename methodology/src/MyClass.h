@@ -7,10 +7,10 @@ using namespace std;
 namespace basic_paradigm
 {
 
-class TestClass
+class MyClass
 {
 public:
-    TestClass(int x) : var(x) {}
+    MyClass(int x) : var(x) {}
 
     int get()
     {

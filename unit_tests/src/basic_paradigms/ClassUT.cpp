@@ -1,12 +1,13 @@
 #include "pch.h"
-#include "class.h"
+
+#include "MyClass.h"
 
 namespace basic_paradigm
 {
 TEST(ClassTest, ShouldBeInitializedStaticaly)
 {
     // GIVEN        
-    TestClass myClass(10);
+    MyClass myClass(10);
     
     // THEN
     EXPECT_EQ(myClass.get(), 10);
@@ -15,11 +16,11 @@ TEST(ClassTest, ShouldBeInitializedStaticaly)
 TEST(ClassTest, ShouldBeInitializedDynamicaly)
 {
     // GIVEN        
-    TestClass *foo, *bar;
+    MyClass*foo, *bar;
     
     // WHEN
-    foo = new TestClass(10);
-    bar = new TestClass[2]{ {*foo}, {20} };
+    foo = new MyClass(10);
+    bar = new MyClass[2]{ {*foo}, {20} };
 
     // THEN
     EXPECT_EQ(foo->get(), 10);
@@ -35,8 +36,8 @@ TEST(ClassTest, ShouldBeInitializedDynamicaly)
 TEST(ClassTest, ShouldBeAccessedThroughPointer)
 {
     // GIVEN        
-    TestClass obj(10);
-    TestClass *pobj;
+    MyClass obj(10);
+    MyClass *pobj;
 
     // WHEN
     pobj = &obj;
