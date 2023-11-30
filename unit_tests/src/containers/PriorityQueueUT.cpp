@@ -1,12 +1,8 @@
-
-
 #include "pch.h"
 
 #include <queue>
 #include <vector>
-#include <array>
 
-using namespace std;
 using ::testing::UnorderedElementsAre;
 
 namespace exercises

@@ -64,11 +64,15 @@
     <ClCompile Include="src\basic_paradigms\PolymorphismUT.cpp" />
     <ClCompile Include="src\boost\AsyncWaitUT.cpp" />
     <ClCompile Include="src\boost\TCPServerUT.cpp" />
-    <ClCompile Include="src\containers\ContainersUsageUT.cpp" />
+    <ClCompile Include="src\containers\ArrayUT.cpp" />
     <ClCompile Include="src\containers\LinkedListUT.cpp" />
+    <ClCompile Include="src\containers\ListUT.cpp" />
+    <ClCompile Include="src\containers\MapUT.cpp" />
     <ClCompile Include="src\containers\PriorityQueueUT.cpp" />
     <ClCompile Include="src\containers\QueueUT.cpp" />
+    <ClCompile Include="src\containers\SetUT.cpp" />
     <ClCompile Include="src\containers\StackUT.cpp" />
+    <ClCompile Include="src\containers\VectorUT.cpp" />
     <ClCompile Include="src\cpp_internals\SharedPtrUT.cpp" />
     <ClCompile Include="src\cpp_internals\UniquePtrUT.cpp" />
     <ClCompile Include="src\design_patterns\AdapterUT.cpp" />

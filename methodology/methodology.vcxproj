@@ -151,7 +151,6 @@
     <ClInclude Include="src\MyClass.h" />
     <ClInclude Include="src\ConditionVariable.h" />
     <ClInclude Include="src\MoveCopy.h" />
-    <ClInclude Include="src\ContainersUsage.h" />
     <ClInclude Include="src\Adapter.h" />
     <ClInclude Include="src\Facade.h" />
     <ClInclude Include="src\Factory.h" />

@@ -173,9 +173,6 @@
     <ClInclude Include="src\FrequencySort.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="src\ContainersUsage.h">
-      <Filter>Header Files\containers</Filter>
-    </ClInclude>
     <ClInclude Include="src\TCPServer.h">
       <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
