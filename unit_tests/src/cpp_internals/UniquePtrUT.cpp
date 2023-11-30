@@ -56,9 +56,14 @@ namespace cpp_internals
 		EXPECT_EQ(*implemented_ptr_2, expected_value);
 	}
 
-	TEST(UniquePointerTest, DISABLED_UnsupportedOperations)
+	/*
+	TEST(UniquePointerTest, UnsupportedOperations)
 	{
-		// b = a; // copy assignment is deleted
-		// MyUniquePtr<int> c = b; // copy constructor is deleted
+		MyUniquePtr<int> a, b;
+
+		b = a; // prohibited: copy assignment is deleted
+
+		MyUniquePtr<int> c = b; // prohibited: copy constructor is deleted
 	}
+	*/
 }
