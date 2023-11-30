@@ -75,6 +75,9 @@
     <ClCompile Include="src\Stack.cpp">
       <Filter>Header Files\containers\Stack</Filter>
     </ClCompile>
+    <ClCompile Include="src\BinaryTree.cpp">
+      <Filter>Header Files\algorithms\binary_tree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Observer.h">
@@ -205,6 +208,9 @@
     </ClInclude>
     <ClInclude Include="src\StackElement.h">
       <Filter>Header Files\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BinaryTreeNode.h">
+      <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
