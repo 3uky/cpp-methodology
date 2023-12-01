@@ -141,6 +141,9 @@
     <ClCompile Include="src\containers\MapUT.cpp">
       <Filter>tests\containers\usage</Filter>
     </ClCompile>
+    <ClCompile Include="src\network\networkUT.cpp">
+      <Filter>tests\network</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">

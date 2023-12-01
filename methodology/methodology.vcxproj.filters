@@ -75,6 +75,9 @@
     <ClCompile Include="src\BinaryTree.cpp">
       <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClCompile>
+    <ClCompile Include="src\WinsockServer.cpp">
+      <Filter>Header Files\network</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Observer.h">
@@ -208,6 +211,9 @@
     </ClInclude>
     <ClInclude Include="src\BinaryTreeNode.h">
       <Filter>Header Files\algorithms\binary_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinsockServer.h">
+      <Filter>Header Files\network</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

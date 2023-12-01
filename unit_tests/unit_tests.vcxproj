@@ -78,6 +78,7 @@
     <ClCompile Include="src\exercises\ReverseStringUT.cpp" />
     <ClCompile Include="src\exercises\UniqueCharactersUT.cpp" />
     <ClCompile Include="src\exercises\UniqueNamesUT.cpp" />
+    <ClCompile Include="src\network\networkUT.cpp" />
     <ClCompile Include="src\paralle_programming\ConditionVariableUT.cpp" />
     <ClCompile Include="src\paralle_programming\MutexGuardThreadUT.cpp" />
   </ItemGroup>
