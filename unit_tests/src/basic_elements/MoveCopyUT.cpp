@@ -1,4 +1,5 @@
-#include "pch.h"
+#include "gmock/gmock.h"
+
 #include "MoveCopy.h"
 
 namespace basic_elements
