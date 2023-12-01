@@ -1,5 +1,3 @@
-#pragma once
-
 #include "QueueFromCArray.h"
 
 namespace containers

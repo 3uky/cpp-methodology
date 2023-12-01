@@ -1,7 +1,5 @@
 #include "gmock/gmock.h"
 
-#pragma once
-
 #include <memory>
 
 using namespace std;

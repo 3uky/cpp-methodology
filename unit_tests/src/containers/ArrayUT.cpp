@@ -9,8 +9,6 @@
 
 #include "gmock/gmock.h"
 
-#pragma once
-
 #include <array>
 
 using ::testing::ElementsAre;

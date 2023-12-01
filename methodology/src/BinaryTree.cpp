@@ -1,10 +1,8 @@
-#pragma once
+#include "BinaryTree.h"
 
 #include <list>
 #include <queue>
 #include <memory>
-
-#include "BinaryTree.h"
 
 namespace algorithms
 {
