@@ -135,7 +135,6 @@
   <ItemGroup>
     <ClCompile Include="src\BinaryTree.cpp" />
     <ClCompile Include="src\MergeSort.h" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="src\QueueFromCArray.cpp" />
     <ClCompile Include="src\Stack.cpp" />
   </ItemGroup>
