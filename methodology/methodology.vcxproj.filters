@@ -221,5 +221,8 @@
     <ClInclude Include="src\WinsockClient.h">
       <Filter>Header Files\network</Filter>
     </ClInclude>
+    <ClInclude Include="src\WinsockLogger.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

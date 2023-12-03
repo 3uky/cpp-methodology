@@ -2,11 +2,7 @@
 
 
 #include <winsock2.h>
-
-// Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
-#pragma comment (lib, "Ws2_32.lib")
-#pragma comment (lib, "Mswsock.lib")
-#pragma comment (lib, "AdvApi32.lib")
+#include <string>
 
 namespace network
 {
@@ -19,11 +15,14 @@ private:
     void InitializeWinsock();
     void TerminateWinsock();
     addrinfo* ResolveServerAddressAndPort();
-    SOCKET CreateSocket(addrinfo* ptr);
-    SOCKET ConnectToServer(addrinfo* serverInfo);
-    void SendInitialBuffer(SOCKET& ConnectSocket);
-    void ShutdownConnection(SOCKET& ConnectSocket);
-    void ReceiveUntilPeerCloseConnection(SOCKET& ConnectSocket);
+    SOCKET CreateSocket(addrinfo* serverInfo);
+    SOCKET ConnectToServer(addrinfo* allServerInfo);
+    void SendInitialBuffer(SOCKET& connectSocket);
+    void ShutdownConnection(SOCKET& connectSocket);
+    void ReceiveUntilPeerCloseConnection(SOCKET& connectSocket);
+
+    const unsigned short m_default_port = 27015;
+    const std::string m_server_address = "127.0.0.1";
 };
 
 }

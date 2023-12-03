@@ -1,31 +1,29 @@
-#define WIN32_LEAN_AND_MEAN
-
 #include "WinsockClient.h"
+#include "WinsockLogger.h"
 
 #include <windows.h>
 #include <winsock2.h>
 #include <ws2tcpip.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <chrono>
+#include <format>
 
-// Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
-#pragma comment (lib, "Ws2_32.lib")
-#pragma comment (lib, "Mswsock.lib")
-#pragma comment (lib, "AdvApi32.lib")
+#pragma warning(disable : 4996)
+
+using namespace std;
 
 namespace network
 {
-
-#define DEFAULT_BUFLEN 512
-#define DEFAULT_PORT "27015"
 
 void WinsockClient::InitializeWinsock()
 {
     WSADATA wsaData;
 
-    int iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
-    if (iResult != 0) {
-        printf("WSAStartup failed with error: %d\n", iResult);
+    int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
+    if (result != 0) {
+        cerr << "WSAStartup failed with error: " << result << endl;
         throw;
     }
 }
@@ -38,7 +36,7 @@ void WinsockClient::TerminateWinsock()
 addrinfo* WinsockClient::ResolveServerAddressAndPort()
 {
     addrinfo hints;
-    addrinfo* result;
+    addrinfo* serverInfo;
 
     ZeroMemory(&hints, sizeof(hints));
     hints.ai_family = AF_UNSPEC;
@@ -46,82 +44,82 @@ addrinfo* WinsockClient::ResolveServerAddressAndPort()
     hints.ai_protocol = IPPROTO_TCP;
 
     // Resolve the server address and port
-    int iResult = getaddrinfo("127.0.0.1", DEFAULT_PORT, &hints, &result);
-    if (iResult != 0) {
-        printf("getaddrinfo failed with error: %d\n", iResult);
+    int result = getaddrinfo(m_server_address.c_str(), to_string(m_default_port).c_str(), &hints, &serverInfo);
+    if (result != 0) {
+        cerr << "getaddrinfo failed with error: " << result << endl;
         WSACleanup();
         throw;
     }
-    return result;
+    return serverInfo;
 }
 
-SOCKET WinsockClient::CreateSocket(addrinfo* ptr)
+SOCKET WinsockClient::CreateSocket(addrinfo* serverInfo)
 {
-    SOCKET ConnectSocket = socket(ptr->ai_family, ptr->ai_socktype, ptr->ai_protocol);
+    SOCKET ConnectSocket = socket(serverInfo->ai_family, serverInfo->ai_socktype, serverInfo->ai_protocol);
     if (ConnectSocket == INVALID_SOCKET) {
-        printf("socket failed with error: %ld\n", WSAGetLastError());
+        cout << "socket failed with error: " << WSAGetLastError() << endl;
         WSACleanup();
         throw;
     }
     return ConnectSocket;
 }
 
-void WinsockClient::SendInitialBuffer(SOCKET& ConnectSocket)
+void WinsockClient::SendInitialBuffer(SOCKET& connectSocket)
 {
     const char* sendbuf = "this is a test";
 
-    int iResult = send(ConnectSocket, sendbuf, (int)strlen(sendbuf), 0);
-    if (iResult == SOCKET_ERROR) {
+    int result = send(connectSocket, sendbuf, (int)strlen(sendbuf), 0);
+    if (result == SOCKET_ERROR) {
         printf("send failed with error: %d\n", WSAGetLastError());
-        closesocket(ConnectSocket);
+        closesocket(connectSocket);
         WSACleanup();
         throw;
     }
 
-    printf("Bytes Sent: %ld\n", iResult);
+    WinsockLogger::Log(std::format("Client: Bytes sent: {}", result));
 }
 
-void WinsockClient::ShutdownConnection(SOCKET& ConnectSocket)
+void WinsockClient::ShutdownConnection(SOCKET& connectSocket)
 {
     // shutdown the connection since no more data will be sent
-    int iResult = shutdown(ConnectSocket, SD_SEND);
-    if (iResult == SOCKET_ERROR) {
-        printf("shutdown failed with error: %d\n", WSAGetLastError());
-        closesocket(ConnectSocket);
+    int result = shutdown(connectSocket, SD_SEND);
+    if (result == SOCKET_ERROR) {
+        cerr << "shutdown failed with error: " << WSAGetLastError() << endl;
+        closesocket(connectSocket);
         WSACleanup();
         throw;
     }
 }
 
-void WinsockClient::ReceiveUntilPeerCloseConnection(SOCKET& ConnectSocket)
+void WinsockClient::ReceiveUntilPeerCloseConnection(SOCKET& connectSocket)
 {
+    const int DEFAULT_BUFLEN = 512;
     char recvbuf[DEFAULT_BUFLEN];
-    int recvbuflen = DEFAULT_BUFLEN;
-    int iResult;
+    int result;
 
     do {
-        iResult = recv(ConnectSocket, recvbuf, recvbuflen, 0);
-        if (iResult > 0)
-            printf("Bytes received: %d\n", iResult);
-        else if (iResult == 0)
-            printf("Connection closed\n");
+        result = recv(connectSocket, recvbuf, DEFAULT_BUFLEN, 0);
+        if (result > 0)
+            WinsockLogger::Log(format("Client: Bytes received: {}", result));
+			
+        else if (result == 0)
+            cout << "Client: Connection closed" << endl;
         else
-            printf("recv failed with error: %d\n", WSAGetLastError());
+            cout << "Client: recv failed with error: " << WSAGetLastError() << endl;
 
-    } while (iResult > 0);
+    } while (result > 0);
 }
 
-SOCKET WinsockClient::ConnectToServer(addrinfo* serverInfo)
+SOCKET WinsockClient::ConnectToServer(addrinfo* allServerInfo)
 {
     SOCKET connectSocket = INVALID_SOCKET;
 
     // Attempt to connect to an address until one succeeds
-    for (addrinfo* ptr = serverInfo; ptr != NULL; ptr = ptr->ai_next) {
-        connectSocket = CreateSocket(ptr);
+    for (addrinfo* serverInfo = allServerInfo; serverInfo != NULL; serverInfo = serverInfo->ai_next) {
+        connectSocket = CreateSocket(serverInfo);
 
-        // Connect to server.
-        int iResult = connect(connectSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
-        if (iResult == SOCKET_ERROR) {
+        int result = connect(connectSocket, serverInfo->ai_addr, static_cast<int>(serverInfo->ai_addrlen));
+        if (result == SOCKET_ERROR) {
             closesocket(connectSocket);
             connectSocket = INVALID_SOCKET;
             continue;
@@ -130,8 +128,8 @@ SOCKET WinsockClient::ConnectToServer(addrinfo* serverInfo)
     }
 
     if (connectSocket == INVALID_SOCKET) {
-        printf("Unable to connect to server!\n");
-        freeaddrinfo(serverInfo);
+        cerr << "Unable to connect to server!" << endl;
+        freeaddrinfo(allServerInfo);
         WSACleanup();
         throw;
     }
@@ -143,18 +141,13 @@ void WinsockClient::Run()
 {
     InitializeWinsock();
 
-    addrinfo* serverInfo = ResolveServerAddressAndPort();
+    addrinfo* allServerInfo = ResolveServerAddressAndPort();
+    SOCKET connectSocket = ConnectToServer(allServerInfo);
+    freeaddrinfo(allServerInfo);
 
-    SOCKET connectSocket = ConnectToServer(serverInfo);
-
-    freeaddrinfo(serverInfo);
-
-    SendInitialBuffer(connectSocket);
-
+	SendInitialBuffer(connectSocket);
     ShutdownConnection(connectSocket);
-
     ReceiveUntilPeerCloseConnection(connectSocket);
-
     closesocket(connectSocket);
 
     TerminateWinsock();

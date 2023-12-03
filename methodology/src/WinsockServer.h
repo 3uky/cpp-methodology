@@ -1,14 +1,10 @@
 // https://learn.microsoft.com/en-us/windows/win32/winsock/complete-server-code
 
-#undef UNICODE
+//#undef UNICODE
 
-#define WIN32_LEAN_AND_MEAN
+//#define WIN32_LEAN_AND_MEAN
 
 #include <winsock2.h>
-
-// Need to link with Ws2_32.lib
-#pragma comment (lib, "Ws2_32.lib")
-// #pragma comment (lib, "Mswsock.lib")
 
 namespace network {
 
@@ -22,11 +18,13 @@ private:
     void TerminateWinsock();
     addrinfo* ResolveServerAddressAndPort();
     SOCKET CreateSocket(addrinfo* result);
-    void BindSocket(SOCKET& ListenSocket, addrinfo* result);
-    void StartListening(SOCKET& ListenSocket);
-    SOCKET AcceptClient(SOCKET& ListenSocket);
-    void HandleConnection(SOCKET& ClientSocket);
-    void ShutdownConnection(SOCKET& ClientSocket);
+    void BindSocket(SOCKET& listenSocket, addrinfo* serverInfo);
+    void StartListening(SOCKET& listenSocket);
+    SOCKET AcceptClient(SOCKET& listenSocket);
+    void HandleConnection(SOCKET& clientSocket);
+    void ShutdownConnection(SOCKET& clientSocket);
+
+    const unsigned short m_default_port = 27015;
 };
 
 }

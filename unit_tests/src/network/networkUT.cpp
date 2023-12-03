@@ -22,11 +22,10 @@ void ExecuteClient()
     c.Run();
 }
 
-TEST(WinsockServerTest, DISABLED_RunServer)
+TEST(WinsockServerTest, DISABLED_ServerShouldRunAndListen)
 {
     ExecuteServer();
 }
-
 TEST(WinsockServerTest, DISABLED_ServerShouldHandleClientRequest)
 {
     std::thread serverThread { ExecuteServer };
