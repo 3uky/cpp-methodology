@@ -20,7 +20,7 @@ namespace network {
 
 #define DEFAULT_PORT "27015"
 
-void Server::Run()
+void WinsockServer::Run()
 {
     InitializeWinsock();
 
@@ -45,7 +45,7 @@ void Server::Run()
     TerminateWinsock();
 }
 
-void Server::InitializeWinsock() // initiates use of the Winsock DLL by a process
+void WinsockServer::InitializeWinsock() // initiates use of the Winsock DLL by a process
 {
     WSADATA wsaData;
     int iResult;
@@ -59,12 +59,12 @@ void Server::InitializeWinsock() // initiates use of the Winsock DLL by a proces
     }
 }
 
-void Server::TerminateWinsock()
+void WinsockServer::TerminateWinsock()
 {
     WSACleanup();
 }
 
-addrinfo* Server::ResolveServerAddressAndPort()
+addrinfo* WinsockServer::ResolveServerAddressAndPort()
 {
     int iResult;
     addrinfo hints;
@@ -88,7 +88,7 @@ addrinfo* Server::ResolveServerAddressAndPort()
     return result;
 }
 
-SOCKET Server::CreateSocket(addrinfo* result)
+SOCKET WinsockServer::CreateSocket(addrinfo* result)
 {
     SOCKET ListenSocket = INVALID_SOCKET;
 
@@ -104,7 +104,7 @@ SOCKET Server::CreateSocket(addrinfo* result)
     return ListenSocket;
 }
 
-void Server::BindSocket(SOCKET& ListenSocket, addrinfo* result)
+void WinsockServer::BindSocket(SOCKET& ListenSocket, addrinfo* result)
 {
     // Setup the TCP listening socket
     int iResult = bind(ListenSocket, result->ai_addr, (int)result->ai_addrlen);
@@ -117,7 +117,7 @@ void Server::BindSocket(SOCKET& ListenSocket, addrinfo* result)
     }
 }
 
-void Server::StartListening(SOCKET& ListenSocket)
+void WinsockServer::StartListening(SOCKET& ListenSocket)
 {
     int iResult = listen(ListenSocket, SOMAXCONN);
     if (iResult == SOCKET_ERROR) {
@@ -128,7 +128,7 @@ void Server::StartListening(SOCKET& ListenSocket)
     }
 }
 
-SOCKET Server::AcceptClient(SOCKET& ListenSocket)
+SOCKET WinsockServer::AcceptClient(SOCKET& ListenSocket)
 {
     SOCKET ClientSocket = INVALID_SOCKET;
 
@@ -143,7 +143,7 @@ SOCKET Server::AcceptClient(SOCKET& ListenSocket)
     return ClientSocket;
 }
 
-void Server::HandleConnection(SOCKET& ClientSocket)
+void WinsockServer::HandleConnection(SOCKET& ClientSocket)
 {
     int iResult, iSendResult;
             
@@ -181,7 +181,7 @@ void Server::HandleConnection(SOCKET& ClientSocket)
     ShutdownConnection(ClientSocket);
 }
 
-void Server::ShutdownConnection(SOCKET& ClientSocket)
+void WinsockServer::ShutdownConnection(SOCKET& ClientSocket)
 {
     // shutdown the connection since we're done
     int iResult = shutdown(ClientSocket, SD_SEND);
@@ -192,7 +192,5 @@ void Server::ShutdownConnection(SOCKET& ClientSocket)
         throw;
     }
 }
-
-
 
 }

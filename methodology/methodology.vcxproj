@@ -137,6 +137,7 @@
     <ClCompile Include="src\MergeSort.h" />
     <ClCompile Include="src\QueueFromCArray.cpp" />
     <ClCompile Include="src\Stack.cpp" />
+    <ClCompile Include="src\WinsockClient.cpp" />
     <ClCompile Include="src\WinsockServer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +176,7 @@
     <ClInclude Include="src\Polymorphism.h" />
     <ClInclude Include="src\SharedPtr.h" />
     <ClInclude Include="src\Stack.h" />
+    <ClInclude Include="src\WinsockClient.h" />
     <ClInclude Include="src\WinsockServer.h" />
     <ClInclude Include="src\Template.h" />
     <ClInclude Include="src\CharacterFilter.h" />

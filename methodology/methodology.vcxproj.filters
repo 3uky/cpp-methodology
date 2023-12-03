@@ -78,6 +78,9 @@
     <ClCompile Include="src\WinsockServer.cpp">
       <Filter>Header Files\network</Filter>
     </ClCompile>
+    <ClCompile Include="src\WinsockClient.cpp">
+      <Filter>Header Files\network</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Observer.h">
@@ -213,6 +216,9 @@
       <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClInclude>
     <ClInclude Include="src\WinsockServer.h">
+      <Filter>Header Files\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WinsockClient.h">
       <Filter>Header Files\network</Filter>
     </ClInclude>
   </ItemGroup>
