@@ -10,19 +10,23 @@ namespace network
 class WinsockClient
 {
 public:
-    void Run();
+    WinsockClient();
+    ~WinsockClient();
+
+    void ConnectToServer(const std::string& serverIp = "127.0.0.1", unsigned short serverPort = 27015);
+    void SendToServer(const std::string& message);
+    void CloseConnectionWithServer();
+
 private:
     void InitializeWinsock();
     void TerminateWinsock();
-    addrinfo* ResolveServerAddressAndPort();
+    addrinfo* ResolveServerAddressAndPort(const std::string& serverIp, unsigned short serverPort);
     SOCKET CreateSocket(addrinfo* serverInfo);
-    SOCKET ConnectToServer(addrinfo* allServerInfo);
-    void SendInitialBuffer(SOCKET& connectSocket);
-    void ShutdownConnection(SOCKET& connectSocket);
-    void ReceiveUntilPeerCloseConnection(SOCKET& connectSocket);
+    void ReceiveUntilPeerCloseConnection();
+    void CloseSocket();
+    void ShutdownConnection();
 
-    const unsigned short m_default_port = 27015;
-    const std::string m_server_address = "127.0.0.1";
+    SOCKET m_connectSocket;
 };
 
 }

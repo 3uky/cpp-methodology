@@ -18,8 +18,10 @@ void ExecuteServer()
 
 void ExecuteClient()
 {
-    WinsockClient c;
-    c.Run();
+    WinsockClient client;
+    client.ConnectToServer();
+    client.SendToServer("this is a test");
+    client.CloseConnectionWithServer();
 }
 
 TEST(WinsockServerTest, DISABLED_ServerShouldRunAndListen)
