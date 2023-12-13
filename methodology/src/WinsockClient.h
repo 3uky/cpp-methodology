@@ -13,16 +13,17 @@ public:
     WinsockClient();
     ~WinsockClient();
 
-    void ConnectToServer(const std::string& serverIp = "127.0.0.1", unsigned short serverPort = 27015);
-    void SendToServer(const std::string& message);
-    void CloseConnectionWithServer();
+    void Connect(const std::string& serverIp = "127.0.0.1", unsigned short serverPort = 27015);
+    void Send(const std::string& message);
+    std::string Receive();
+    void CloseConnection();
 
 private:
     void InitializeWinsock();
     void TerminateWinsock();
     addrinfo* ResolveServerAddressAndPort(const std::string& serverIp, unsigned short serverPort);
     SOCKET CreateSocket(addrinfo* serverInfo);
-    void ReceiveUntilPeerCloseConnection();
+    void ReceiveUntilServerCloseConnection();
     void CloseSocket();
     void ShutdownConnection();
 

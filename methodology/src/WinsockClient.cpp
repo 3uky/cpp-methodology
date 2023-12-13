@@ -42,7 +42,7 @@ void WinsockClient::TerminateWinsock()
     WSACleanup();
 }
 
-void WinsockClient::ConnectToServer(const std::string& serverIp, unsigned short serverPort)
+void WinsockClient::Connect(const std::string& serverIp, unsigned short serverPort)
 {
     addrinfo* serverInfo = ResolveServerAddressAndPort(serverIp, serverPort);
 
@@ -58,14 +58,12 @@ void WinsockClient::ConnectToServer(const std::string& serverIp, unsigned short 
         break;
     }
 
+    freeaddrinfo(serverInfo);
+
     if (m_connectSocket == INVALID_SOCKET) {
         cerr << "Unable to connect to server!" << endl;
-        freeaddrinfo(serverInfo);
-        TerminateWinsock();
         throw;
     }
-
-	freeaddrinfo(serverInfo);
 }
 
 addrinfo* WinsockClient::ResolveServerAddressAndPort(const std::string& serverIp, unsigned short serverPort)
@@ -100,7 +98,7 @@ SOCKET WinsockClient::CreateSocket(addrinfo* serverInfo)
     return ConnectSocket;
 }
 
-void WinsockClient::SendToServer(const std::string& message)
+void WinsockClient::Send(const std::string& message)
 {
     int result = send(m_connectSocket, message.c_str(), static_cast<int>(message.size()), 0);
     if (result == SOCKET_ERROR) {
@@ -113,10 +111,10 @@ void WinsockClient::SendToServer(const std::string& message)
 	cout << std::format("Client: Bytes sent: {}", result);
 }
 
-void WinsockClient::CloseConnectionWithServer()
+void WinsockClient::CloseConnection()
 {
     ShutdownConnection();
-    ReceiveUntilPeerCloseConnection();
+    ReceiveUntilServerCloseConnection();
     CloseSocket();
 }
 
@@ -132,22 +130,31 @@ void WinsockClient::ShutdownConnection()
     }
 }
 
-void WinsockClient::ReceiveUntilPeerCloseConnection()
+std::string WinsockClient::Receive()
 {
     const int DEFAULT_BUFLEN = 512;
     char recvbuf[DEFAULT_BUFLEN];
-    int result;
+    std::string receivedMessage;
 
-    do {
-        result = recv(m_connectSocket, recvbuf, DEFAULT_BUFLEN, 0);
-        if (result > 0)
-            cout << format("Client: Bytes received: {}", result);
-        else if (result == 0)
-            cout << "Client: Connection closed" << endl;
-        else
-            cout << "Client: recv failed with error: " << WSAGetLastError() << endl;
+    int bytes = recv(m_connectSocket, recvbuf, DEFAULT_BUFLEN, 0);
 
-    } while (result > 0);
+    if (bytes > 0)
+        receivedMessage = std::string(recvbuf, bytes);
+    if (bytes < 0)
+        cerr << "Client: recv failed with error: " << WSAGetLastError() << endl;
+
+	return receivedMessage;	// on close connection result would be 0 size string
+}
+
+void WinsockClient::ReceiveUntilServerCloseConnection()
+{
+    std::string receivedMessage;
+
+    do
+    {
+        receivedMessage = Receive();
+    } while (receivedMessage.size() != 0);
+
 }
 
 void WinsockClient::CloseSocket()
