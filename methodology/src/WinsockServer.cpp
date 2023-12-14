@@ -82,7 +82,6 @@ addrinfo* WinsockServer::ResolveServerAddressAndPort(unsigned short port)
     if (result != 0)
     {
         cerr << "getaddrinfo failed with error: " << result << endl;
-        WSACleanup();
         throw;
     }
             
@@ -96,7 +95,6 @@ SOCKET WinsockServer::CreateSocket(addrinfo* result)
     if (listenSocket == INVALID_SOCKET) {
         cerr << "socket failed with error: " << WSAGetLastError() << endl;
         freeaddrinfo(result);
-        WSACleanup();
         throw;
     }
 
@@ -111,7 +109,6 @@ void WinsockServer::BindSocket(SOCKET& listenSocket, addrinfo* serverInfo)
         cerr << "bind failed with error: " << WSAGetLastError() << endl;
         freeaddrinfo(serverInfo);
         CloseSocket(listenSocket);
-        WSACleanup();
         throw;
     }
 }
@@ -122,7 +119,6 @@ void WinsockServer::StartListening()
     if (result == SOCKET_ERROR) {
         cerr << "listen failed with error: " << WSAGetLastError() << endl;
         CloseSocket(m_listenSocket);
-        WSACleanup();
         throw;
     }
 }
@@ -134,7 +130,6 @@ SOCKET WinsockServer::AcceptClient()
     if (clientSocket == INVALID_SOCKET) {
         cerr << "accept failed with error: " << WSAGetLastError() << endl;
         CloseSocket(m_listenSocket);
-        WSACleanup();
         throw;
     }
     return clientSocket;
@@ -161,7 +156,6 @@ void WinsockServer::HandleConnection(SOCKET& clientSocket)
             if (sendResult == SOCKET_ERROR) {
                 cout << "Server: send failed with error: " << WSAGetLastError() << endl;
                 CloseSocket(clientSocket);
-                WSACleanup();
                 throw;
             }
             
@@ -172,7 +166,6 @@ void WinsockServer::HandleConnection(SOCKET& clientSocket)
         else {
             cout << "Server: recv failed with error: " << WSAGetLastError() << endl;
             CloseSocket(clientSocket);
-            WSACleanup();
             throw;
         }
 
@@ -188,7 +181,6 @@ void WinsockServer::ShutdownConnection(SOCKET& clientSocket)
     if (result == SOCKET_ERROR) {
         cerr << "shutdown failed with error: " << WSAGetLastError() << endl;
         CloseSocket(clientSocket);
-        WSACleanup();
         throw;
     }
 }
