@@ -21,6 +21,7 @@ WinsockServer::WinsockServer() : m_listenSocket(INVALID_SOCKET)
 
 WinsockServer::~WinsockServer()
 {
+    CloseSocket(m_listenSocket);
     TerminateWinsock();
 }
 
@@ -53,8 +54,11 @@ void WinsockServer::Run()
 
 void WinsockServer::CloseSocket(SOCKET& socket)
 {
-    closesocket(socket);
-    socket = INVALID_SOCKET;
+    if (socket != INVALID_SOCKET)
+    {
+        closesocket(socket);
+        socket = INVALID_SOCKET;
+    }
 }
 
 void WinsockServer::Listen(unsigned short serverPort)
@@ -108,7 +112,6 @@ void WinsockServer::BindSocket(SOCKET& listenSocket, addrinfo* serverInfo)
     if (result == SOCKET_ERROR) {
         cerr << "bind failed with error: " << WSAGetLastError() << endl;
         freeaddrinfo(serverInfo);
-        CloseSocket(listenSocket);
         throw;
     }
 }
@@ -118,7 +121,6 @@ void WinsockServer::StartListening()
     const int result = listen(m_listenSocket, SOMAXCONN);
     if (result == SOCKET_ERROR) {
         cerr << "listen failed with error: " << WSAGetLastError() << endl;
-        CloseSocket(m_listenSocket);
         throw;
     }
 }
@@ -129,7 +131,6 @@ SOCKET WinsockServer::AcceptClient()
     SOCKET clientSocket = accept(m_listenSocket, NULL, NULL);
     if (clientSocket == INVALID_SOCKET) {
         cerr << "accept failed with error: " << WSAGetLastError() << endl;
-        CloseSocket(m_listenSocket);
         throw;
     }
     return clientSocket;
@@ -176,7 +177,6 @@ void WinsockServer::HandleConnection(SOCKET& clientSocket)
 
 void WinsockServer::ShutdownConnection(SOCKET& clientSocket)
 {
-    // shutdown the connection since we're done
     int result = shutdown(clientSocket, SD_SEND);
     if (result == SOCKET_ERROR) {
         cerr << "shutdown failed with error: " << WSAGetLastError() << endl;
