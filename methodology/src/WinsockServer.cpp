@@ -14,7 +14,7 @@ using namespace std;
 
 namespace network {
 
-WinsockServer::WinsockServer()
+WinsockServer::WinsockServer() : m_listenSocket(INVALID_SOCKET)
 {
     InitializeWinsock();
 }
@@ -43,17 +43,28 @@ void WinsockServer::TerminateWinsock()
 
 void WinsockServer::Run()
 {
-    addrinfo* serverInfo = ResolveServerAddressAndPort();
-    SOCKET listenSocket = CreateSocket(serverInfo);
-    BindSocket(listenSocket, serverInfo);
-    freeaddrinfo(serverInfo);
-	StartListening(listenSocket);
+    Listen();
 
-	SOCKET clientSocket = AcceptClient(listenSocket);
-	closesocket(listenSocket); // no longer need server socket
+	SOCKET clientSocket = AcceptClient(m_listenSocket);
+	closesocket(m_listenSocket); // no longer need server socket
     HandleConnection(clientSocket);
     closesocket(clientSocket);
 }
+
+void CloseSocket(SOCKET& socket)
+{
+    closesocket(socket);
+}
+
+void WinsockServer::Listen()
+{
+    addrinfo* serverInfo = ResolveServerAddressAndPort();
+    m_listenSocket = CreateSocket(serverInfo);
+    BindSocket(m_listenSocket, serverInfo);
+    freeaddrinfo(serverInfo);
+    StartListening(m_listenSocket);
+}
+
 
 addrinfo* WinsockServer::ResolveServerAddressAndPort()
 {

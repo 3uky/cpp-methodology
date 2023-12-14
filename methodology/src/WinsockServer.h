@@ -14,6 +14,7 @@ public:
     WinsockServer();
     ~WinsockServer();
 
+    void Listen();
     void Run();
 
 private:
@@ -28,6 +29,8 @@ private:
     void ShutdownConnection(SOCKET& clientSocket);
 
     const unsigned short m_default_port = 27015;
+
+    SOCKET m_listenSocket;
 };
 
 }
