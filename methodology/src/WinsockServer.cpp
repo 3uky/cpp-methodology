@@ -45,28 +45,29 @@ void WinsockServer::Run()
 {
     Listen();
 
-	SOCKET clientSocket = AcceptClient(m_listenSocket);
-	closesocket(m_listenSocket); // no longer need server socket
+	SOCKET clientSocket = AcceptClient();
+    CloseSocket(m_listenSocket); // no longer need server socket
     HandleConnection(clientSocket);
-    closesocket(clientSocket);
+    CloseSocket(clientSocket);
 }
 
-void CloseSocket(SOCKET& socket)
+void WinsockServer::CloseSocket(SOCKET& socket)
 {
     closesocket(socket);
+    socket = INVALID_SOCKET;
 }
 
-void WinsockServer::Listen()
+void WinsockServer::Listen(unsigned short serverPort)
 {
-    addrinfo* serverInfo = ResolveServerAddressAndPort();
+    addrinfo* serverInfo = ResolveServerAddressAndPort(serverPort);
     m_listenSocket = CreateSocket(serverInfo);
     BindSocket(m_listenSocket, serverInfo);
     freeaddrinfo(serverInfo);
-    StartListening(m_listenSocket);
+    StartListening();
 }
 
 
-addrinfo* WinsockServer::ResolveServerAddressAndPort()
+addrinfo* WinsockServer::ResolveServerAddressAndPort(unsigned short port)
 {
     addrinfo hints;
     addrinfo* serverInfo = NULL;
@@ -77,8 +78,7 @@ addrinfo* WinsockServer::ResolveServerAddressAndPort()
     hints.ai_protocol = IPPROTO_TCP;
     hints.ai_flags = AI_PASSIVE;
 
-    // Resolve the server address and port
-    int result = getaddrinfo(NULL, std::to_string(m_default_port).c_str(), &hints, &serverInfo);
+    int result = getaddrinfo(NULL, std::to_string(port).c_str(), &hints, &serverInfo);
     if (result != 0)
     {
         cerr << "getaddrinfo failed with error: " << result << endl;
@@ -110,30 +110,30 @@ void WinsockServer::BindSocket(SOCKET& listenSocket, addrinfo* serverInfo)
     if (result == SOCKET_ERROR) {
         cerr << "bind failed with error: " << WSAGetLastError() << endl;
         freeaddrinfo(serverInfo);
-        closesocket(listenSocket);
+        CloseSocket(listenSocket);
         WSACleanup();
         throw;
     }
 }
 
-void WinsockServer::StartListening(SOCKET& listenSocket)
+void WinsockServer::StartListening()
 {
-    const int result = listen(listenSocket, SOMAXCONN);
+    const int result = listen(m_listenSocket, SOMAXCONN);
     if (result == SOCKET_ERROR) {
         cerr << "listen failed with error: " << WSAGetLastError() << endl;
-        closesocket(listenSocket);
+        CloseSocket(m_listenSocket);
         WSACleanup();
         throw;
     }
 }
 
-SOCKET WinsockServer::AcceptClient(SOCKET& listenSocket)
+SOCKET WinsockServer::AcceptClient()
 {
     // Accept a client socket
-    SOCKET clientSocket = accept(listenSocket, NULL, NULL);
+    SOCKET clientSocket = accept(m_listenSocket, NULL, NULL);
     if (clientSocket == INVALID_SOCKET) {
         cerr << "accept failed with error: " << WSAGetLastError() << endl;
-        closesocket(listenSocket);
+        CloseSocket(m_listenSocket);
         WSACleanup();
         throw;
     }
@@ -160,7 +160,7 @@ void WinsockServer::HandleConnection(SOCKET& clientSocket)
             sendResult = send(clientSocket, recvbuf, recvResult, 0);
             if (sendResult == SOCKET_ERROR) {
                 cout << "Server: send failed with error: " << WSAGetLastError() << endl;
-                closesocket(clientSocket);
+                CloseSocket(clientSocket);
                 WSACleanup();
                 throw;
             }
@@ -171,7 +171,7 @@ void WinsockServer::HandleConnection(SOCKET& clientSocket)
             cout << "Server: Connection closing..." << endl;
         else {
             cout << "Server: recv failed with error: " << WSAGetLastError() << endl;
-            closesocket(clientSocket);
+            CloseSocket(clientSocket);
             WSACleanup();
             throw;
         }
@@ -187,7 +187,7 @@ void WinsockServer::ShutdownConnection(SOCKET& clientSocket)
     int result = shutdown(clientSocket, SD_SEND);
     if (result == SOCKET_ERROR) {
         cerr << "shutdown failed with error: " << WSAGetLastError() << endl;
-        closesocket(clientSocket);
+        CloseSocket(clientSocket);
         WSACleanup();
         throw;
     }

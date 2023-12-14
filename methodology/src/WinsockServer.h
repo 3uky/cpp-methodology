@@ -14,19 +14,20 @@ public:
     WinsockServer();
     ~WinsockServer();
 
-    void Listen();
+    void Listen(unsigned short serverPort = 27015);
     void Run();
 
 private:
     void InitializeWinsock();
     void TerminateWinsock();
-    addrinfo* ResolveServerAddressAndPort();
+    addrinfo* ResolveServerAddressAndPort(unsigned short port);
     SOCKET CreateSocket(addrinfo* result);
     void BindSocket(SOCKET& listenSocket, addrinfo* serverInfo);
-    void StartListening(SOCKET& listenSocket);
-    SOCKET AcceptClient(SOCKET& listenSocket);
+    void StartListening();
+    SOCKET AcceptClient();
     void HandleConnection(SOCKET& clientSocket);
     void ShutdownConnection(SOCKET& clientSocket);
+    void CloseSocket(SOCKET& socket);
 
     const unsigned short m_default_port = 27015;
 
