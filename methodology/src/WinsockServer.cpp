@@ -14,24 +14,17 @@ using namespace std;
 
 namespace network {
 
-void WinsockServer::Run()
+WinsockServer::WinsockServer()
 {
     InitializeWinsock();
+}
 
-    addrinfo* serverInfo = ResolveServerAddressAndPort();
-    SOCKET listenSocket = CreateSocket(serverInfo);
-    BindSocket(listenSocket, serverInfo);
-    freeaddrinfo(serverInfo);
-	StartListening(listenSocket);
-
-	SOCKET clientSocket = AcceptClient(listenSocket);
-	closesocket(listenSocket); // no longer need server socket
-    HandleConnection(clientSocket);
-    closesocket(clientSocket);
+WinsockServer::~WinsockServer()
+{
     TerminateWinsock();
 }
 
-void WinsockServer::InitializeWinsock() // initiates use of the Winsock DLL by a process
+void WinsockServer::InitializeWinsock() // initiates use of the Winsock DLL
 {
     WSADATA wsaData;
 
@@ -46,6 +39,20 @@ void WinsockServer::InitializeWinsock() // initiates use of the Winsock DLL by a
 void WinsockServer::TerminateWinsock()
 {
     WSACleanup();
+}
+
+void WinsockServer::Run()
+{
+    addrinfo* serverInfo = ResolveServerAddressAndPort();
+    SOCKET listenSocket = CreateSocket(serverInfo);
+    BindSocket(listenSocket, serverInfo);
+    freeaddrinfo(serverInfo);
+	StartListening(listenSocket);
+
+	SOCKET clientSocket = AcceptClient(listenSocket);
+	closesocket(listenSocket); // no longer need server socket
+    HandleConnection(clientSocket);
+    closesocket(clientSocket);
 }
 
 addrinfo* WinsockServer::ResolveServerAddressAndPort()

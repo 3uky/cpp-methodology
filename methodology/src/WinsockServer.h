@@ -11,10 +11,13 @@ namespace network {
 class WinsockServer
 {
 public:
+    WinsockServer();
+    ~WinsockServer();
+
     void Run();
 
 private:
-    void InitializeWinsock(); // initiates use of the Winsock DLL by a process
+    void InitializeWinsock();
     void TerminateWinsock();
     addrinfo* ResolveServerAddressAndPort();
     SOCKET CreateSocket(addrinfo* result);
