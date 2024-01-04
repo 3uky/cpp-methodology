@@ -224,5 +224,8 @@
     <ClInclude Include="src\WinsockLogger.h">
       <Filter>Header Files\network</Filter>
     </ClInclude>
+    <ClInclude Include="src\HashMap.h">
+      <Filter>Header Files\cpp_internals</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

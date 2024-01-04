@@ -144,6 +144,9 @@
     <ClCompile Include="src\network\networkUT.cpp">
       <Filter>tests\network</Filter>
     </ClCompile>
+    <ClCompile Include="src\cpp_internals\HashMapUT.cpp">
+      <Filter>tests\cpp_internals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">

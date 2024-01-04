@@ -167,6 +167,7 @@
     <ClInclude Include="src\BubbleSort.h" />
     <ClInclude Include="src\Fibonacci.h" />
     <ClInclude Include="src\FrequencySort.h" />
+    <ClInclude Include="src\HashMap.h" />
     <ClInclude Include="src\InsertionSort.h" />
     <ClInclude Include="src\LinkedList.h" />
     <ClInclude Include="src\BinaryTreeNode.h" />
