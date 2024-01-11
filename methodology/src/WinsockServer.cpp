@@ -48,7 +48,6 @@ void WinsockServer::Run()
     Listen();
 
 	SOCKET clientSocket = AcceptClient();
-    CloseSocket(m_listenSocket); // no longer need server socket
 
 	HandleConnection(clientSocket);
     ShutdownConnection(clientSocket);
