@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <chrono>
+#include <string>
 
 #pragma warning(disable : 4996)
 
@@ -48,8 +49,9 @@ void WinsockServer::Run()
 
 	SOCKET clientSocket = AcceptClient();
     CloseSocket(m_listenSocket); // no longer need server socket
-    HandleConnection(clientSocket);
-    CloseSocket(clientSocket);
+
+	HandleConnection(clientSocket);
+    ShutdownConnection(clientSocket);
 }
 
 void WinsockServer::CloseSocket(SOCKET& socket)
@@ -138,48 +140,49 @@ SOCKET WinsockServer::AcceptClient()
 
 void WinsockServer::HandleConnection(SOCKET& clientSocket)
 {
-    int recvResult, sendResult;
-            
+    std::string message;
+
+    while (message = Receive(clientSocket), !message.empty())
+        Send(message, clientSocket);
+}
+
+std::string WinsockServer::Receive(SOCKET& clientSocket)
+{
     const int DEFAULT_BUFLEN = 512;
     char recvbuf[DEFAULT_BUFLEN];
 
-    // Receive until the peer shuts down the connection
-    do {
-        recvResult = recv(clientSocket, recvbuf, DEFAULT_BUFLEN, 0);
-        if (recvResult > 0) {
-            
-            cout << std::format("Server: Bytes received: {}", recvResult);
+    int bytes = recv(clientSocket, recvbuf, DEFAULT_BUFLEN, 0);
+    cout << std::format("Server: Bytes received: {}\n", bytes);
+    
+    if (bytes > 0)
+    {
+        return std::string(recvbuf, bytes);
+    }
+    else if (bytes == 0)
+        cout << "Server: Connection closing..." << endl;
+    if (bytes < 0)
+        cerr << "Server: recv failed with error: " << WSAGetLastError() << endl;
+    
+    return std::string{};
+}
 
-            //cout << "Server: Bytes received: " << recvResult << endl;
+void WinsockServer::Send(const std::string& message, SOCKET& clientSocket)
+{
+    int result = send(clientSocket, message.c_str(), static_cast<int>(message.size()), 0);
+    if (result == SOCKET_ERROR) {
+        cerr << std::format("Server: send failed with error: {}\n", WSAGetLastError());
+        CloseSocket(clientSocket);
+        throw;
+    }
 
-            // Echo the buffer back to the sender
-            sendResult = send(clientSocket, recvbuf, recvResult, 0);
-            if (sendResult == SOCKET_ERROR) {
-                cout << "Server: send failed with error: " << WSAGetLastError() << endl;
-                CloseSocket(clientSocket);
-                throw;
-            }
-            
-            cout << std::format("Server: Bytes sent: {}", sendResult);
-        }
-        else if (recvResult == 0)
-            cout << "Server: Connection closing..." << endl;
-        else {
-            cout << "Server: recv failed with error: " << WSAGetLastError() << endl;
-            CloseSocket(clientSocket);
-            throw;
-        }
-
-    } while (recvResult > 0);
-
-    ShutdownConnection(clientSocket);
+    cout << std::format("Server: Bytes sent: {}", result);
 }
 
 void WinsockServer::ShutdownConnection(SOCKET& clientSocket)
 {
     int result = shutdown(clientSocket, SD_SEND);
     if (result == SOCKET_ERROR) {
-        cerr << "shutdown failed with error: " << WSAGetLastError() << endl;
+        cerr << "Server: shutdown failed with error: " << WSAGetLastError() << endl;
         CloseSocket(clientSocket);
         throw;
     }

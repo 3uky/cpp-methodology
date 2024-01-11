@@ -1,10 +1,7 @@
 // https://learn.microsoft.com/en-us/windows/win32/winsock/complete-server-code
 
-//#undef UNICODE
-
-//#define WIN32_LEAN_AND_MEAN
-
 #include <winsock2.h>
+#include <string>
 
 namespace network {
 
@@ -26,11 +23,12 @@ private:
     void StartListening();
     SOCKET AcceptClient();
     void HandleConnection(SOCKET& clientSocket);
-    void ShutdownConnection(SOCKET& clientSocket);
+    std::string Receive(SOCKET& clientSocket);
+    void Send(const std::string& message, SOCKET& clientSocket);
+	void ShutdownConnection(SOCKET& clientSocket);
     void CloseSocket(SOCKET& socket);
 
     const unsigned short m_default_port = 27015;
-
     SOCKET m_listenSocket;
 };
 
