@@ -1,3 +1,6 @@
+// https://medium.com/@mark.winter/implementing-a-hash-table-in-c-14-for-practice-9c4ad6b7cc3e
+// https://www.geeksforgeeks.org/how-to-use-unordered_map-efficiently-in-c/
+
 #pragma once
 
 #include <algorithm>
