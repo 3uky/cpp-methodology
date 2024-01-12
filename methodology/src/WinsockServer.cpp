@@ -8,7 +8,8 @@
 #include <string>
 #include <chrono>
 #include <string>
-
+#include <functional>
+#include <iostream>
 #pragma warning(disable : 4996)
 
 using namespace std;
@@ -18,6 +19,18 @@ namespace network {
 WinsockServer::WinsockServer() : m_listenSocket(INVALID_SOCKET)
 {
     InitializeWinsock();
+    SetDefaultClientRequestHandler();
+}
+
+// default handler reply with same message server received
+void WinsockServer::SetDefaultClientRequestHandler()
+{
+    m_clientRequestHandler = [this](std::string clientRequestMessage, SOCKET& clientSocket) { Send(clientRequestMessage, clientSocket); };
+}
+
+void WinsockServer::DefineClientRequestHandler(std::function<void(std::string message, SOCKET& socket)> callback)
+{
+    m_clientRequestHandler = callback;
 }
 
 WinsockServer::~WinsockServer()
@@ -61,7 +74,6 @@ void WinsockServer::Listen(unsigned short serverPort)
     StartListening();
 }
 
-
 addrinfo* WinsockServer::ResolveServerAddressAndPort(unsigned short port)
 {
     addrinfo hints;
@@ -99,7 +111,7 @@ SOCKET WinsockServer::CreateSocket(addrinfo* result)
 void WinsockServer::BindSocket(SOCKET& listenSocket, addrinfo* serverInfo)
 {
     // Setup the TCP listening socket
-    const int result = bind(listenSocket, serverInfo->ai_addr, (int)serverInfo->ai_addrlen);
+    const int result = ::bind(listenSocket, serverInfo->ai_addr, (int)serverInfo->ai_addrlen);
     if (result == SOCKET_ERROR) {
         cerr << "bind failed with error: " << WSAGetLastError() << endl;
         freeaddrinfo(serverInfo);
@@ -127,12 +139,12 @@ SOCKET WinsockServer::AcceptClient()
     return clientSocket;
 }
 
-void WinsockServer::ReplyWithSameMessage(SOCKET& clientSocket)
+void WinsockServer::HandleClientRequests(SOCKET& clientSocket)
 {
     std::string message;
 
     while (message = Receive(clientSocket), !message.empty())
-        Send(message, clientSocket);
+        m_clientRequestHandler(message, clientSocket);
 }
 
 std::string WinsockServer::Receive(SOCKET& clientSocket)

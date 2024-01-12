@@ -14,8 +14,9 @@ void ExecuteServer()
 {
     WinsockServer server;
 	server.Listen();
-    auto clientSocket = server.AcceptClient();
-    server.ReplyWithSameMessage(clientSocket);
+	auto clientSocket = server.AcceptClient();
+	//server.DefineClientRequestHandler([&](std::string message, SOCKET& socket) {server.Send(message, socket); });
+	server.HandleClientRequests(clientSocket);
     server.ShutdownConnection(clientSocket);
 }
 

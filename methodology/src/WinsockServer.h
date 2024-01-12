@@ -2,6 +2,7 @@
 
 #include <winsock2.h>
 #include <string>
+#include <functional>
 
 namespace network {
 
@@ -17,11 +18,13 @@ public:
     std::string Receive(SOCKET& clientSocket);
     void Send(const std::string& message, SOCKET& clientSocket);
 
-    void ReplyWithSameMessage(SOCKET& clientSocket);
+    void DefineClientRequestHandler(std::function<void(std::string clientRequestMessage, SOCKET& clientSocket)> callback);
+    void HandleClientRequests(SOCKET& clientSocket);
 
 private:
     void InitializeWinsock();
     void TerminateWinsock();
+    void SetDefaultClientRequestHandler();
     addrinfo* ResolveServerAddressAndPort(unsigned short port);
     SOCKET CreateSocket(addrinfo* result);
     void BindSocket(SOCKET& listenSocket, addrinfo* serverInfo);
@@ -30,6 +33,8 @@ private:
 
     const unsigned short m_default_port = 27015;
     SOCKET m_listenSocket;
+
+    std::function<void(std::string message, SOCKET& socket)> m_clientRequestHandler;
 };
 
 }
