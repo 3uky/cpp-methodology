@@ -12,8 +12,11 @@ namespace network
 
 void ExecuteServer()
 {
-    WinsockServer s;
-    s.Run();
+    WinsockServer server;
+	server.Listen();
+    auto clientSocket = server.AcceptClient();
+    server.ReplyWithSameMessage(clientSocket);
+    server.ShutdownConnection(clientSocket);
 }
 
 void ExecuteClient()

@@ -43,16 +43,6 @@ void WinsockServer::TerminateWinsock()
     WSACleanup();
 }
 
-void WinsockServer::Run()
-{
-    Listen();
-
-	SOCKET clientSocket = AcceptClient();
-
-	HandleConnection(clientSocket);
-    ShutdownConnection(clientSocket);
-}
-
 void WinsockServer::CloseSocket(SOCKET& socket)
 {
     if (socket != INVALID_SOCKET)
@@ -137,7 +127,7 @@ SOCKET WinsockServer::AcceptClient()
     return clientSocket;
 }
 
-void WinsockServer::HandleConnection(SOCKET& clientSocket)
+void WinsockServer::ReplyWithSameMessage(SOCKET& clientSocket)
 {
     std::string message;
 
@@ -157,7 +147,7 @@ std::string WinsockServer::Receive(SOCKET& clientSocket)
     {
         return std::string(recvbuf, bytes);
     }
-    else if (bytes == 0)
+    if (bytes == 0)
         cout << "Server: Connection closing..." << endl;
     if (bytes < 0)
         cerr << "Server: recv failed with error: " << WSAGetLastError() << endl;

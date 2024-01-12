@@ -12,7 +12,12 @@ public:
     ~WinsockServer();
 
     void Listen(unsigned short serverPort = 27015);
-    void Run();
+    SOCKET AcceptClient();
+    void ShutdownConnection(SOCKET& clientSocket);
+    std::string Receive(SOCKET& clientSocket);
+    void Send(const std::string& message, SOCKET& clientSocket);
+
+    void ReplyWithSameMessage(SOCKET& clientSocket);
 
 private:
     void InitializeWinsock();
@@ -21,11 +26,6 @@ private:
     SOCKET CreateSocket(addrinfo* result);
     void BindSocket(SOCKET& listenSocket, addrinfo* serverInfo);
     void StartListening();
-    SOCKET AcceptClient();
-    void HandleConnection(SOCKET& clientSocket);
-    std::string Receive(SOCKET& clientSocket);
-    void Send(const std::string& message, SOCKET& clientSocket);
-	void ShutdownConnection(SOCKET& clientSocket);
     void CloseSocket(SOCKET& socket);
 
     const unsigned short m_default_port = 27015;
