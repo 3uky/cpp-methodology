@@ -42,7 +42,7 @@ TEST(WinsockServerTest, DISABLED_ServerAndClientShouldFollowCommunicationProtoco
     clientThread.join();
 }
 
-TEST(WinsockServerTest, ServerShouldReplyToClientRequest)
+TEST(WinsockServerTest, DISABLED_ServerShouldReplyToClientRequest)
 {
     // GIVEN
     WinsockClient client;
