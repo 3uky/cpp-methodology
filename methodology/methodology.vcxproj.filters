@@ -61,6 +61,15 @@
     <Filter Include="Header Files\containers\Stack">
       <UniqueIdentifier>{360bcf77-54ef-45a4-8374-0167e977a4bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\design_patterns\behavioral">
+      <UniqueIdentifier>{9efbad97-0c9f-46a7-bb77-d4706bcc5e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\design_patterns\creational">
+      <UniqueIdentifier>{c5c975dc-1131-4c9b-af9a-1dbc715ed933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\design_patterns\structural">
+      <UniqueIdentifier>{4163cc36-7fd3-4bd3-95a1-b8a45698bcf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MergeSort.h">
@@ -83,24 +92,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Observer.h">
-      <Filter>Header Files\design_patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Adapter.h">
-      <Filter>Header Files\design_patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Singleton.h">
-      <Filter>Header Files\design_patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Factory.h">
-      <Filter>Header Files\design_patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Facade.h">
-      <Filter>Header Files\design_patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ObserverBoostSignal.h">
-      <Filter>Header Files\design_patterns</Filter>
-    </ClInclude>
     <ClInclude Include="src\AsyncWait.h">
       <Filter>Header Files\boost_asio</Filter>
     </ClInclude>
@@ -226,6 +217,27 @@
     </ClInclude>
     <ClInclude Include="src\HashMap.h">
       <Filter>Header Files\cpp_internals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Adapter.h">
+      <Filter>Header Files\design_patterns\structural</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Facade.h">
+      <Filter>Header Files\design_patterns\structural</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Factory.h">
+      <Filter>Header Files\design_patterns\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Observer.h">
+      <Filter>Header Files\design_patterns\behavioral</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ObserverBoostSignal.h">
+      <Filter>Header Files\design_patterns\behavioral</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Singleton.h">
+      <Filter>Header Files\design_patterns\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Decorator.h">
+      <Filter>Header Files\design_patterns\structural</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
