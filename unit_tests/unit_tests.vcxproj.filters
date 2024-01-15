@@ -147,6 +147,9 @@
     <ClCompile Include="src\cpp_internals\HashMapUT.cpp">
       <Filter>tests\cpp_internals</Filter>
     </ClCompile>
+    <ClCompile Include="src\design_patterns\DecoratorUT.cpp">
+      <Filter>tests\design_patterns\structural</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
