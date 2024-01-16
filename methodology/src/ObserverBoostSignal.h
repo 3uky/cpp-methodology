@@ -31,6 +31,7 @@ public:
     virtual std::string Handler(int eventValue) = 0;
     
 };
+
 class Observer : public IObserver
 {
 public:

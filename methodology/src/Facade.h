@@ -8,6 +8,9 @@
 
 using namespace std;
 
+namespace design_patterns
+{
+
 class MisDepartment
 {
   public:
@@ -178,3 +181,5 @@ private:
     ElectricianUnion m_electrician;
     MisDepartment m_technician;
 };
+
+}

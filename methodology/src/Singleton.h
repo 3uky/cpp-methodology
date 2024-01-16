@@ -4,6 +4,9 @@
 
 using namespace std;
 
+namespace design_patterns
+{
+
 class Singleton
 {
 public:
@@ -76,3 +79,4 @@ public:
     }
 };
 
+}

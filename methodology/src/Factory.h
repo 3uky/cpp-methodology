@@ -4,6 +4,9 @@
 
 using namespace std;
 
+namespace design_patterns
+{
+
 enum ObjectType
 {
     ObjectA,
@@ -58,4 +61,6 @@ unique_ptr<IObject> Factory::MakeObject(ObjectType choice)
     default:
         return std::make_unique<MyObjectC>();
     }
+}
+
 }
