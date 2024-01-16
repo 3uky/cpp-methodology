@@ -242,5 +242,8 @@
     <ClInclude Include="src\Decorator.h">
       <Filter>Header Files\design_patterns\Structural</Filter>
     </ClInclude>
+    <ClInclude Include="src\Builder.h">
+      <Filter>Header Files\design_patterns\creational</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -165,6 +165,7 @@
     <ClInclude Include="src\AsyncWait.h" />
     <ClInclude Include="src\BinaryTree.h" />
     <ClInclude Include="src\BubbleSort.h" />
+    <ClInclude Include="src\Builder.h" />
     <ClInclude Include="src\Decorator.h" />
     <ClInclude Include="src\Fibonacci.h" />
     <ClInclude Include="src\FrequencySort.h" />

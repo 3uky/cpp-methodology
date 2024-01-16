@@ -150,6 +150,9 @@
     <ClCompile Include="src\design_patterns\DecoratorUT.cpp">
       <Filter>tests\design_patterns\structural</Filter>
     </ClCompile>
+    <ClCompile Include="src\design_patterns\BuilderUT.cpp">
+      <Filter>tests\design_patterns\creational</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
