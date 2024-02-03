@@ -70,6 +70,9 @@
     <Filter Include="Header Files\design_patterns\structural">
       <UniqueIdentifier>{4163cc36-7fd3-4bd3-95a1-b8a45698bcf4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="solid">
+      <UniqueIdentifier>{b2d30ae9-abcd-4d52-9dd3-be6db86b33c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MergeSort.h">
@@ -244,6 +247,9 @@
     </ClInclude>
     <ClInclude Include="src\Builder.h">
       <Filter>Header Files\design_patterns\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DependencyInversion.h">
+      <Filter>solid</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -171,6 +171,7 @@
     <ClInclude Include="src\FrequencySort.h" />
     <ClInclude Include="src\HashMap.h" />
     <ClInclude Include="src\InsertionSort.h" />
+    <ClInclude Include="src\DependencyInversion.h" />
     <ClInclude Include="src\LinkedList.h" />
     <ClInclude Include="src\BinaryTreeNode.h" />
     <ClInclude Include="src\ObserverBoostSignal.h" />
