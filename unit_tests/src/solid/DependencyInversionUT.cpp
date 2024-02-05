@@ -18,7 +18,7 @@ public:
     MOCK_METHOD(void, Putchar, (int c), (override));
 };
 
-TEST(DependencyInversionTest, ShouldPrintCharactersInsertedFromKeyboardUntilEOF)
+TEST(DependencyInversionTest, PrinterShouldPrintUntilEOF)
 {
     // GIVEN
     MockKeyboard keyboard;
@@ -35,6 +35,29 @@ TEST(DependencyInversionTest, ShouldPrintCharactersInsertedFromKeyboardUntilEOF)
 
     // THEN
     worker.Copy(keyboard, printer);
+}
+
+TEST(DependencyInversionTest, PrinterShouldPrintCharactersInsertedFromKeyboard)
+{
+    // GIVEN
+    MockKeyboard keyboard;
+    Printer printer;
+    Worker worker;
+
+    // WHEN
+    EXPECT_CALL(keyboard, Getchar())
+        .Times(6)
+        .WillOnce(Return('h'))
+        .WillOnce(Return('e'))
+        .WillOnce(Return('l'))
+        .WillOnce(Return('l'))
+        .WillOnce(Return('o'))
+        .WillOnce(Return(EOF));
+
+    // THEN
+    testing::internal::CaptureStdout();
+    worker.Copy(keyboard, printer);
+    ASSERT_EQ("hello", testing::internal::GetCapturedStdout());
 }
 
 }

@@ -65,7 +65,7 @@ class Printer : public Writer
 {
     void Putchar(int c) override
     {
-        cout << c << endl;
+        cout << static_cast<char>(c);
     }
 };
 
