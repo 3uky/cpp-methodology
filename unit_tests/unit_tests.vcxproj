@@ -84,6 +84,7 @@
     <ClCompile Include="src\network\networkUT.cpp" />
     <ClCompile Include="src\paralle_programming\ConditionVariableUT.cpp" />
     <ClCompile Include="src\paralle_programming\MutexGuardThreadUT.cpp" />
+    <ClCompile Include="src\solid\DependencyInversionUT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\methodology\methodology.vcxproj">

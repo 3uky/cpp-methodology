@@ -153,6 +153,9 @@
     <ClCompile Include="src\design_patterns\BuilderUT.cpp">
       <Filter>tests\design_patterns\creational</Filter>
     </ClCompile>
+    <ClCompile Include="src\solid\DependencyInversionUT.cpp">
+      <Filter>tests\solid</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
@@ -211,6 +214,9 @@
     </Filter>
     <Filter Include="tests\containers\implementation">
       <UniqueIdentifier>{58afdc89-b0ce-4184-b265-2be904e30253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\solid">
+      <UniqueIdentifier>{39dfeb38-40c4-4706-beb2-866ea8624d92}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
