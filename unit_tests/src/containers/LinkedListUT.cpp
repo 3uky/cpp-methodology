@@ -9,28 +9,28 @@ using ::testing::ElementsAre;
 
 namespace containers
 {
-TEST(LinkedListTest, ShouldAccessFirstElement)
+
+class LinkedListTest : public testing::Test
 {
-	// GIVEN
+protected:
+	void SetUp()
+	{
+		test_list.Insert(5);
+		test_list.Insert(6);
+		test_list.Insert(7);
+	}
+
 	LinkedList<int> test_list;
+};
 
-	// WHEN
-	test_list.Insert(5);
-	test_list.Insert(6);
-	test_list.Insert(7);
-
+TEST_F(LinkedListTest, ShouldAccessFirstElement)
+{
 	// THEN
 	EXPECT_EQ(test_list.Front(), 5);
 }
 
-TEST(LinkedListTest, ShouldDeleteValueOnSpecifiedPosition)
+TEST_F(LinkedListTest, ShouldDeleteValueOnSpecifiedPosition)
 {
-	// GIVEN
-	LinkedList<int> test_list;
-	test_list.Insert(5);
-	test_list.Insert(6);
-	test_list.Insert(7);
-
 	// WHEN
 	test_list.Remove(1);
 
@@ -39,44 +39,16 @@ TEST(LinkedListTest, ShouldDeleteValueOnSpecifiedPosition)
 	EXPECT_EQ(test_list.Get(1), 7);
 }
 
-TEST(LinkedListTest, ShouldInsertValues)
+TEST_F(LinkedListTest, ShouldInsertValues)
 {
-	// GIVEN
-	LinkedList<int> test_list;
-
-	// WHEN
-	test_list.Insert(5);
-	test_list.Insert(6);
-	test_list.Insert(7);
-
 	// THEN
 	EXPECT_EQ(test_list.Get(0), 5);
 	EXPECT_EQ(test_list.Get(1), 6);
 	EXPECT_EQ(test_list.Get(2), 7);
 }
 
-
-TEST(LinkedListTest, ShouldReverseValuesOfStdList)
+TEST_F(LinkedListTest, ShouldSwapElements)
 {
-	// GIVEN
-	std::list<int> test_list = { 1, 2, 3, 4, 5 };
-
-	// WHEN
-	test_list.reverse();
-
-	// THEN
-	EXPECT_THAT(test_list, ElementsAre(5, 4, 3, 2, 1));
-
-}
-
-TEST(LinkedListTest, ShouldSwapElements)
-{
-	// GIVEN
-	LinkedList<int> test_list;
-	test_list.Insert(5);
-	test_list.Insert(6);
-	test_list.Insert(7);
-
 	// WHEN
 	test_list.Swap(0, 2);
 	
@@ -86,48 +58,39 @@ TEST(LinkedListTest, ShouldSwapElements)
 	EXPECT_EQ(test_list.Get(2), 5);
 }
 
-TEST(LinkedListTest, ShouldReturnExactCountOfElements)
-{	// GIVEN
-	LinkedList<int> test_list;
-	test_list.Insert(5);
-	test_list.Insert(6);
-	test_list.Insert(7);
-
+TEST_F(LinkedListTest, ShouldReturnExactCountOfElements)
+{
 	// WHEN
 	EXPECT_EQ(test_list.Count(), 3);
 }
 
-
-TEST(LinkedListTest, ShouldReverseElements)
+TEST_F(LinkedListTest, ShouldReverseElements)
 {
-	// GIVEN
-	LinkedList<int> test_list;
-	test_list.Insert(5);
-	test_list.Insert(6);
-	test_list.Insert(7);
-	test_list.Insert(8);
-
 	// WHEN
 	test_list.Reverse();
 
 	// THEN
-	EXPECT_EQ(test_list.Get(0), 8);
-	EXPECT_EQ(test_list.Get(1), 7);
-	EXPECT_EQ(test_list.Get(2), 6);
-	EXPECT_EQ(test_list.Get(3), 5);
+	EXPECT_EQ(test_list.Get(0), 7);
+	EXPECT_EQ(test_list.Get(1), 6);
+	EXPECT_EQ(test_list.Get(2), 5);
 }
 
-TEST(LinkedListTest, ShouldRetrunLastElement)
+TEST_F(LinkedListTest, ShouldRetrunLastElement)
+{
+	// WHEN/THEN
+	EXPECT_EQ(test_list.Back(), 7);
+}
+
+TEST(StdLinkedListTest, ShouldReverseValuesOfStdList)
 {
 	// GIVEN
-	LinkedList<int> test_list;
-	test_list.Insert(5);
-	test_list.Insert(6);
-	test_list.Insert(7);
-	test_list.Insert(8);
+	std::list<int> test_list = { 1, 2, 3, 4, 5 };
 
-	// WHEN/THEN
-	EXPECT_EQ(test_list.Back(), 8);
+	// WHEN
+	test_list.reverse();
+
+	// THEN
+	EXPECT_THAT(test_list, ElementsAre(5, 4, 3, 2, 1));
 }
 
 }
