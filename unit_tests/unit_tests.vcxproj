@@ -55,6 +55,7 @@
     <ClCompile Include="src\basic_paradigms\PolymorphismUT.cpp" />
     <ClCompile Include="src\boost\AsyncWaitUT.cpp" />
     <ClCompile Include="src\boost\TCPServerUT.cpp" />
+    <ClCompile Include="src\clean_code\BowlingGameUT.cpp" />
     <ClCompile Include="src\containers\ArrayUT.cpp" />
     <ClCompile Include="src\containers\LinkedListUT.cpp" />
     <ClCompile Include="src\containers\ListUT.cpp" />

@@ -156,6 +156,9 @@
     <ClCompile Include="src\solid\DependencyInversionUT.cpp">
       <Filter>tests\solid</Filter>
     </ClCompile>
+    <ClCompile Include="src\clean_code\BowlingGameUT.cpp">
+      <Filter>tests\clean_code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
@@ -217,6 +220,9 @@
     </Filter>
     <Filter Include="tests\solid">
       <UniqueIdentifier>{39dfeb38-40c4-4706-beb2-866ea8624d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\clean_code">
+      <UniqueIdentifier>{1c8958fd-b2f6-4781-bad9-5955aece8b08}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

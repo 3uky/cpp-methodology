@@ -164,6 +164,7 @@
     <ClInclude Include="src\BinarySearch.h" />
     <ClInclude Include="src\AsyncWait.h" />
     <ClInclude Include="src\BinaryTree.h" />
+    <ClInclude Include="src\BowlingGame.h" />
     <ClInclude Include="src\BubbleSort.h" />
     <ClInclude Include="src\Builder.h" />
     <ClInclude Include="src\Decorator.h" />
