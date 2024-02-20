@@ -70,11 +70,20 @@
     <Filter Include="Header Files\design_patterns\structural">
       <UniqueIdentifier>{4163cc36-7fd3-4bd3-95a1-b8a45698bcf4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="solid">
-      <UniqueIdentifier>{b2d30ae9-abcd-4d52-9dd3-be6db86b33c6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\clean_code">
       <UniqueIdentifier>{d0ea3ef6-6aa2-465d-8a7e-70f6aea75d9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\clean_code\solid">
+      <UniqueIdentifier>{b2d30ae9-abcd-4d52-9dd3-be6db86b33c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\clean_code\TDD">
+      <UniqueIdentifier>{5eb40936-d13b-4a0b-99d6-a7899350d4b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\clean_code\solid\single_responsibility_principle">
+      <UniqueIdentifier>{fc08b8bc-b703-4766-afd2-8123c4046ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\clean_code\solid\open_close_principle">
+      <UniqueIdentifier>{a3da55a0-2d96-4261-b582-2c14a68cbad1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -251,11 +260,14 @@
     <ClInclude Include="src\Builder.h">
       <Filter>Header Files\design_patterns\creational</Filter>
     </ClInclude>
-    <ClInclude Include="src\DependencyInversion.h">
-      <Filter>solid</Filter>
+    <ClInclude Include="src\clean_code\BowlingGame.h">
+      <Filter>Header Files\clean_code\TDD</Filter>
     </ClInclude>
-    <ClInclude Include="src\BowlingGame.h">
-      <Filter>Header Files\clean_code</Filter>
+    <ClInclude Include="src\clean_code\DependencyInversion.h">
+      <Filter>Header Files\clean_code\solid\single_responsibility_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\Expense.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

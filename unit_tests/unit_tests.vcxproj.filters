@@ -153,11 +153,11 @@
     <ClCompile Include="src\design_patterns\BuilderUT.cpp">
       <Filter>tests\design_patterns\creational</Filter>
     </ClCompile>
-    <ClCompile Include="src\solid\DependencyInversionUT.cpp">
-      <Filter>tests\solid</Filter>
-    </ClCompile>
     <ClCompile Include="src\clean_code\BowlingGameUT.cpp">
-      <Filter>tests\clean_code</Filter>
+      <Filter>tests\clean_code\TDD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\solid\DependencyInversionUT.cpp">
+      <Filter>tests\clean_code\solid\single_responsibility_principle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -218,11 +218,20 @@
     <Filter Include="tests\containers\implementation">
       <UniqueIdentifier>{58afdc89-b0ce-4184-b265-2be904e30253}</UniqueIdentifier>
     </Filter>
-    <Filter Include="tests\solid">
-      <UniqueIdentifier>{39dfeb38-40c4-4706-beb2-866ea8624d92}</UniqueIdentifier>
-    </Filter>
     <Filter Include="tests\clean_code">
       <UniqueIdentifier>{1c8958fd-b2f6-4781-bad9-5955aece8b08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\clean_code\solid">
+      <UniqueIdentifier>{39dfeb38-40c4-4706-beb2-866ea8624d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\clean_code\TDD">
+      <UniqueIdentifier>{d6673eaf-5ba5-4589-99a0-1a2c778a12d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\clean_code\solid\single_responsibility_principle">
+      <UniqueIdentifier>{63317f2e-dc83-411c-8282-1c83c6083661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\clean_code\solid\open_close_principle">
+      <UniqueIdentifier>{65462bd3-1e61-466b-ae36-df99c5c75e85}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
