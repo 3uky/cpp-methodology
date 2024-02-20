@@ -52,9 +52,9 @@ namespace clean_code
     public:
         ExpenseReport() : m_total(0), m_mealExpense(0) {}
 
-        void AddExpense(DinnerExpense& expense)
+        void AddExpense(IExpense& expense)
         {
-            m_expenses.push_back(std::make_shared<DinnerExpense>(expense));
+            m_expenses.push_back(expense);
         }
 
         void TotalUpExpenses()
@@ -63,13 +63,13 @@ namespace clean_code
                 AddToTotal(expense); 
         }
 
-        void AddToTotal(std::shared_ptr<IExpense> expense) {
-            if (expense->IsMeal())
-                m_mealExpense += expense->GetAmount();
-            m_total += expense->GetAmount();
+        void AddToTotal(IExpense& expense) {
+            if (expense.IsMeal())
+                m_mealExpense += expense.GetAmount();
+            m_total += expense.GetAmount();
         }
 
-        list<std::shared_ptr<IExpense>>& GetExpenses()
+        list<std::reference_wrapper<IExpense>>& GetExpenses()
         {
             return m_expenses;
         }
@@ -85,7 +85,7 @@ namespace clean_code
         }
 
     private:
-        list<std::shared_ptr<IExpense>> m_expenses = {};
+        list<std::reference_wrapper<IExpense>> m_expenses;
         int m_total;
         int m_mealExpense;
     };
@@ -108,7 +108,7 @@ namespace clean_code
     class IExpenseNamer
     {
     public:
-        virtual string GetName(std::shared_ptr<IExpense> expense) = 0;
+        virtual string GetName(IExpense& expense) = 0;
     };
 
     class ExpenseNamer : public IExpenseNamer
@@ -116,9 +116,9 @@ namespace clean_code
     public:
         ExpenseNamer() {};
 
-        string GetName(std::shared_ptr<IExpense> expense) override
+        string GetName(IExpense& expense) override
         {
-            return expense->GetName();
+            return expense.GetName();
         }
     };
 
@@ -129,8 +129,8 @@ namespace clean_code
 
         void PrintReport()
         {            
-                m_report.TotalUpExpenses();
-                printExpensesAndTotals();
+            m_report.TotalUpExpenses();
+            printExpensesAndTotals();
         }
 
     private:
@@ -144,16 +144,16 @@ namespace clean_code
             m_printer.Print(std::format("Expenses {}\n", GetDate()));
         }
         void PrintExpenses() {
-            for (std::shared_ptr<IExpense> expense : m_report.GetExpenses())
+            for (IExpense& expense : m_report.GetExpenses())
                 PrintExpense(expense);
         };
 
-        void PrintExpense(std::shared_ptr<IExpense> expense)
+        void PrintExpense(IExpense& expense)
         {
             m_printer.Print(std::format("{}\t{}\t${:.02F}\n",
-                expense->IsOverage() ? "X" : "",
+                expense.IsOverage() ? "X" : "",
                 m_namer.GetName(expense),
-                PenniesToDollar(expense->GetAmount()))
+                PenniesToDollar(expense.GetAmount()))
             );
         }
 
