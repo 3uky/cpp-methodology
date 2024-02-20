@@ -169,6 +169,11 @@
     <ClInclude Include="src\clean_code\BowlingGame.h" />
     <ClInclude Include="src\clean_code\DependencyInversion.h" />
     <ClInclude Include="src\clean_code\Expense.h" />
+    <ClInclude Include="src\clean_code\ExpenseReport.h" />
+    <ClInclude Include="src\clean_code\ExpenseReporter.h" />
+    <ClInclude Include="src\clean_code\IExpense.h" />
+    <ClInclude Include="src\clean_code\IReportPrinter.h" />
+    <ClInclude Include="src\clean_code\ReportPrinter.h" />
     <ClInclude Include="src\Decorator.h" />
     <ClInclude Include="src\Fibonacci.h" />
     <ClInclude Include="src\FrequencySort.h" />

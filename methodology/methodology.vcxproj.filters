@@ -269,5 +269,20 @@
     <ClInclude Include="src\clean_code\Expense.h">
       <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
     </ClInclude>
+    <ClInclude Include="src\clean_code\ExpenseReporter.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\ExpenseReport.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\IReportPrinter.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\IExpense.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\ReportPrinter.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

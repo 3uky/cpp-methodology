@@ -1,6 +1,9 @@
 #include "gmock/gmock.h"
 
 #include "Expense.h"
+#include "ExpenseReport.h"
+#include "ExpenseReporter.h"
+#include "IReportPrinter.h"
 
 namespace clean_code
 {
@@ -17,27 +20,28 @@ public:
 	}
 
 private:
-	string printedText = "";
+	string printedText;
 };
 
 class ExpenseTest : public testing::Test
 {
 protected:
-	void SetUp()
-	{
-	}
 
+	ExpenseTest() : reporter(report, printer) {}
+
+	void SetUp() {}
+	
 	ExpenseReport report;
-	ReportPrinterMock printer;	
+	ReportPrinterMock printer;
+	ExpenseReporter reporter;
 };
 
 TEST_F(ExpenseTest, printEmpty)
 {
 	// GIVEN / WHEN
-	ExpenseReporter reporter(report, printer);
+	reporter.PrintReport();
 
 	// THEN
-	reporter.PrintReport();
 	ASSERT_EQ(printer.GetText(), "Expenses 2/19/2024\n"
 		"\n"
 		"Meal expenses $0.00\n"
@@ -47,10 +51,9 @@ TEST_F(ExpenseTest, printEmpty)
 TEST_F(ExpenseTest, printOneDinner)
 {
 	// GIVEN
-	ExpenseReporter reporter(report, printer);
+	DinnerExpense dinner(1678);
 
 	// WHEN
-	DinnerExpense dinner(1678);
 	report.AddExpense(dinner);
 
 	// THEN
@@ -65,17 +68,15 @@ TEST_F(ExpenseTest, printOneDinner)
 TEST_F(ExpenseTest, printTwoMeals)
 {
 	// GIVEN
-	ExpenseReporter reporter(report, printer);
-
-	// WHEN
 	DinnerExpense dinner(1000);
 	BreakfastExpense breakfast(500);
 
+	// WHEN
 	report.AddExpense(dinner);
 	report.AddExpense(breakfast);
-
-	// THEN
 	reporter.PrintReport();
+
+	// THEN	
 	ASSERT_EQ(printer.GetText(), "Expenses 2/19/2024\n"
 		" \tDinner\t$10.00\n"
 		" \tBreakfast\t$5.00\n"
@@ -84,23 +85,20 @@ TEST_F(ExpenseTest, printTwoMeals)
 		"Total $15.00");
 }
 
-
 TEST_F(ExpenseTest, printTwoMealsAndCarRental)
 {
 	// GIVEN
-	ExpenseReporter reporter(report, printer);
-
-	// WHEN
 	DinnerExpense dinner(1000);
 	BreakfastExpense breakfast(500);
 	CarRentalExpense carRental(50000);
 
+	// WHEN
 	report.AddExpense(dinner);
 	report.AddExpense(breakfast);
 	report.AddExpense(carRental);
+	reporter.PrintReport();
 
 	// THEN
-	reporter.PrintReport();
 	ASSERT_EQ(printer.GetText(), "Expenses 2/19/2024\n"
 		" \tDinner\t$10.00\n"
 		" \tBreakfast\t$5.00\n"
@@ -113,21 +111,19 @@ TEST_F(ExpenseTest, printTwoMealsAndCarRental)
 TEST_F(ExpenseTest, printOverages)
 {
 	// GIVEN
-	ExpenseReporter reporter(report, printer);
-
-	// WHEN
 	BreakfastExpense breakfast(1000);
 	BreakfastExpense breakfast2(1001);
 	DinnerExpense dinner(5000);
 	DinnerExpense dinner2(5001);
 
+	// WHEN
 	report.AddExpense(breakfast);
 	report.AddExpense(breakfast2);
 	report.AddExpense(dinner);
 	report.AddExpense(dinner2);
+	reporter.PrintReport();
 
 	// THEN
-	reporter.PrintReport();
 	ASSERT_EQ(printer.GetText(), "Expenses 2/19/2024\n"
 		" \tBreakfast\t$10.00\n"
 		"X\tBreakfast\t$10.01\n"
