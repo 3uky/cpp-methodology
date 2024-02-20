@@ -159,6 +159,9 @@
     <ClCompile Include="src\solid\DependencyInversionUT.cpp">
       <Filter>tests\clean_code\solid\single_responsibility_principle</Filter>
     </ClCompile>
+    <ClCompile Include="src\clean_code\ExpenseUT.cpp">
+      <Filter>tests\clean_code\solid\open_close_principle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">

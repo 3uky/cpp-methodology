@@ -1,4 +1,4 @@
-// bussiness logic is separated from presentation
+// business logic is separated from presentation
 // is possible to add new type of expense so open-close principle is achieved
 // it's not prone to new requirements - in other words modification would be needed in old code
 //  e.g. add * to print report if expense during one week exceed some limit
@@ -15,25 +15,25 @@ using namespace std;
 
 namespace clean_code
 {
-    class Expense
+    class IExpense
     {
     public:
-        Expense(int amount) { m_amount = amount; }
-
+        IExpense(int amount) { m_amount = amount; }
         int GetAmount() { return m_amount; }
+
         virtual bool IsOverage() = 0;
         virtual bool IsMeal() = 0;
         virtual string GetName() = 0;
 
     protected:
         int m_amount;
-    };
-        
 
-    class DinnerExpense : public Expense
+    };
+
+    class DinnerExpense : public IExpense
     {
     public:
-        DinnerExpense(int amount) : Expense(amount) {};
+        DinnerExpense(int amount) : IExpense(amount) {};
 
     private:
         bool IsOverage() override {
@@ -52,19 +52,24 @@ namespace clean_code
     public:
         ExpenseReport() : m_total(0), m_mealExpense(0) {}
 
+        void AddExpense(DinnerExpense& expense)
+        {
+            m_expenses.push_back(std::make_shared<DinnerExpense>(expense));
+        }
+
         void TotalUpExpenses()
         {
             for (auto& expense : m_expenses)
                 AddToTotal(expense); 
         }
 
-        void AddToTotal(Expense& expense) {
-            if (expense.IsMeal())
-                m_mealExpense += expense.GetAmount();
-            m_total += expense.GetAmount();
+        void AddToTotal(std::shared_ptr<IExpense> expense) {
+            if (expense->IsMeal())
+                m_mealExpense += expense->GetAmount();
+            m_total += expense->GetAmount();
         }
 
-        list<Expense>& GetExpenses()
+        list<std::shared_ptr<IExpense>>& GetExpenses()
         {
             return m_expenses;
         }
@@ -80,24 +85,53 @@ namespace clean_code
         }
 
     private:
-        list<Expense> m_expenses = {};
+        list<std::shared_ptr<IExpense>> m_expenses = {};
         int m_total;
         int m_mealExpense;
+    };
+
+    class IReportPrinter
+    {
+    public:
+        virtual void Print(string print) = 0;
+    };
+
+    class ReportPrinter : public IReportPrinter
+    {
+    public:
+        void Print(string print) override
+        {
+            cout << print;
+        }
+    };
+
+    class IExpenseNamer
+    {
+    public:
+        virtual string GetName(std::shared_ptr<IExpense> expense) = 0;
+    };
+
+    class ExpenseNamer : public IExpenseNamer
+    {
+    public:
+        ExpenseNamer() {};
+
+        string GetName(std::shared_ptr<IExpense> expense) override
+        {
+            return expense->GetName();
+        }
     };
 
     class ExpenseReporter
     {
     public:
-        ExpenseReporter(ExpenseReport& report) : m_report(report) {}
+        ExpenseReporter(ExpenseReport& report, IReportPrinter& printer) : m_report(report), m_printer(printer) {}
 
-        void PrintReport(ReportPrinter& printer)
-        {
-            m_printer = printer;
-            m_report.TotalUpExpenses();
-            printExpensesAndTotals();
+        void PrintReport()
+        {            
+                m_report.TotalUpExpenses();
+                printExpensesAndTotals();
         }
-
-        ReportPrinter m_printer;
 
     private:
         void printExpensesAndTotals() {
@@ -110,28 +144,28 @@ namespace clean_code
             m_printer.Print(std::format("Expenses {}\n", GetDate()));
         }
         void PrintExpenses() {
-            for (Expense& expense : m_report.GetExpenses())
+            for (std::shared_ptr<IExpense> expense : m_report.GetExpenses())
                 PrintExpense(expense);
         };
 
-        void PrintExpense(Expense& expense)
+        void PrintExpense(std::shared_ptr<IExpense> expense)
         {
-            m_printer.Print(std::format("{}\t{}\t{}\n",
-                expense.IsOverage() ? "X" : "",
+            m_printer.Print(std::format("{}\t{}\t${:.02F}\n",
+                expense->IsOverage() ? "X" : "",
                 m_namer.GetName(expense),
-                PenniesToDollar(expense.GetAmount()))
+                PenniesToDollar(expense->GetAmount()))
             );
         }
 
-        float PenniesToDollar(int amountInPennies)
+        double PenniesToDollar(int amountInPennies)
         {
             return amountInPennies / 100.0;
         }
 
-        int PrintTotals() 
+        void PrintTotals() 
         {
-            m_printer.Print(std::format("\nMeal expenses {}", PenniesToDollar(m_report.GetMealExpenses())));
-            m_printer.Print(std::format("\nTotal {}", PenniesToDollar(m_report.GetTotalExpenses())));
+            m_printer.Print(std::format("\nMeal expenses ${:.02F}", PenniesToDollar(m_report.GetMealExpenses())));
+            m_printer.Print(std::format("\nTotal ${:.02F}", PenniesToDollar(m_report.GetTotalExpenses())));
         }
 
         string GetDate()
@@ -139,34 +173,11 @@ namespace clean_code
             return "2/19/2024";
         }
 
-        ExpenseReport m_report;
+        ExpenseReport& m_report;
+        IReportPrinter& m_printer;
         ExpenseNamer m_namer;
-          
     };
 
-    class ReportPrinter
-    {
-    public:
-        void Print(string print)
-        {
-            cout << print;
-        }
-    };
+    
 
-    class IExpenseNamer
-    {
-    public:
-        virtual string GetName(Expense& expense) = 0;
-    };
-
-    class ExpenseNamer : public IExpenseNamer
-    {
-    public:
-        ExpenseNamer() {};
-        
-        string GetName(Expense& expense) override
-        {
-            return expense.GetName();
-        }
-    };
 }
