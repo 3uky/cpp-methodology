@@ -47,6 +47,40 @@ namespace clean_code
         }
     };
 
+    class BreakfastExpense : public IExpense
+    {
+    public:
+        BreakfastExpense(int amount) : IExpense(amount) {};
+
+    private:
+        bool IsOverage() override {
+            return m_amount > 1000;
+        };
+        bool IsMeal() override {
+            return true;
+        }
+        string GetName() override {
+            return "Breakfast";
+        }
+    };
+
+    class CarRentalExpense : public IExpense
+    {
+    public:
+        CarRentalExpense(int amount) : IExpense(amount) {};
+
+    private:
+        bool IsOverage() override {
+            return false;
+        };
+        bool IsMeal() override {
+            return false;
+        }
+        string GetName() override {
+            return "Car Rental";
+        }
+    };
+
     class ExpenseReport
     {
     public:
@@ -151,7 +185,7 @@ namespace clean_code
         void PrintExpense(IExpense& expense)
         {
             m_printer.Print(std::format("{}\t{}\t${:.02F}\n",
-                expense.IsOverage() ? "X" : "",
+                expense.IsOverage() ? "X" : " ",
                 m_namer.GetName(expense),
                 PenniesToDollar(expense.GetAmount()))
             );
