@@ -284,5 +284,8 @@
     <ClInclude Include="src\clean_code\ReportPrinter.h">
       <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
     </ClInclude>
+    <ClInclude Include="src\ForwardList.h">
+      <Filter>Header Files\containers\list</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

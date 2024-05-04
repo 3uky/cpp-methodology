@@ -176,6 +176,7 @@
     <ClInclude Include="src\clean_code\ReportPrinter.h" />
     <ClInclude Include="src\Decorator.h" />
     <ClInclude Include="src\Fibonacci.h" />
+    <ClInclude Include="src\ForwardList.h" />
     <ClInclude Include="src\FrequencySort.h" />
     <ClInclude Include="src\HashMap.h" />
     <ClInclude Include="src\InsertionSort.h" />
