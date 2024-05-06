@@ -36,15 +36,15 @@ public:
 
 	ForwardList(const ForwardList& list)
 	{
-		Node* root = list.m_head.get();
-		Node* pnew_head{ nullptr };
+		Node<T>* root = list.m_head.get();
+		Node<T>* pnew_head{ nullptr };
 
-		std::unique_ptr<Node> new_head{nullptr};
+		std::unique_ptr<Node<T>> new_head{nullptr};
 		
 
 		while(root)
 		{
-			auto temp{ std::make_unique<Node>(root->data) };
+			auto temp = std::make_unique<Node<T>>(root->GetValue());
 			if(new_head == nullptr) // first copy
 			{ 
 				new_head = std::move(temp);
@@ -52,8 +52,8 @@ public:
 			}
 			else
 			{
-				pnew_head.next = std::move(temp);
-				pnew_head = pnew_head.next.get();
+				pnew_head->next = std::move(temp);
+				pnew_head = pnew_head->next.get();
 			}
 
 			root = root->next.get();
@@ -64,7 +64,7 @@ public:
 
 	ForwardList(ForwardList&& list)
 	{
-		list.m_head = std::move(list.m_head);
+		m_head = std::move(list.m_head);
 	}
 
 	void Push(T data) 

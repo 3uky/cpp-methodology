@@ -136,4 +136,38 @@ TEST(ContainersListTest, ShouldReverseForwardList)
     ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre(0, 1, 2, 3));
 }
 
+TEST(ContainersListTest, ShouldCopyForwardList)
+{
+    // GIVEN
+    ForwardList<int> tested_list;
+
+    tested_list.Push(0);
+    tested_list.Push(1);
+    tested_list.Push(2);
+    tested_list.Push(3);
+
+    // WHEN
+    ForwardList<int> copied_list(tested_list);
+
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(copied_list), ElementsAre(3, 2, 1, 0));
+}
+
+TEST(ContainersListTest, ShouldMoveForwardList)
+{
+    // GIVEN
+    ForwardList<int> tested_list;
+
+    tested_list.Push(0);
+    tested_list.Push(1);
+    tested_list.Push(2);
+    tested_list.Push(3);
+
+    // WHEN
+    ForwardList<int> moved_list= std::move(tested_list);
+
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(moved_list), ElementsAre(3, 2, 1, 0));
+}
+
 }
