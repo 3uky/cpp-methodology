@@ -86,7 +86,7 @@ public:
 		if (m_head == nullptr)
 			return;
 		
-		std::unique_ptr<Node> temp = std::move(m_head);
+		std::unique_ptr<Node<T>> temp = std::move(m_head);
 		m_head = std::move(temp->next);
 	}
 

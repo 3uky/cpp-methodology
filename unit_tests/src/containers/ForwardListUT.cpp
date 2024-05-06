@@ -23,9 +23,24 @@ std::list<T> ForwardList2List(ForwardList<T>& list)
     return linearizedList;
 }
 
-TEST(ContainersListTest, ShouldInitializeForwardList)
+TEST(ContainersListTest, ShouldPushNewValuesInForwardList)
 {
-    // GIVEN/WHEN
+    // GIVEN
+    ForwardList<int> tested_list;
+
+    // WHEN
+    tested_list.Push(0);
+    tested_list.Push(1);
+    tested_list.Push(2);
+    tested_list.Push(3);
+    
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre(3, 2, 1, 0));
+}
+
+TEST(ContainersListTest, ShouldPopValueFromForwardList)
+{
+    // GIVEN
     ForwardList<int> tested_list;
 
     tested_list.Push(0);
@@ -33,10 +48,75 @@ TEST(ContainersListTest, ShouldInitializeForwardList)
     tested_list.Push(2);
     tested_list.Push(3);
 
+    // WHEN
+    tested_list.Pop();
+
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre(2, 1, 0));
+}
+
+TEST(ContainersListTest, ShouldHandlePopEmptyForwardList)
+{
+    // GIVEN
+    ForwardList<int> tested_list;
+  
+    // WHEN
+    tested_list.Pop();
     
     // THEN
-    auto const linearizedTestedList = ForwardList2List<int>(tested_list);
-    ASSERT_THAT(linearizedTestedList, ElementsAre(3, 2, 1, 0));
+    ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre());
+}
+
+TEST(ContainersListTest, ShouldPopAllElementsFromForwardList)
+{
+    // GIVEN
+    ForwardList<int> tested_list;
+
+    tested_list.Push(0);
+    tested_list.Push(1);
+    tested_list.Push(2);
+    tested_list.Push(3);
+
+    // WHEN
+    tested_list.Pop();
+    tested_list.Pop();
+    tested_list.Pop();
+    tested_list.Pop();
+
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre());
+}
+
+TEST(ContainersListTest, ShouldCleanForwardList)
+{
+    // GIVEN
+    ForwardList<int> tested_list;
+
+    tested_list.Push(0);
+    tested_list.Push(1);
+    tested_list.Push(2);
+    tested_list.Push(3);
+
+    // WHEN
+    tested_list.Clean();
+
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre());
+}
+
+TEST(ContainersListTest, DISABLED_ShouldBeAbleToHanldeLargeNumberOfValueInsertionIntoForwardList)
+{
+    // GIVEN/WHEN
+    ForwardList<int> tested_list;
+
+
+    // WHEN
+    for (int i = 0; i < 10000000; i++)
+        tested_list.Push(i);
+    tested_list.Clean();   
+
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre());
 }
 
 }
