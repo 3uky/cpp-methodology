@@ -119,4 +119,21 @@ TEST(ContainersListTest, DISABLED_ShouldBeAbleToHanldeLargeNumberOfValueInsertio
     ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre());
 }
 
+TEST(ContainersListTest, ShouldReverseForwardList)
+{
+    // GIVEN
+    ForwardList<int> tested_list;
+    
+    tested_list.Push(0);
+    tested_list.Push(1);
+    tested_list.Push(2);
+    tested_list.Push(3);
+
+    // WHEN
+    tested_list.Reverse();
+
+    // THEN
+    ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre(0, 1, 2, 3));
+}
+
 }

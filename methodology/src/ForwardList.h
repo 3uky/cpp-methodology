@@ -106,6 +106,20 @@ public:
 		return m_head.get();
 	}
 
+	void Reverse()
+	{
+		ForwardList<T> tmp;
+
+		auto root = Head();
+		while (root)
+		{
+			tmp.Push(root->GetValue());
+			root = root->Next();
+		}
+		Clean();
+		m_head = std::move(tmp.m_head);
+	}
+
 private:
 	std::unique_ptr<Node<T>> m_head;
 };
