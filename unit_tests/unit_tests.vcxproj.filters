@@ -162,6 +162,9 @@
     <ClCompile Include="src\clean_code\ExpenseUT.cpp">
       <Filter>tests\clean_code\solid\open_close_principle</Filter>
     </ClCompile>
+    <ClCompile Include="src\containers\ForwardListUT.cpp">
+      <Filter>tests\containers\implementation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">

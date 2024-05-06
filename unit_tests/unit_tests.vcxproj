@@ -58,6 +58,7 @@
     <ClCompile Include="src\clean_code\BowlingGameUT.cpp" />
     <ClCompile Include="src\clean_code\ExpenseUT.cpp" />
     <ClCompile Include="src\containers\ArrayUT.cpp" />
+    <ClCompile Include="src\containers\ForwardListUT.cpp" />
     <ClCompile Include="src\containers\LinkedListUT.cpp" />
     <ClCompile Include="src\containers\ListUT.cpp" />
     <ClCompile Include="src\containers\MapUT.cpp" />
