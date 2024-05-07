@@ -70,6 +70,7 @@
     <ClCompile Include="src\cpp_internals\HashMapUT.cpp" />
     <ClCompile Include="src\cpp_internals\SharedPtrUT.cpp" />
     <ClCompile Include="src\cpp_internals\UniquePtrUT.cpp" />
+    <ClCompile Include="src\dangerous_constructions\StringViewUT.cpp" />
     <ClCompile Include="src\design_patterns\AdapterUT.cpp" />
     <ClCompile Include="src\design_patterns\BuilderUT.cpp" />
     <ClCompile Include="src\design_patterns\DecoratorUT.cpp" />

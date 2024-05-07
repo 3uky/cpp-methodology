@@ -165,6 +165,9 @@
     <ClCompile Include="src\containers\ForwardListUT.cpp">
       <Filter>tests\containers\implementation</Filter>
     </ClCompile>
+    <ClCompile Include="src\dangerous_constructions\StringViewUT.cpp">
+      <Filter>tests\undefined_behavior</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
@@ -238,6 +241,9 @@
     </Filter>
     <Filter Include="tests\clean_code\solid\open_close_principle">
       <UniqueIdentifier>{65462bd3-1e61-466b-ae36-df99c5c75e85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\undefined_behavior">
+      <UniqueIdentifier>{1698708a-d40c-4794-a8c9-673b96bd7e37}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
