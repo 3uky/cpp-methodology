@@ -55,7 +55,7 @@ TEST(ContainersListTest, ShouldPopValueFromForwardList)
     ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre(2, 1, 0));
 }
 
-TEST(ContainersListTest, ShouldHandlePopEmptyForwardList)
+TEST(ContainersListTest, ShouldHandlePopOnEmptyForwardList)
 {
     // GIVEN
     ForwardList<int> tested_list;
