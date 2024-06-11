@@ -192,9 +192,13 @@
     <ClInclude Include="src\design_patterns\Observer.h" />
     <ClInclude Include="src\design_patterns\ObserverBoostSignal.h" />
     <ClInclude Include="src\design_patterns\Singleton.h" />
-    <ClInclude Include="src\Fibonacci.h" />
+    <ClInclude Include="src\exercises\CharacterFilter.h" />
+    <ClInclude Include="src\exercises\Fibonacci.h" />
+    <ClInclude Include="src\exercises\FrequencySort.h" />
+    <ClInclude Include="src\exercises\ReverseString.h" />
+    <ClInclude Include="src\exercises\UniqueCharacters.h" />
+    <ClInclude Include="src\exercises\UniqueNames.h" />
     <ClInclude Include="src\ForwardList.h" />
-    <ClInclude Include="src\FrequencySort.h" />
     <ClInclude Include="src\HashMap.h" />
     <ClInclude Include="src\LinkedList.h" />
     <ClInclude Include="src\MyClass.h" />
@@ -206,7 +210,6 @@
     <ClInclude Include="src\QueueFromCArray.h" />
     <ClInclude Include="src\QueueFromSharedPointer.h" />
     <ClInclude Include="src\QueueFromVector.h" />
-    <ClInclude Include="src\ReverseString.h" />
     <ClInclude Include="src\StackElement.h" />
     <ClInclude Include="src\StackFromDeque.h" />
     <ClInclude Include="src\StackFromVector.h" />
@@ -218,10 +221,7 @@
     <ClInclude Include="src\SharedPtr.h" />
     <ClInclude Include="src\Stack.h" />
     <ClInclude Include="src\Template.h" />
-    <ClInclude Include="src\CharacterFilter.h" />
     <ClInclude Include="src\TypeConversions.h" />
-    <ClInclude Include="src\UniqueCharacters.h" />
-    <ClInclude Include="src\UniqueNames.h" />
     <ClInclude Include="src\UniquePtr.h" />
     <ClInclude Include="shared\ILinkedList.h" />
     <ClInclude Include="shared\IQueue.h" />

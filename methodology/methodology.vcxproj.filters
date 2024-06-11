@@ -137,9 +137,6 @@
     <ClInclude Include="src\Polymorphism.h">
       <Filter>Header Files\basic\paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="src\CharacterFilter.h">
-      <Filter>Header Files\exercises</Filter>
-    </ClInclude>
     <ClInclude Include="src\UniquePtr.h">
       <Filter>Header Files\basic\internals</Filter>
     </ClInclude>
@@ -155,23 +152,8 @@
     <ClInclude Include="src\Template.h">
       <Filter>Header Files\basic\elements</Filter>
     </ClInclude>
-    <ClInclude Include="src\UniqueNames.h">
-      <Filter>Header Files\exercises</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Fibonacci.h">
-      <Filter>Header Files\exercises</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ReverseString.h">
-      <Filter>Header Files\exercises</Filter>
-    </ClInclude>
-    <ClInclude Include="src\UniqueCharacters.h">
-      <Filter>Header Files\exercises</Filter>
-    </ClInclude>
     <ClInclude Include="src\LinkedList.h">
       <Filter>Header Files\basic\containers\list</Filter>
-    </ClInclude>
-    <ClInclude Include="src\FrequencySort.h">
-      <Filter>Header Files\exercises</Filter>
     </ClInclude>
     <ClInclude Include="src\TCPServer.h">
       <Filter>Header Files\boost\asio</Filter>
@@ -313,6 +295,24 @@
     </ClInclude>
     <ClInclude Include="src\network\WinsockServer.h">
       <Filter>Header Files\network\winsock</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises\CharacterFilter.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises\Fibonacci.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises\FrequencySort.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises\ReverseString.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises\UniqueCharacters.h">
+      <Filter>Header Files\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exercises\UniqueNames.h">
+      <Filter>Header Files\exercises</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
