@@ -99,12 +99,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\QueueFromCArray.cpp">
-      <Filter>Header Files\basic\containers\queue</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Stack.cpp">
-      <Filter>Header Files\basic\containers\Stack</Filter>
-    </ClCompile>
     <ClCompile Include="src\algorithms\binary_tree\BinaryTree.cpp">
       <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClCompile>
@@ -114,88 +108,16 @@
     <ClCompile Include="src\network\WinsockServer.cpp">
       <Filter>Header Files\network\winsock</Filter>
     </ClCompile>
+    <ClCompile Include="src\basic\containers\QueueFromCArray.cpp">
+      <Filter>Header Files\basic\containers\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="src\basic\containers\Stack.cpp">
+      <Filter>Header Files\basic\containers\Stack</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AsyncWait.h">
-      <Filter>Header Files\boost\asio</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ConditionVariable.h">
-      <Filter>Header Files\basic\parallel</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MutexGuardThread.h">
-      <Filter>Header Files\basic\parallel</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MoveCopy.h">
-      <Filter>Header Files\basic\elements</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Mutable.h">
-      <Filter>Header Files\basic\elements</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TypeConversions.h">
-      <Filter>Header Files\basic\elements</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Polymorphism.h">
-      <Filter>Header Files\basic\paradigms</Filter>
-    </ClInclude>
-    <ClInclude Include="src\UniquePtr.h">
-      <Filter>Header Files\basic\internals</Filter>
-    </ClInclude>
-    <ClInclude Include="src\SharedPtr.h">
-      <Filter>Header Files\basic\internals</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MyClass.h">
-      <Filter>Header Files\basic\paradigms</Filter>
-    </ClInclude>
-    <ClInclude Include="src\OverloadingOperators.h">
-      <Filter>Header Files\basic\elements</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Template.h">
-      <Filter>Header Files\basic\elements</Filter>
-    </ClInclude>
-    <ClInclude Include="src\LinkedList.h">
-      <Filter>Header Files\basic\containers\list</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TCPServer.h">
-      <Filter>Header Files\boost\asio</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QueueFromVector.h">
-      <Filter>Header Files\basic\containers\queue</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QueueFromSharedPointer.h">
-      <Filter>Header Files\basic\containers\queue</Filter>
-    </ClInclude>
-    <ClInclude Include="shared\IQueue.h">
-      <Filter>Header Files\basic\containers\queue</Filter>
-    </ClInclude>
-    <ClInclude Include="shared\ILinkedList.h">
-      <Filter>Header Files\basic\containers\list</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Stack.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
-    </ClInclude>
-    <ClInclude Include="shared\IStack.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QueueFromCArray.h">
-      <Filter>Header Files\basic\containers\queue</Filter>
-    </ClInclude>
-    <ClInclude Include="src\StackFromDeque.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
-    </ClInclude>
-    <ClInclude Include="src\StackFromVector.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
-    </ClInclude>
-    <ClInclude Include="src\StackElement.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
-    </ClInclude>
-    <ClInclude Include="src\HashMap.h">
-      <Filter>Header Files\basic\internals</Filter>
-    </ClInclude>
     <ClInclude Include="src\clean_code\BowlingGame.h">
       <Filter>Header Files\clean_code\TDD</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ForwardList.h">
-      <Filter>Header Files\basic\containers\list</Filter>
     </ClInclude>
     <ClInclude Include="src\clean_code\dependency_inversion\IWriter.h">
       <Filter>Header Files\clean_code\solid\depency_inversion</Filter>
@@ -313,6 +235,84 @@
     </ClInclude>
     <ClInclude Include="src\exercises\UniqueNames.h">
       <Filter>Header Files\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="src\boost\AsyncWait.h">
+      <Filter>Header Files\boost\asio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\boost\TCPServer.h">
+      <Filter>Header Files\boost\asio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\ForwardList.h">
+      <Filter>Header Files\basic\containers\list</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\ILinkedList.h">
+      <Filter>Header Files\basic\containers\list</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\LinkedList.h">
+      <Filter>Header Files\basic\containers\list</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\IQueue.h">
+      <Filter>Header Files\basic\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\QueueFromCArray.h">
+      <Filter>Header Files\basic\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\QueueFromSharedPointer.h">
+      <Filter>Header Files\basic\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\QueueFromVector.h">
+      <Filter>Header Files\basic\containers\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\IStack.h">
+      <Filter>Header Files\basic\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\Stack.h">
+      <Filter>Header Files\basic\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\StackElement.h">
+      <Filter>Header Files\basic\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\StackFromDeque.h">
+      <Filter>Header Files\basic\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\StackFromVector.h">
+      <Filter>Header Files\basic\containers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\elements\MoveCopy.h">
+      <Filter>Header Files\basic\elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\elements\Mutable.h">
+      <Filter>Header Files\basic\elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\elements\OverloadingOperators.h">
+      <Filter>Header Files\basic\elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\elements\Template.h">
+      <Filter>Header Files\basic\elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\elements\TypeConversions.h">
+      <Filter>Header Files\basic\elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\internals\HashMap.h">
+      <Filter>Header Files\basic\internals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\internals\SharedPtr.h">
+      <Filter>Header Files\basic\internals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\internals\UniquePtr.h">
+      <Filter>Header Files\basic\internals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\paradigms\MyClass.h">
+      <Filter>Header Files\basic\paradigms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\paradigms\Polymorphism.h">
+      <Filter>Header Files\basic\paradigms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\parallel\ConditionVariable.h">
+      <Filter>Header Files\basic\parallel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\parallel\MutexGuardThread.h">
+      <Filter>Header Files\basic\parallel</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

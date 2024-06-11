@@ -77,7 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\src</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\src</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
       <AdditionalOptions>
@@ -117,7 +117,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\src</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
       <AdditionalOptions>
@@ -138,7 +138,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.\shared;.\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\src</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
       <AdditionalOptions>
@@ -154,10 +154,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\algorithms\binary_tree\BinaryTree.cpp" />
+    <ClCompile Include="src\basic\containers\QueueFromCArray.cpp" />
+    <ClCompile Include="src\basic\containers\Stack.cpp" />
     <ClCompile Include="src\network\WinsockClient.cpp" />
     <ClCompile Include="src\network\WinsockServer.cpp" />
-    <ClCompile Include="src\QueueFromCArray.cpp" />
-    <ClCompile Include="src\Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\algorithms\BinarySearch.h" />
@@ -170,7 +170,32 @@
     <ClInclude Include="src\algorithms\sort\QuickSort.h" />
     <ClInclude Include="src\algorithms\sort\SelectionSort.h" />
     <ClInclude Include="src\algorithms\sort\Shuffle.h" />
-    <ClInclude Include="src\AsyncWait.h" />
+    <ClInclude Include="src\basic\containers\ForwardList.h" />
+    <ClInclude Include="src\basic\containers\ILinkedList.h" />
+    <ClInclude Include="src\basic\containers\IQueue.h" />
+    <ClInclude Include="src\basic\containers\IStack.h" />
+    <ClInclude Include="src\basic\containers\LinkedList.h" />
+    <ClInclude Include="src\basic\containers\QueueFromCArray.h" />
+    <ClInclude Include="src\basic\containers\QueueFromSharedPointer.h" />
+    <ClInclude Include="src\basic\containers\QueueFromVector.h" />
+    <ClInclude Include="src\basic\containers\Stack.h" />
+    <ClInclude Include="src\basic\containers\StackElement.h" />
+    <ClInclude Include="src\basic\containers\StackFromDeque.h" />
+    <ClInclude Include="src\basic\containers\StackFromVector.h" />
+    <ClInclude Include="src\basic\elements\MoveCopy.h" />
+    <ClInclude Include="src\basic\elements\Mutable.h" />
+    <ClInclude Include="src\basic\elements\OverloadingOperators.h" />
+    <ClInclude Include="src\basic\elements\Template.h" />
+    <ClInclude Include="src\basic\elements\TypeConversions.h" />
+    <ClInclude Include="src\basic\internals\HashMap.h" />
+    <ClInclude Include="src\basic\internals\SharedPtr.h" />
+    <ClInclude Include="src\basic\internals\UniquePtr.h" />
+    <ClInclude Include="src\basic\paradigms\MyClass.h" />
+    <ClInclude Include="src\basic\paradigms\Polymorphism.h" />
+    <ClInclude Include="src\basic\parallel\ConditionVariable.h" />
+    <ClInclude Include="src\basic\parallel\MutexGuardThread.h" />
+    <ClInclude Include="src\boost\AsyncWait.h" />
+    <ClInclude Include="src\boost\TCPServer.h" />
     <ClInclude Include="src\clean_code\BowlingGame.h" />
     <ClInclude Include="src\clean_code\dependency_inversion\IReader.h" />
     <ClInclude Include="src\clean_code\dependency_inversion\IWriter.h" />
@@ -198,34 +223,9 @@
     <ClInclude Include="src\exercises\ReverseString.h" />
     <ClInclude Include="src\exercises\UniqueCharacters.h" />
     <ClInclude Include="src\exercises\UniqueNames.h" />
-    <ClInclude Include="src\ForwardList.h" />
-    <ClInclude Include="src\HashMap.h" />
-    <ClInclude Include="src\LinkedList.h" />
-    <ClInclude Include="src\MyClass.h" />
-    <ClInclude Include="src\ConditionVariable.h" />
-    <ClInclude Include="src\MoveCopy.h" />
     <ClInclude Include="src\network\WinsockClient.h" />
     <ClInclude Include="src\network\WinsockLogger.h" />
     <ClInclude Include="src\network\WinsockServer.h" />
-    <ClInclude Include="src\QueueFromCArray.h" />
-    <ClInclude Include="src\QueueFromSharedPointer.h" />
-    <ClInclude Include="src\QueueFromVector.h" />
-    <ClInclude Include="src\StackElement.h" />
-    <ClInclude Include="src\StackFromDeque.h" />
-    <ClInclude Include="src\StackFromVector.h" />
-    <ClInclude Include="src\TCPServer.h" />
-    <ClInclude Include="src\Mutable.h" />
-    <ClInclude Include="src\MutexGuardThread.h" />
-    <ClInclude Include="src\OverloadingOperators.h" />
-    <ClInclude Include="src\Polymorphism.h" />
-    <ClInclude Include="src\SharedPtr.h" />
-    <ClInclude Include="src\Stack.h" />
-    <ClInclude Include="src\Template.h" />
-    <ClInclude Include="src\TypeConversions.h" />
-    <ClInclude Include="src\UniquePtr.h" />
-    <ClInclude Include="shared\ILinkedList.h" />
-    <ClInclude Include="shared\IQueue.h" />
-    <ClInclude Include="shared\IStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

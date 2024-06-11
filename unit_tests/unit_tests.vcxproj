@@ -114,7 +114,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\methodology\src\basic\parallel;..\methodology\src\basic\internals;..\methodology\src\basic\paradigms;..\methodology\src\basic\elements;..\methodology\src\basic\containers;..\methodology\src\boost;..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -131,7 +131,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\methodology\src\basic\parallel;..\methodology\src\basic\internals;..\methodology\src\basic\paradigms;..\methodology\src\basic\elements;..\methodology\src\basic\containers;..\methodology\src\boost;..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -147,7 +147,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\methodology\src\basic\parallel;..\methodology\src\basic\internals;..\methodology\src\basic\paradigms;..\methodology\src\basic\elements;..\methodology\src\basic\containers;..\methodology\src\boost;..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -165,7 +165,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\methodology\src\basic\parallel;..\methodology\src\basic\internals;..\methodology\src\basic\paradigms;..\methodology\src\basic\elements;..\methodology\src\basic\containers;..\methodology\src\boost;..\methodology\src\exercises;..\methodology\src\network;..\methodology\src\design_patterns;..\methodology\src\algorithms\sort;..\methodology\src\algorithms;..\methodology\src\algorithms\binary_tree;..\methodology\src\clean_code\TDD;..\methodology\src\clean_code\open_close_principle;..\methodology\src\clean_code\dependency_inversion;..\methodology\src\clean_code;..\methodology\src;..\methodology\shared;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
