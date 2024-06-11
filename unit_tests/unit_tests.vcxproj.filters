@@ -21,9 +21,6 @@
     <ClCompile Include="src\algorithms\ShuffleUT.cpp">
       <Filter>tests\algorithms\sort</Filter>
     </ClCompile>
-    <ClCompile Include="src\algorithms\BinarySearchUT.cpp">
-      <Filter>tests\algorithms\search</Filter>
-    </ClCompile>
     <ClCompile Include="src\algorithms\BinaryTreeUT.cpp">
       <Filter>tests\algorithms\binary_tree</Filter>
     </ClCompile>
@@ -168,6 +165,9 @@
     <ClCompile Include="src\dangerous_constructions\StringViewUT.cpp">
       <Filter>tests\undefined_behavior</Filter>
     </ClCompile>
+    <ClCompile Include="src\algorithms\BinarySearchUT.cpp">
+      <Filter>tests\algorithms\search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
@@ -202,9 +202,6 @@
     </Filter>
     <Filter Include="tests\algorithms\sort">
       <UniqueIdentifier>{c3edae3c-1b84-49d5-9c33-5eeb7cc8cfc0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="tests\algorithms\search">
-      <UniqueIdentifier>{a00091a7-bf58-4186-a2ea-66af73c0af7d}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\parallel_programming">
       <UniqueIdentifier>{8399dbf9-55cf-4187-bd07-975a32db8c13}</UniqueIdentifier>
@@ -244,6 +241,9 @@
     </Filter>
     <Filter Include="tests\clean_code\solid\dependency_inversion">
       <UniqueIdentifier>{63317f2e-dc83-411c-8282-1c83c6083661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\algorithms\search">
+      <UniqueIdentifier>{6138c396-a1ce-4e25-bdf7-f93025a5f169}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

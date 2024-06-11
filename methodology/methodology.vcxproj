@@ -153,18 +153,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\BinaryTree.cpp" />
-    <ClCompile Include="src\MergeSort.h" />
+    <ClCompile Include="src\algorithms\binary_tree\BinaryTree.cpp" />
     <ClCompile Include="src\QueueFromCArray.cpp" />
     <ClCompile Include="src\Stack.cpp" />
     <ClCompile Include="src\WinsockClient.cpp" />
     <ClCompile Include="src\WinsockServer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\BinarySearch.h" />
+    <ClInclude Include="src\algorithms\BinarySearch.h" />
+    <ClInclude Include="src\algorithms\binary_tree\BinaryTree.h" />
+    <ClInclude Include="src\algorithms\binary_tree\BinaryTreeNode.h" />
+    <ClInclude Include="src\algorithms\sort\BubbleSort.h" />
+    <ClInclude Include="src\algorithms\sort\FrequencySort.h" />
+    <ClInclude Include="src\algorithms\sort\InsertionSort.h" />
+    <ClInclude Include="src\algorithms\sort\MergeSort.h" />
+    <ClInclude Include="src\algorithms\sort\QuickSort.h" />
+    <ClInclude Include="src\algorithms\sort\SelectionSort.h" />
+    <ClInclude Include="src\algorithms\sort\Shuffle.h" />
     <ClInclude Include="src\AsyncWait.h" />
-    <ClInclude Include="src\BinaryTree.h" />
-    <ClInclude Include="src\BubbleSort.h" />
     <ClInclude Include="src\Builder.h" />
     <ClInclude Include="src\clean_code\BowlingGame.h" />
     <ClInclude Include="src\clean_code\dependency_inversion\IReader.h" />
@@ -184,9 +190,7 @@
     <ClInclude Include="src\ForwardList.h" />
     <ClInclude Include="src\FrequencySort.h" />
     <ClInclude Include="src\HashMap.h" />
-    <ClInclude Include="src\InsertionSort.h" />
     <ClInclude Include="src\LinkedList.h" />
-    <ClInclude Include="src\BinaryTreeNode.h" />
     <ClInclude Include="src\ObserverBoostSignal.h" />
     <ClInclude Include="src\MyClass.h" />
     <ClInclude Include="src\ConditionVariable.h" />
@@ -198,14 +202,11 @@
     <ClInclude Include="src\QueueFromCArray.h" />
     <ClInclude Include="src\QueueFromSharedPointer.h" />
     <ClInclude Include="src\QueueFromVector.h" />
-    <ClInclude Include="src\QuickSort.h" />
     <ClInclude Include="src\ReverseString.h" />
-    <ClInclude Include="src\SelectionSort.h" />
     <ClInclude Include="src\StackElement.h" />
     <ClInclude Include="src\StackFromDeque.h" />
     <ClInclude Include="src\StackFromVector.h" />
     <ClInclude Include="src\TCPServer.h" />
-    <ClInclude Include="src\Shuffle.h" />
     <ClInclude Include="src\Singleton.h" />
     <ClInclude Include="src\Mutable.h" />
     <ClInclude Include="src\MutexGuardThread.h" />

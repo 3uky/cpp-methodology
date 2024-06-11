@@ -31,9 +31,6 @@
     <Filter Include="Header Files\algorithms">
       <UniqueIdentifier>{83c55bd5-5e4e-4551-a920-2159e3cdc6ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\algorithms\search">
-      <UniqueIdentifier>{391bb07b-e8d8-49af-a306-de978b8cbf8d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\algorithms\sort">
       <UniqueIdentifier>{af81cd5d-5f70-4669-83e8-37d1d2300ad2}</UniqueIdentifier>
     </Filter>
@@ -88,25 +85,25 @@
     <Filter Include="Header Files\clean_code\solid\depency_inversion">
       <UniqueIdentifier>{cfc4cd5b-1c50-4d6a-bdda-ab57d10cf27e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\algorithms\search">
+      <UniqueIdentifier>{fd21eac5-55e6-4617-8b87-243b5cf1d07b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\MergeSort.h">
-      <Filter>Header Files\algorithms\sort</Filter>
-    </ClCompile>
     <ClCompile Include="src\QueueFromCArray.cpp">
       <Filter>Header Files\containers\queue</Filter>
     </ClCompile>
     <ClCompile Include="src\Stack.cpp">
       <Filter>Header Files\containers\Stack</Filter>
     </ClCompile>
-    <ClCompile Include="src\BinaryTree.cpp">
-      <Filter>Header Files\algorithms\binary_tree</Filter>
-    </ClCompile>
     <ClCompile Include="src\WinsockServer.cpp">
       <Filter>Header Files\network</Filter>
     </ClCompile>
     <ClCompile Include="src\WinsockClient.cpp">
       <Filter>Header Files\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\algorithms\binary_tree\BinaryTree.cpp">
+      <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -143,9 +140,6 @@
     <ClInclude Include="src\MyClass.h">
       <Filter>Header Files\basic_paradigms</Filter>
     </ClInclude>
-    <ClInclude Include="src\BinarySearch.h">
-      <Filter>Header Files\algorithms\search</Filter>
-    </ClInclude>
     <ClInclude Include="src\OverloadingOperators.h">
       <Filter>Header Files\basic_elements</Filter>
     </ClInclude>
@@ -161,29 +155,11 @@
     <ClInclude Include="src\ReverseString.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
-    <ClInclude Include="src\Shuffle.h">
-      <Filter>Header Files\algorithms\sort</Filter>
-    </ClInclude>
     <ClInclude Include="src\UniqueCharacters.h">
       <Filter>Header Files\exercises</Filter>
     </ClInclude>
     <ClInclude Include="src\LinkedList.h">
       <Filter>Header Files\containers\list</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QuickSort.h">
-      <Filter>Header Files\algorithms\sort</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BubbleSort.h">
-      <Filter>Header Files\algorithms\sort</Filter>
-    </ClInclude>
-    <ClInclude Include="src\InsertionSort.h">
-      <Filter>Header Files\algorithms\sort</Filter>
-    </ClInclude>
-    <ClInclude Include="src\SelectionSort.h">
-      <Filter>Header Files\algorithms\sort</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BinaryTree.h">
-      <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClInclude>
     <ClInclude Include="src\FrequencySort.h">
       <Filter>Header Files\exercises</Filter>
@@ -220,9 +196,6 @@
     </ClInclude>
     <ClInclude Include="src\StackElement.h">
       <Filter>Header Files\containers\Stack</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BinaryTreeNode.h">
-      <Filter>Header Files\algorithms\binary_tree</Filter>
     </ClInclude>
     <ClInclude Include="src\WinsockServer.h">
       <Filter>Header Files\network</Filter>
@@ -304,6 +277,36 @@
     </ClInclude>
     <ClInclude Include="src\clean_code\open_close_principle\ReportPrinter.h">
       <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\binary_tree\BinaryTree.h">
+      <Filter>Header Files\algorithms\binary_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\binary_tree\BinaryTreeNode.h">
+      <Filter>Header Files\algorithms\binary_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\BinarySearch.h">
+      <Filter>Header Files\algorithms\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\sort\BubbleSort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\sort\FrequencySort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\sort\InsertionSort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\sort\MergeSort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\sort\QuickSort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\sort\SelectionSort.h">
+      <Filter>Header Files\algorithms\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\algorithms\sort\Shuffle.h">
+      <Filter>Header Files\algorithms\sort</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
