@@ -4,7 +4,7 @@
 
 #include <array>
 
-namespace clean_code
+namespace clean_code::TDD
 {
 
 class Game

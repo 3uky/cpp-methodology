@@ -2,7 +2,7 @@
 
 #include "BowlingGame.h"
 
-namespace clean_code
+namespace clean_code::TDD
 {
 
 class BowlingGameTest : public testing::Test
