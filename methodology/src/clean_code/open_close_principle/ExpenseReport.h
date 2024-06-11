@@ -10,7 +10,7 @@
 
 using namespace std;
 
-namespace clean_code
+namespace clean_code::solid
 {
     class ExpenseReport
     {

@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace clean_code
+namespace clean_code::solid
 {
     class IReportPrinter
     {

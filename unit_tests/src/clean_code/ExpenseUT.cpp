@@ -5,7 +5,7 @@
 #include "ExpenseReporter.h"
 #include "IReportPrinter.h"
 
-namespace clean_code
+namespace clean_code::solid
 {
 
 class ReportPrinterMock : public IReportPrinter
@@ -23,11 +23,11 @@ private:
 	string printedText;
 };
 
-class ExpenseTest : public testing::Test
+class OpenClosePrincipleTest : public testing::Test
 {
 protected:
 
-	ExpenseTest() : reporter(report, printer) {}
+	OpenClosePrincipleTest() : reporter(report, printer) {}
 
 	void SetUp() {}
 	
@@ -36,7 +36,7 @@ protected:
 	ExpenseReporter reporter;
 };
 
-TEST_F(ExpenseTest, printEmpty)
+TEST_F(OpenClosePrincipleTest, printEmpty)
 {
 	// GIVEN / WHEN
 	reporter.PrintReport();
@@ -48,7 +48,7 @@ TEST_F(ExpenseTest, printEmpty)
 		"Total $0.00");
 }
 
-TEST_F(ExpenseTest, printOneDinner)
+TEST_F(OpenClosePrincipleTest, printOneDinner)
 {
 	// GIVEN
 	DinnerExpense dinner(1678);
@@ -65,7 +65,7 @@ TEST_F(ExpenseTest, printOneDinner)
 		"Total $16.78");
 }
 
-TEST_F(ExpenseTest, printTwoMeals)
+TEST_F(OpenClosePrincipleTest, printTwoMeals)
 {
 	// GIVEN
 	DinnerExpense dinner(1000);
@@ -85,7 +85,7 @@ TEST_F(ExpenseTest, printTwoMeals)
 		"Total $15.00");
 }
 
-TEST_F(ExpenseTest, printTwoMealsAndCarRental)
+TEST_F(OpenClosePrincipleTest, printTwoMealsAndCarRental)
 {
 	// GIVEN
 	DinnerExpense dinner(1000);
@@ -108,7 +108,7 @@ TEST_F(ExpenseTest, printTwoMealsAndCarRental)
 		"Total $515.00");
 }
 
-TEST_F(ExpenseTest, printOverages)
+TEST_F(OpenClosePrincipleTest, printOverages)
 {
 	// GIVEN
 	BreakfastExpense breakfast(1000);
