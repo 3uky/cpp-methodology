@@ -157,7 +157,7 @@
       <Filter>tests\clean_code\TDD</Filter>
     </ClCompile>
     <ClCompile Include="src\solid\DependencyInversionUT.cpp">
-      <Filter>tests\clean_code\solid\single_responsibility_principle</Filter>
+      <Filter>tests\clean_code\solid\dependency_inversion</Filter>
     </ClCompile>
     <ClCompile Include="src\clean_code\ExpenseUT.cpp">
       <Filter>tests\clean_code\solid\open_close_principle</Filter>
@@ -236,14 +236,14 @@
     <Filter Include="tests\clean_code\TDD">
       <UniqueIdentifier>{d6673eaf-5ba5-4589-99a0-1a2c778a12d3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="tests\clean_code\solid\single_responsibility_principle">
-      <UniqueIdentifier>{63317f2e-dc83-411c-8282-1c83c6083661}</UniqueIdentifier>
-    </Filter>
     <Filter Include="tests\clean_code\solid\open_close_principle">
       <UniqueIdentifier>{65462bd3-1e61-466b-ae36-df99c5c75e85}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests\undefined_behavior">
       <UniqueIdentifier>{1698708a-d40c-4794-a8c9-673b96bd7e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\clean_code\solid\dependency_inversion">
+      <UniqueIdentifier>{63317f2e-dc83-411c-8282-1c83c6083661}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

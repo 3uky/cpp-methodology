@@ -1,11 +1,13 @@
 #include "gmock/gmock.h"
 
-#include "DependencyInversion.h"
+#include "Keyboard.h"
+#include "Printer.h"
+#include "Worker.h"
 
 using ::testing::Return;
 using ::testing::_;
 
-namespace solid
+namespace clean_code::solid
 {
 
 class MockKeyboard : public Keyboard {

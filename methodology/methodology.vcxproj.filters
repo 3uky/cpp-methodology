@@ -85,6 +85,9 @@
     <Filter Include="Header Files\clean_code\solid\open_close_principle">
       <UniqueIdentifier>{a3da55a0-2d96-4261-b582-2c14a68cbad1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\clean_code\solid\depency_inversion">
+      <UniqueIdentifier>{cfc4cd5b-1c50-4d6a-bdda-ab57d10cf27e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MergeSort.h">
@@ -263,29 +266,44 @@
     <ClInclude Include="src\clean_code\BowlingGame.h">
       <Filter>Header Files\clean_code\TDD</Filter>
     </ClInclude>
-    <ClInclude Include="src\clean_code\DependencyInversion.h">
-      <Filter>Header Files\clean_code\solid\single_responsibility_principle</Filter>
-    </ClInclude>
-    <ClInclude Include="src\clean_code\Expense.h">
-      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
-    </ClInclude>
-    <ClInclude Include="src\clean_code\ExpenseReporter.h">
-      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
-    </ClInclude>
-    <ClInclude Include="src\clean_code\ExpenseReport.h">
-      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
-    </ClInclude>
-    <ClInclude Include="src\clean_code\IReportPrinter.h">
-      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
-    </ClInclude>
-    <ClInclude Include="src\clean_code\IExpense.h">
-      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
-    </ClInclude>
-    <ClInclude Include="src\clean_code\ReportPrinter.h">
-      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
-    </ClInclude>
     <ClInclude Include="src\ForwardList.h">
       <Filter>Header Files\containers\list</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\dependency_inversion\IWriter.h">
+      <Filter>Header Files\clean_code\solid\depency_inversion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\dependency_inversion\IReader.h">
+      <Filter>Header Files\clean_code\solid\depency_inversion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\dependency_inversion\Keyboard.h">
+      <Filter>Header Files\clean_code\solid\depency_inversion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\dependency_inversion\Printer.h">
+      <Filter>Header Files\clean_code\solid\depency_inversion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\dependency_inversion\Worker.h">
+      <Filter>Header Files\clean_code\solid\depency_inversion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\open_close_principle\Expense.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\open_close_principle\ExpenseNamer.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\open_close_principle\ExpenseReport.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\open_close_principle\ExpenseReporter.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\open_close_principle\IExpense.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\open_close_principle\IReportPrinter.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clean_code\open_close_principle\ReportPrinter.h">
+      <Filter>Header Files\clean_code\solid\open_close_principle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

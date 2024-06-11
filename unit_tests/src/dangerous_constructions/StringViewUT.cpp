@@ -32,7 +32,7 @@ namespace undefined_behavior
 
 
 	// user defined literal is converted to temporary string which is destructed on the end of expression
-	// string view is pointing to unvalid memory, access on string view caused undefined behavior
+	// string view is pointing to unvalid memory,  access on string view caused undefined behavior
 	TEST(StringViewTest, ShouldAccessUnvalidatedMemory2)
 	{
 		// GIVEN / WHEN
