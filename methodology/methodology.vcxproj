@@ -154,10 +154,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\algorithms\binary_tree\BinaryTree.cpp" />
+    <ClCompile Include="src\network\WinsockClient.cpp" />
+    <ClCompile Include="src\network\WinsockServer.cpp" />
     <ClCompile Include="src\QueueFromCArray.cpp" />
     <ClCompile Include="src\Stack.cpp" />
-    <ClCompile Include="src\WinsockClient.cpp" />
-    <ClCompile Include="src\WinsockServer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\algorithms\BinarySearch.h" />
@@ -200,6 +200,9 @@
     <ClInclude Include="src\MyClass.h" />
     <ClInclude Include="src\ConditionVariable.h" />
     <ClInclude Include="src\MoveCopy.h" />
+    <ClInclude Include="src\network\WinsockClient.h" />
+    <ClInclude Include="src\network\WinsockLogger.h" />
+    <ClInclude Include="src\network\WinsockServer.h" />
     <ClInclude Include="src\QueueFromCArray.h" />
     <ClInclude Include="src\QueueFromSharedPointer.h" />
     <ClInclude Include="src\QueueFromVector.h" />
@@ -214,9 +217,6 @@
     <ClInclude Include="src\Polymorphism.h" />
     <ClInclude Include="src\SharedPtr.h" />
     <ClInclude Include="src\Stack.h" />
-    <ClInclude Include="src\WinsockClient.h" />
-    <ClInclude Include="src\WinsockLogger.h" />
-    <ClInclude Include="src\WinsockServer.h" />
     <ClInclude Include="src\Template.h" />
     <ClInclude Include="src\CharacterFilter.h" />
     <ClInclude Include="src\TypeConversions.h" />
