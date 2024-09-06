@@ -168,6 +168,9 @@
     <ClCompile Include="src\clean_code\DependencyInversionUT.cpp">
       <Filter>tests\clean_code\solid\dependency_inversion</Filter>
     </ClCompile>
+    <ClCompile Include="src\unit_test\databaseSimulationUT.cpp">
+      <Filter>tests\unit_test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
@@ -247,6 +250,9 @@
     </Filter>
     <Filter Include="tests\basic\elements">
       <UniqueIdentifier>{e6750f50-2cab-45a4-86c8-53a75cd46b03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\unit_test">
+      <UniqueIdentifier>{c38a62c2-cd44-457e-adb1-1c5decfa154b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
