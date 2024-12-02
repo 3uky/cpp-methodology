@@ -34,6 +34,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="IteratorUT.cpp" />
     <ClCompile Include="src\algorithms\BinarySearchUT.cpp" />
     <ClCompile Include="src\algorithms\BinaryTreeUT.cpp" />
     <ClCompile Include="src\algorithms\BubbleSortUT.cpp" />

@@ -73,9 +73,6 @@
     <Filter Include="Header Files\basic\containers\queue">
       <UniqueIdentifier>{664daf7f-bda9-4363-9971-608d78157ca7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\basic\containers\Stack">
-      <UniqueIdentifier>{360bcf77-54ef-45a4-8374-0167e977a4bd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\basic\elements">
       <UniqueIdentifier>{380ab401-165f-4f3c-a0da-291c5aa57d0a}</UniqueIdentifier>
     </Filter>
@@ -97,6 +94,12 @@
     <Filter Include="Header Files\network\winsock">
       <UniqueIdentifier>{8ded19c4-2f17-4b2d-a58f-9224b83754bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\basic\containers\iterator">
+      <UniqueIdentifier>{5c2744d9-6afd-4e42-8beb-b9af88d31a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\basic\containers\stack">
+      <UniqueIdentifier>{360bcf77-54ef-45a4-8374-0167e977a4bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\algorithms\binary_tree\BinaryTree.cpp">
@@ -112,7 +115,7 @@
       <Filter>Header Files\basic\containers\queue</Filter>
     </ClCompile>
     <ClCompile Include="src\basic\containers\Stack.cpp">
-      <Filter>Header Files\basic\containers\Stack</Filter>
+      <Filter>Header Files\basic\containers\stack</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -264,19 +267,19 @@
       <Filter>Header Files\basic\containers\queue</Filter>
     </ClInclude>
     <ClInclude Include="src\basic\containers\IStack.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
+      <Filter>Header Files\basic\containers\stack</Filter>
     </ClInclude>
     <ClInclude Include="src\basic\containers\Stack.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
+      <Filter>Header Files\basic\containers\stack</Filter>
     </ClInclude>
     <ClInclude Include="src\basic\containers\StackElement.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
+      <Filter>Header Files\basic\containers\stack</Filter>
     </ClInclude>
     <ClInclude Include="src\basic\containers\StackFromDeque.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
+      <Filter>Header Files\basic\containers\stack</Filter>
     </ClInclude>
     <ClInclude Include="src\basic\containers\StackFromVector.h">
-      <Filter>Header Files\basic\containers\Stack</Filter>
+      <Filter>Header Files\basic\containers\stack</Filter>
     </ClInclude>
     <ClInclude Include="src\basic\elements\MoveCopy.h">
       <Filter>Header Files\basic\elements</Filter>
@@ -313,6 +316,9 @@
     </ClInclude>
     <ClInclude Include="src\basic\parallel\MutexGuardThread.h">
       <Filter>Header Files\basic\parallel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\basic\containers\Iterator.h">
+      <Filter>Header Files\basic\containers\iterator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

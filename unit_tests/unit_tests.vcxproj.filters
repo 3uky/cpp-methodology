@@ -171,6 +171,9 @@
     <ClCompile Include="src\unit_test\databaseSimulationUT.cpp">
       <Filter>tests\unit_test</Filter>
     </ClCompile>
+    <ClCompile Include="IteratorUT.cpp">
+      <Filter>tests\basic\containers\implementation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="tests">
