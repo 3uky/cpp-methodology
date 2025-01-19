@@ -1,5 +1,7 @@
 set(BINARY ${CMAKE_PROJECT_NAME}_tst)
 
+include(GoogleTest)
+
 file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.h *.cpp)
 
 set(SOURCES ${TEST_SOURCES})
@@ -24,7 +26,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src/exercises)
 
 add_executable(${BINARY} ${TEST_SOURCES})
 
-add_test(NAME ${BINARY} COMMAND ${BINARY})
-
 target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest)
 target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gmock)
+
+gtest_discover_tests(${BINARY})
