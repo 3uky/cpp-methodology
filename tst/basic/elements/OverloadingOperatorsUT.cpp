@@ -4,19 +4,18 @@
 
 namespace basic_elements
 {
-    TEST(OverloadingOperators, ShouldOverloadVectorOperator) 
+    TEST(OverloadingOperators, ShouldOverloadComplexNumberOperator) 
     {
         // GIVEN
-        MyVector foo(3, 1);
-        MyVector bar(1, 2);
-        MyVector result;
+        ComplexNumber foo(3, 1);
+        ComplexNumber bar(1, 2);
+        ComplexNumber result;
 
         // WHEN
         result = foo + bar;
 
         // THEN
-        EXPECT_EQ(result.getX(), 4);
-        EXPECT_EQ(result.getY(), 3);
+        EXPECT_EQ(result.getReal(), 4);
+        EXPECT_EQ(result.getImaginary(), 3);
     }
-
 }

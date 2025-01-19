@@ -7,31 +7,39 @@ using namespace std;
 namespace basic_elements
 {
 
-class MyVector {
+class ComplexNumber {
 
 public:
-    MyVector() {}
-    MyVector(int a, int b) : x(a), y(b) {}
+    ComplexNumber() {}
+    ComplexNumber(int r, int i) : _r(r), _i(i) {}
 
-    MyVector operator+(const MyVector& param)
+    ComplexNumber operator+(const ComplexNumber& param)
     {
-        MyVector temp;
-        temp.x = x + param.x;
-        temp.y = y + param.y;
+        ComplexNumber temp;
+        temp._r = _r + param._r;
+        temp._i = _i + param._i;
         return temp;
     }
 
-    int getX() const
+    ComplexNumber operator-(const ComplexNumber& param)
     {
-        return x;
+        ComplexNumber temp;
+        temp._r = _r - param._r;
+        temp._i = _i - param._i;
+        return temp;
     }
-    int getY() const
+
+    int getReal() const
     {
-        return y;
+        return _r;
+    }
+    int getImaginary() const
+    {
+        return _i;
     }
 
 private:
-    int x, y;
+    int _r, _i;
 };
 
 }
