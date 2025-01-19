@@ -11,7 +11,7 @@ class ComplexNumber {
 
 public:
     ComplexNumber() {}
-    ComplexNumber(int r, int i) : _r(r), _i(i) {}
+    ComplexNumber(double r, double i) : _r(r), _i(i) {}
 
     ComplexNumber operator+(const ComplexNumber& param)
     {
@@ -29,17 +29,36 @@ public:
         return temp;
     }
 
-    int getReal() const
+    ComplexNumber operator*(const ComplexNumber& param)
+    {
+        ComplexNumber temp;
+        temp._r = _r * param._r - _i * param._i;
+        temp._i = _r * param._i + _i * param._r;
+        return temp;
+    }
+
+    ComplexNumber operator/(const ComplexNumber& param)
+    {
+        ComplexNumber temp;
+        double denominator = param._r * param._r + param._i * param._i;
+        temp._r = (_r * param._r + _i * param._i) / denominator;
+        temp._i = (_i * param._r - _r * param._i) / denominator;
+        return temp;
+    }
+
+
+    double getReal() const
     {
         return _r;
     }
-    int getImaginary() const
+
+    double getImaginary() const
     {
         return _i;
     }
 
 private:
-    int _r, _i;
+    double _r, _i;
 };
 
 }

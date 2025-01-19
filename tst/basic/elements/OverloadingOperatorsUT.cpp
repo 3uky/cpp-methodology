@@ -4,10 +4,10 @@
 
 namespace basic_elements
 {
-    TEST(OverloadingOperators, ShouldOverloadComplexNumberOperator) 
+    TEST(OverloadingOperators, ShouldAddComplexNumbers) 
     {
         // GIVEN
-        ComplexNumber foo(3, 1);
+        ComplexNumber foo(3, 4);
         ComplexNumber bar(1, 2);
         ComplexNumber result;
 
@@ -16,6 +16,51 @@ namespace basic_elements
 
         // THEN
         EXPECT_EQ(result.getReal(), 4);
-        EXPECT_EQ(result.getImaginary(), 3);
+        EXPECT_EQ(result.getImaginary(), 6);
+    }
+
+    TEST(OverloadingOperators, ShouldSubstractComplexNumbers) 
+    {
+        // GIVEN
+        ComplexNumber foo(3, 4);
+        ComplexNumber bar(1, 2);
+        ComplexNumber result;
+
+        // WHEN
+        result = foo - bar;
+
+        // THEN
+        EXPECT_EQ(result.getReal(), 2);
+        EXPECT_EQ(result.getImaginary(), 2);
+    }
+
+    TEST(OverloadingOperators, ShouldDivideComplexNumbers) 
+    {
+        // GIVEN
+        ComplexNumber foo(3, 4);
+        ComplexNumber bar(1, 2);
+        ComplexNumber result;
+
+        // WHEN
+        result = foo / bar;
+
+        // THEN
+        EXPECT_EQ(result.getReal(), 2.2);
+        EXPECT_EQ(result.getImaginary(), -0.4);
+    }
+    
+    TEST(OverloadingOperators, ShouldMultiplyComplexNumbers) 
+    {
+        // GIVEN
+        ComplexNumber foo(3, 4);
+        ComplexNumber bar(1, 2);
+        ComplexNumber result;
+
+        // WHEN
+        result = foo * bar;
+
+        // THEN
+        EXPECT_EQ(result.getReal(), -5);
+        EXPECT_EQ(result.getImaginary(), 10);
     }
 }
