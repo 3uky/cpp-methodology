@@ -48,6 +48,16 @@ public:
         return temp;
     }
 
+    bool operator==(const ComplexNumber& param)
+    {
+        return param._i == _i && param._r == _r;
+    }
+
+    bool operator!=(const ComplexNumber& param)
+    {
+        return param._i != _i || param._r != _r;
+    }
+
     double getMagnitude() const
     {
         return sqrt(pow(_r, 2) + pow(_i, 2));
