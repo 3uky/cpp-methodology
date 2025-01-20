@@ -51,7 +51,7 @@ public:
     Constructor& operator=(const Constructor& x)
 	{
         delete ptr;                      // delete currently pointed string
-        ptr = new string(x.content());   // allocate space for new string, and copy
+        ptr = new string(x.content());   // allocate space for new string, and copy value
         return *this;
     }
     
@@ -62,7 +62,7 @@ public:
 	{
         delete ptr;
         ptr = x.ptr;
-        x.ptr = nullptr; // free of memory is not necessary because this->ptr (or just ptr in this context) is pointing on it now
+        x.ptr = nullptr; // necessary for correct delete otherwise it happens twice for same memory and lead to undefined behavior
         return *this;
     }
 
