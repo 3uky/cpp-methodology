@@ -63,4 +63,16 @@ namespace basic_elements
         EXPECT_EQ(result.getReal(), -5);
         EXPECT_EQ(result.getImaginary(), 10);
     }
+
+    TEST(OverloadingOperators, ShouldComputeComplexNumbers) 
+    {
+        // GIVEN
+        ComplexNumber foo(3, 4);
+        ComplexNumber result;
+
+        // WHEN / THEN
+        EXPECT_EQ(foo.getMagnitude(), 5.0);
+    }
+
+
 }

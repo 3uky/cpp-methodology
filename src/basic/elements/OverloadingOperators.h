@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include <cmath>
+
 using namespace std;
 
 namespace basic_elements
@@ -46,6 +48,10 @@ public:
         return temp;
     }
 
+    double getMagnitude() const
+    {
+        return sqrt(pow(_r, 2) + pow(_i, 2));
+    }
 
     double getReal() const
     {
