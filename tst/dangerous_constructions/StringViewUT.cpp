@@ -13,8 +13,10 @@ namespace undefined_behavior
 	// string view member in structure doesnt own passed memory of temporary object
 	// temporary object is destructed after object initialization and memory became unvalid
 	// accessing memory through object string view member result in undefined behavior
-	TEST(StringViewTest, DISABLED_ShouldAccessUnvalidatedMemory)
+	TEST(StringViewTest, ShouldAccessUnvalidatedMemory)
 	{
+		GTEST_SKIP();
+
 		// GIVEN
 		std::string hello{"Hello"};
 		struct X
@@ -33,8 +35,10 @@ namespace undefined_behavior
 
 	// user defined literal is converted to temporary string which is destructed on the end of expression
 	// string view is pointing to unvalid memory,  access on string view caused undefined behavior
-	TEST(StringViewTest, DISABLED_ShouldAccessUnvalidatedMemory2)
+	TEST(StringViewTest, ShouldAccessUnvalidatedMemory2)
 	{
+		GTEST_SKIP();
+
 		// GIVEN / WHEN
 		std::string_view bad("Hello, World!"s);
 

@@ -106,8 +106,10 @@ TEST(ContainersListTest, ShouldCleanForwardList)
     ASSERT_THAT(ForwardList2List<int>(tested_list), ElementsAre());
 }
 
-TEST(ContainersListTest, DISABLED_ShouldBeAbleToHanldeLargeNumberOfValueInsertionIntoForwardList)
+TEST(ContainersListTest, ShouldBeAbleToHanldeLargeNumberOfValueInsertionIntoForwardList)
 {
+    GTEST_SKIP();
+
     // GIVEN/WHEN
     ForwardList<int> tested_list;
 

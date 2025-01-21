@@ -43,8 +43,10 @@ namespace parallel_programming
         ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A*B*A*"));
     }
     
-    TEST(ParalellProgrammingTest, DISABLED_ShouldThreadsExecuteAtLeastPauseDuration)
+    TEST(ParalellProgrammingTest, ShouldThreadsExecuteAtLeastPauseDuration)
     {
+        GTEST_SKIP();
+
         // GIVEN
         MyCriticalSection ks;
         int pause_duration_s = 1;
