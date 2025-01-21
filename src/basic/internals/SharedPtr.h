@@ -22,29 +22,30 @@ public:
 	{
 	}
 
-	/*** Copy Semantics ***/
-	MySharedPtr(const MySharedPtr& obj) // copy constructor: MySharedPtr<int> bar = foo;
+	// copy constructor: MySharedPtr<int> bar = foo;
+	MySharedPtr(const MySharedPtr& obj) 
 	{
-		ptr = obj.ptr; // share the underlying pointer
+		ptr = obj.ptr;
 		refCount = obj.refCount;
-		if (obj.ptr != nullptr)
-			(*refCount)++; // if the pointer is not null, increment the refCount
+		if (ptr)
+			(*refCount)++;
 	}
-
-	MySharedPtr& operator=(const MySharedPtr& obj) // copy assignment: foo = bar;
+	
+	// copy assignment: foo = bar;
+	MySharedPtr& operator=(const MySharedPtr& obj) 
 	{
-		Reset(); // cleanup any existing data
+		Reset();
 
-		// Assign incoming object's data to this object
-		ptr = obj.ptr; // share the underlying pointer
+		ptr = obj.ptr;
 		refCount = obj.refCount;
-		if (obj.ptr != nullptr)
-			(*refCount)++; // if the pointer is not null, increment the refCount
+		if (ptr)
+			(*refCount)++;
+
 		return *this;
 	}
 
-	/*** Move Semantics ***/
-	MySharedPtr(MySharedPtr&& dyingObj) // move constructor: MySharedPtr<int> b = MySharedPtr(new int(3));
+	// move constructor: MySharedPtr<int> b = MySharedPtr(new int(3));
+	MySharedPtr(MySharedPtr&& dyingObj)
 	{
 		ptr = dyingObj.ptr; // share the underlying pointer
 		refCount = dyingObj.refCount;
@@ -67,9 +68,7 @@ public:
 
 	unsigned int use_count() const
 	{
-		if (refCount == nullptr)
-			return 0;
-		return *refCount;
+		return refCount ? *refCount : 0;
 	}
 
 	T* get() const
@@ -87,7 +86,7 @@ public:
 		return *ptr;
 	}
 
-	~MySharedPtr() // destructor
+	~MySharedPtr()
 	{
 		Reset();
 	}
@@ -95,16 +94,13 @@ public:
 private:
 	void Reset()
 	{
-		if (refCount != nullptr)
+		if (refCount && --(*refCount) == 0)
 		{
-			(*refCount)--;
-
-			if (*refCount == 0) {
-				if (ptr != nullptr)
-					delete ptr;
-				delete refCount;
-			}
+			delete ptr;
+			delete refCount;
 		}
+		ptr = nullptr;
+		refCount = nullptr;
 	}
 };
 
