@@ -173,4 +173,25 @@ TEST(SharedPointerTest, ShouldHaveSameBehaviorAsSmartPointerOnCopyAssignment)
     EXPECT_EQ(implemented_ptr_2.use_count(), reference_ptr_2.use_count());
 }
 
+TEST(SharedPointerTest, ShouldCorrectlyUpdateReferenceCounter)
+{
+    // GIVEN
+    MySharedPtr<int> a; // default contsructor (nullptr)
+    MySharedPtr b = a; // copy assignment
+    MySharedPtr c(10); // overloaded constructor (value)
+
+    // WHEN - copy assignment
+    a = c;
+
+    // THEN
+
+    EXPECT_EQ(a.use_count(), 2);
+    EXPECT_EQ(a.use_count(), c.use_count());
+    EXPECT_EQ(*a, 10);
+    EXPECT_EQ(*c, 10);
+
+    EXPECT_EQ(b.use_count(), 0);
+    EXPECT_TRUE((b.get() == nullptr));
+}
+
 }

@@ -10,17 +10,9 @@ class MySharedPtr
 	unsigned int* refCount = nullptr;
 
 public:
-	MySharedPtr() : ptr(nullptr), refCount(new unsigned int(0)) // default constructor
-	{
-	}
-
-	MySharedPtr(T val) : ptr(new T(val)), refCount(new unsigned int(1)) // constructor
-	{
-	}
-
-	MySharedPtr(T* ptr) : ptr(ptr), refCount(new unsigned int(1)) // constructor
-	{
-	}
+	MySharedPtr() : ptr(nullptr), refCount(nullptr) {}
+	MySharedPtr(T val) : ptr(new T(val)), refCount(new unsigned int(1)) {}
+	MySharedPtr(T* ptr) : ptr(ptr), refCount(ptr ? new unsigned int(1) : nullptr) {}
 
 	// copy constructor: MySharedPtr<int> bar = foo;
 	MySharedPtr(const MySharedPtr& obj) 
@@ -68,7 +60,12 @@ public:
 
 	unsigned int use_count() const
 	{
-		return refCount ? *refCount : 0;
+		if (refCount == nullptr)
+			return 0;
+		else
+			return *refCount;
+
+		//return  ? *refCount : 0;
 	}
 
 	T* get() const
@@ -94,13 +91,16 @@ public:
 private:
 	void Reset()
 	{
-		if (refCount && --(*refCount) == 0)
+		if (ptr)
 		{
-			delete ptr;
-			delete refCount;
-		}
-		ptr = nullptr;
-		refCount = nullptr;
+            if (--(*refCount) == 0)
+			{
+                delete ptr;
+                delete refCount;
+            }
+            ptr = nullptr;
+            refCount = nullptr;
+        }
 	}
 };
 
