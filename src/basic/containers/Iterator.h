@@ -19,8 +19,35 @@ public:
         }
     }
 
+    MyContainer(MyContainer& origin)
+    {
+        size = origin.size;
+        data = new T[size];
+        for (size_t i = 0; i < size; ++i) 
+        {
+            data[i] = origin.data[i];
+        }        
+    }
+
     ~MyContainer() {
+        Cleanup();
+    }
+    
+    void Cleanup()
+    {
         delete[] data;
+    }
+
+    MyContainer& operator=(const MyContainer& origin)
+    {
+        Cleanup();
+        size = origin.size;
+        data = new T[size];
+        for (size_t i = 0; i < size; ++i) 
+        {
+            data[i] = origin.data[i];
+        }        
+        return *this;
     }
 
     // Allow access to elements
