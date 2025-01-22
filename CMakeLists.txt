@@ -1,9 +1,7 @@
 cmake_minimum_required(VERSION 3.5.0)
-project(cpp-template VERSION 0.1.0 LANGUAGES C CXX)
+project(cpp-methodology VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
-
-list(REMOVE_ITEM lib_srcs "tst/clean_code/ExpenseUT.cpp")
 
 add_subdirectory(tst)
 add_subdirectory(src)
