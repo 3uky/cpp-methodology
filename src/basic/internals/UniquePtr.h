@@ -15,18 +15,18 @@ public:
 	MyUniquePtr(const MyUniquePtr& obj) = delete; // copy constructor is prohibited
 	MyUniquePtr& operator=(const MyUniquePtr& obj) = delete; // copy assignment is prohibited
 
-	MyUniquePtr(MyUniquePtr&& dyingObj) // move constructor: MyUniquePtr object = std::move(dyingObject);
+	// move constructor: MyUniquePtr object = std::move(dyingObject);
+	MyUniquePtr(MyUniquePtr&& dyingObj)
 	{
-		// Transfer ownership of the memory pointed by dyingObj to this object
 		ptr = dyingObj.ptr;
 		dyingObj.ptr = nullptr; 
 	}
 
-	MyUniquePtr& operator=(MyUniquePtr&& dyingObj) // move assignment: object = std::move(dyingObject);
+	// move assignment: object = std::move(dyingObject);
+	MyUniquePtr& operator=(MyUniquePtr&& dyingObj)
 	{
-		__cleanup__(); // cleanup any existing data
+		Reset();
 
-		// Transfer ownership of the memory pointed by dyingObj to this object
 		ptr = dyingObj.ptr;
 		dyingObj.ptr = nullptr;
 
@@ -40,19 +40,17 @@ public:
 
 	T& operator*()
 	{
-		// if(ptr != nullptr)
 		return *ptr;
 	}
 
 	~MyUniquePtr()
 	{
-		__cleanup__();
+		Reset();
 	}
 
 private:
-	void __cleanup__()
+	void Reset()
 	{
-		if (ptr != nullptr)
-			delete ptr;
+		delete ptr;
 	}
 };
