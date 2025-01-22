@@ -50,5 +50,7 @@ build/
 *.swp
 
 *.vscode
+*.log
+*.txt
 
 lib/googletest
