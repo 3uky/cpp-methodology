@@ -1,7 +1,7 @@
 #include "gmock/gmock.h"
 
+#include "MyContainer.h"
 #include "Iterator.h"
-#include <ranges>
 
 using ::testing::ElementsAre;
 
@@ -27,7 +27,7 @@ TEST(ContainersIteratorTest, ShouldIncrementInterator)
     container[1] = 20;
     
     // WHEN
-    MyContainer<int>::Iterator it = container.begin();
+    Iterator it = container.begin();
     ++it;
 
     // THEN
@@ -40,9 +40,9 @@ TEST(ContainersIteratorTest, ShouldDecrementInterator)
     MyContainer<int> container(5);
     container[0] = 10;
     container[1] = 20;
-    
+
     // WHEN
-    MyContainer<int>::Iterator it = MyContainer<int>::Iterator(container.data + 1);
+    Iterator it = Iterator<int>(container.data + 1);
     --it;
 
     // THEN
@@ -56,7 +56,7 @@ TEST(ContainersIteratorTest, ShouldSetItaratorToContainerBegin)
     container[0] = 10;
     
     // WHEN
-    MyContainer<int>::Iterator it = container.begin();
+    Iterator it = container.begin();
 
     // THEN
     EXPECT_EQ(*it, 10);
@@ -69,7 +69,7 @@ TEST(ContainersIteratorTest, ShouldSetItaratorToContainerEnd)
     container[4] = 10;
     
     // WHEN
-    MyContainer<int>::Iterator it = container.end();
+    Iterator it = container.end();
 
     // THEN
     // end points after last element and should be decremented
@@ -82,7 +82,7 @@ TEST(ContainersIteratorTest, ShouldIterateThroughForCycle)
     std::vector<int> expected = {0,0,0,3,0};
     MyContainer<int> container(5);
     container[3] = 3;   
-    
+
     // WHEN / THEN
     int i = 0;
     for(auto it = container.begin(); it != container.end(); ++it)
