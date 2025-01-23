@@ -12,7 +12,7 @@ namespace cpp_internals
 		constexpr int expected_value = 1;
 
 		// WHEN - parametrized constructor (template typename is deducted from value type)
-		MyUniquePtr implemented_ptr(expected_value);
+		MyUniquePtr<int> implemented_ptr(expected_value);
 		
 		// THEN
 		EXPECT_EQ(*implemented_ptr, expected_value);
@@ -36,7 +36,7 @@ namespace cpp_internals
 		constexpr int expected_value = 1;
 
 		// WHEN - move constructor
-		MyUniquePtr dyingObject(expected_value);
+		MyUniquePtr<int> dyingObject(expected_value);
 		MyUniquePtr<int> implemented_ptr = std::move(dyingObject);
 
 		// THEN
