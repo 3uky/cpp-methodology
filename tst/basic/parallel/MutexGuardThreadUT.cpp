@@ -11,7 +11,7 @@ using testing::MatchesRegex;
 
 namespace parallel_programming
 {
-    TEST(ParalellProgrammingTest, ShouldAccessCriticalSectionWithMutex)
+    TEST(MutexTest, ShouldAccessCriticalSectionWithMutex)
 	{
         // GIVEN
         MyCriticalSection ks;
@@ -27,7 +27,7 @@ namespace parallel_programming
         ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A*B*A*"));
     }
 
-    TEST(ParalellProgrammingTest, ShouldAccessCriticailSectionWithGuard)
+    TEST(MutexTest, ShouldAccessCriticailSectionWithGuard)
     {
         // GIVEN
         MyCriticalSection ks;
@@ -43,7 +43,7 @@ namespace parallel_programming
         ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A*B*A*"));
     }
     
-    TEST(ParalellProgrammingTest, ShouldThreadsExecuteAtLeastPauseDuration)
+    TEST(MutexTest, ShouldThreadsExecuteAtLeastPauseDuration)
     {
         GTEST_SKIP();
 
@@ -64,6 +64,32 @@ namespace parallel_programming
 
         // THEN
         EXPECT_GE(elapsed_seconds.count(), pause_duration_s);
+    }
+
+    TEST(MutexTest, MutexLocking) 
+    {
+        // GIVEN
+        std::mutex mtx;
+        std::vector<std::thread> threads;
+        int shared_data = 0;
+        int no_threads = 1000;
+
+        // without protection of critical section race condition could occure
+        // race condition scenario: thread A read value of shared_data before increment and it's interupted with thread B
+        auto increment = [&]() {
+            std::lock_guard<std::mutex> lock(mtx);
+            shared_data++;
+        };
+
+        // WHEN
+        for (int i = 0; i < no_threads; ++i) 
+            threads.push_back(std::thread(increment));
+
+        for (auto& t : threads)
+            t.join();
+
+        // THEN
+        ASSERT_EQ(shared_data, no_threads);
     }
 
 }
