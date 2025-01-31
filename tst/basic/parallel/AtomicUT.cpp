@@ -26,16 +26,22 @@ TEST(AtomicTest, AtomicIncrement)
     ASSERT_EQ(value.load(std::memory_order_relaxed), 2000);
 }
 
+// test depends on cpu, if is fast enough race condition won't occur and test would fail
 TEST(AtomicTest, NonAtomicIncrement)
 {
-    GTEST_SKIP();
+    //GTEST_SKIP();
 
     // GIVEN
     int non_atomic_value = 0;
 
+    // if two threads read the same value of counter at the same time,
+    // they both increment it and write back the same new value, causing a lost update
     auto increment = [&]() {
-        for (int i = 0; i < 1000000; ++i) {
-            non_atomic_value++;
+        for (int i = 0; i < 10000; ++i) {
+            int temp = non_atomic_value;  // read the current value
+            temp++;                       // increment the local copy
+            non_atomic_value = temp;  
+
         }
     };
 
@@ -47,7 +53,7 @@ TEST(AtomicTest, NonAtomicIncrement)
     t2.join();
 
     // THEN
-    ASSERT_NE(non_atomic_value, 2000000); // this is hard to simulate on fast pc
+    ASSERT_NE(non_atomic_value, 20000); // there would be lower value then expected if race condtion occur
 }
 
 }
