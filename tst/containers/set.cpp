@@ -15,7 +15,7 @@ using namespace std;
 
 using ::testing::UnorderedElementsAre;
 
-namespace basic_elements
+namespace containers
 {
 
 TEST(ContainersSetTest, ShouldContainUniqueValues)

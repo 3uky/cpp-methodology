@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-namespace basic_elements
+namespace cpp_modern
 {
 
 std::vector<int> sample_vec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};

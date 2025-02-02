@@ -2,7 +2,7 @@
 
 #include "polymorphism.h"
 
-namespace basic_paradigm
+namespace oop_paradigm
 {
 
 TEST(PolymorphismTest, ShouldBePolymorphicWithStaticInitialization)

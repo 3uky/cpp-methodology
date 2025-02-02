@@ -7,19 +7,20 @@
 
 #include <string>
 
-using namespace std;
+namespace cpp_basic_constructs
+{
 
 class Constructor
 {
 public:
     Constructor()
     {
-        ptr = new string("default");
+        ptr = new std::string("default");
     }
 
-    Constructor(const string& str)
+    Constructor(const std::string& str)
     {
-        ptr = new string(str);
+        ptr = new std::string(str);
     }
 
     ~Constructor()
@@ -32,7 +33,7 @@ public:
 	// Constructor b = a;
     Constructor(const Constructor& x)
     {
-        ptr = new string(x.content());
+        ptr = new std::string(x.content());
     }
 
     // move constructor:
@@ -51,7 +52,7 @@ public:
     Constructor& operator=(const Constructor& x)
 	{
         delete ptr;                      // delete currently pointed string
-        ptr = new string(x.content());   // allocate space for new string, and copy value
+        ptr = new std::string(x.content());   // allocate space for new string, and copy value
         return *this;
     }
     
@@ -71,11 +72,13 @@ public:
         return Constructor(content() + rhs.content());
     }
 
-    const string& content() const
+    const std::string& content() const
 	{
         return *ptr;
     }
 
 private:
-    string* ptr;
+    std::string* ptr;
 };
+
+}

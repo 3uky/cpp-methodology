@@ -2,9 +2,7 @@
 
 #pragma once
 
-using namespace std;
-
-namespace basic_paradigm
+namespace cpp_basic_constructs
 {
 
 class MyTemplate

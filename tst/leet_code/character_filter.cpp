@@ -2,9 +2,7 @@
 
 #include "character_filter.h"
 
-using namespace std;
-
-namespace exercises
+namespace leet_code
 {
     TEST(CharacterFilterTest, ShouldFilterJustNumericLetters)
     {

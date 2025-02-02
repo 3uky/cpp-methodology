@@ -4,7 +4,7 @@
 
 using namespace std;
 
-namespace basic_paradigm
+namespace oop_paradigm
 {
 
 class MyClass

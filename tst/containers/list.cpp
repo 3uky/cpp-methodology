@@ -13,7 +13,7 @@
 
 using ::testing::ElementsAre;
 
-namespace basic_elements
+namespace containers
 {
 
 TEST(ContainersListTest, ShouldInitializeList)

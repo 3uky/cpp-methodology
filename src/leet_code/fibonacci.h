@@ -2,7 +2,7 @@
 
 #include <vector>
 
-namespace exercises
+namespace leet_code
 {
 
 class IFibonacci

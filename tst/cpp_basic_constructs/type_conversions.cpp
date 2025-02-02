@@ -2,7 +2,7 @@
 
 #include "type_conversions.h"
 
-namespace basic_elements
+namespace cpp_basic_constructs
 {
 
 TEST(TypeConversionTest, ShouldDynamicDownCastToDerivedClass)

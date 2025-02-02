@@ -2,7 +2,7 @@
 
 #pragma once
 
-namespace basic_paradigm
+namespace oop_paradigm
 {
 
 class IPolygon

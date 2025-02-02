@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace exercises
+namespace leet_code
 {
 
 class UtilString
