@@ -11,7 +11,7 @@
 
 #include <map>
 
-namespace basic_elements
+namespace containers
 {
 
 TEST(ContainersMapTest, ShouldInitializeMap)

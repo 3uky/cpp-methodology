@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "IExpense.h"
+#include "i_expense.h"
 
 using namespace std;
 

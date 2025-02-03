@@ -2,6 +2,9 @@
 
 #pragma once
 
+namespace cpp_basic_constructs
+{
+
 class Mutable
 {
 public:
@@ -26,3 +29,5 @@ private:
     //int m_not_mutable;
     mutable int m_mutable_var;
 };
+
+}

@@ -1,8 +1,8 @@
 #include "gmock/gmock.h"
 
-#include "Keyboard.h"
-#include "Printer.h"
-#include "Worker.h"
+#include "keyboard.h"
+#include "printer.h"
+#include "worker.h"
 
 using ::testing::Return;
 using ::testing::_;

@@ -2,7 +2,7 @@
 
 #include "move_copy_semantics.h"
 
-namespace basic_elements
+namespace cpp_basic_constructs
 {
 
 TEST(ConstructorTest, ShouldBeInitializedThroughImplicitConstructor)

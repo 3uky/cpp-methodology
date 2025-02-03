@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace exercises
+namespace leet_code
 {
 
 class UniqueNames

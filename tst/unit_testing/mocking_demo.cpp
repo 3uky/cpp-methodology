@@ -4,7 +4,7 @@
 
 using ::testing::Return;
 
-namespace unit_test
+namespace unit_testing
 {
     class Database
     {

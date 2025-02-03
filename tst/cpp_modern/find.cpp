@@ -4,7 +4,7 @@
 #include <array>
 #include <ranges>
 
-namespace basic_elements
+namespace cpp_modern
 {
 	// predicates
 	bool divides_4(int x) { return x % 4 == 0; };

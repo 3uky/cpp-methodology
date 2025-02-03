@@ -2,7 +2,7 @@
 
 #include "overloading_operators.h"
 
-namespace basic_elements
+namespace cpp_basic_constructs
 {
     TEST(OverloadingOperators, ShouldAddComplexNumbers) 
     {

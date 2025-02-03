@@ -6,7 +6,7 @@
 
 #pragma once
 
-namespace basic_elements
+namespace cpp_basic_constructs
 {
 
 enum ObjectType

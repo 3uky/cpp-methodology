@@ -2,11 +2,9 @@
 
 #include "unique_names.h"
 
-using namespace std;
-
 using ::testing::ElementsAre;
 
-namespace exercises
+namespace leet_code
 {
     TEST(UniqueNamesTest, ShouldReturnUniqueNames)
     {

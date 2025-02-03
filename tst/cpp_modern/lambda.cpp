@@ -2,7 +2,7 @@
 
 using namespace std;
 
-namespace basic_elements
+namespace cpp_modern
 {
 TEST(LambdaTest, ShouldReturnSummaryThroughLambda)
 {

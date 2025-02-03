@@ -9,8 +9,6 @@ namespace containers
 template <typename T>
 class MyContainer {
 public:
-    
-
     T* data;
     size_t size;
 

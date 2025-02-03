@@ -2,10 +2,9 @@
 
 #include "frequency_sort.h"
 
-using namespace std;
 using ::testing::ElementsAre;
 
-namespace exercises
+namespace leet_code
 {
     TEST(FrequencySortTest, ShouldSortSequenceBasedOnFrequency)
     {

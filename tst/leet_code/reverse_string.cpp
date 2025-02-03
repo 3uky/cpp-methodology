@@ -2,9 +2,7 @@
 
 #include "reverse_string.h"
 
-using namespace std;
-
-namespace exercises
+namespace leet_code
 {
 
 TEST(ReverseStringTest, ShouldReverseString)

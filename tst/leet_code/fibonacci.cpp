@@ -2,10 +2,9 @@
 
 #include "fibonacci.h"
 
-using namespace std;
 using ::testing::ElementsAre;
 
-namespace exercises
+namespace leet_code
 {
     TEST(FibonacciTest, ShouldReturnExpectedSequenceOnZeroLenght)
     {

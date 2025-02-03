@@ -3,7 +3,7 @@
 #include <span>
 #include <array>
 
-namespace basic_elements
+namespace cpp_modern
 {
     int span_func_sum(std::span<const int> data) // since C++20
     {

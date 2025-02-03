@@ -2,9 +2,7 @@
 
 #include "unique_characters.h"
 
-using namespace std;
-
-namespace exercises
+namespace leet_code
 {
     TEST(UniqueCharactersTest, ShouldReturnStringWithUniqueCharacters)
     {

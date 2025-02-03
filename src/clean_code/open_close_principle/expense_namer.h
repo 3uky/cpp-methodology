@@ -1,6 +1,6 @@
 #include <string>
 
-#include "Expense.h"
+#include "expense.h"
 
 using namespace std;
 

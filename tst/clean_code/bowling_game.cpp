@@ -1,6 +1,6 @@
 #include "gmock/gmock.h"
 
-#include "BowlingGame.h"
+#include "bowling_game.h"
 
 namespace clean_code::TDD
 {

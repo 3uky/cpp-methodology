@@ -2,9 +2,7 @@
 
 #include "mutable.h"
 
-using namespace std;
-
-namespace basic_elements
+namespace cpp_basic_constructs
 {
     TEST(MutableTest, ShouldChangeMutableVariableInConstantMethod)
     {

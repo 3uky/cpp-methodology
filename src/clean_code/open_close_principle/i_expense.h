@@ -6,8 +6,6 @@
 
 #include <string>
 
-using namespace std;
-
 namespace clean_code::solid
 {
     class IExpense
@@ -18,7 +16,7 @@ namespace clean_code::solid
 
         virtual bool IsOverage() = 0;
         virtual bool IsMeal() = 0;
-        virtual string GetName() = 0;
+        virtual std::string GetName() = 0;
 
     protected:
         int m_amount;

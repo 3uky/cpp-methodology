@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "IStack.h"
+#include "i_stack.h"
 
 namespace containers
 {

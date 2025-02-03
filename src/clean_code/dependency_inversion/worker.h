@@ -21,8 +21,8 @@ void copy ()
 
 #include <iostream>
 
-#include "IReader.h"
-#include "IWriter.h"
+#include "i_reader.h"
+#include "i_writer.h"
 
 namespace clean_code::solid
 {
@@ -30,14 +30,15 @@ namespace clean_code::solid
 class Worker
 {
 public:
-    static void Copy(IReader& reader, IWriter& writer)
+static void Copy(IReader& reader, IWriter& writer)
+{
+    int c;
+    while((c = reader.Getchar()) != EOF)
     {
-        int c;
-        while((c = reader.Getchar()) != EOF)
-        {
-            writer.Putchar(c);
-        }
+        writer.Putchar(c);
     }
+}
+
 };
 
 }

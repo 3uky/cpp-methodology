@@ -4,7 +4,7 @@
 
 // exercise description: arrange elements base on their frequency
 
-namespace exercises
+namespace leet_code
 {
 	class FrequencySort
 	{

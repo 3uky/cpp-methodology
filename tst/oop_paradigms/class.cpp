@@ -2,8 +2,9 @@
 
 #include "my_class.h"
 
-namespace basic_paradigm
+namespace oop_paradigm
 {
+    
 TEST(ClassTest, ShouldBeInitializedStaticaly)
 {
     // GIVEN        

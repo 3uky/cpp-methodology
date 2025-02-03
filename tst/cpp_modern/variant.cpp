@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 
-namespace basic_elements
+namespace cpp_modern
 {
 
 TEST(VariantTest, HoldsInt)
