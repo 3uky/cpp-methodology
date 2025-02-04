@@ -10,18 +10,18 @@ public:
 
 class Subject : public ISubject
 {
-    public:
-        // Signal with one arguments and a void return value
-        boost::signals2::signal<void (int eventValue)> sig;
+public:
+    // Signal with one arguments and a void return value
+    boost::signals2::signal<void (int eventValue)> sig;
 
-        void Subscribe(std::function<std::string(int eventValue)> callback) override
-        {
-            sig.connect(callback);
-        }
+    void Subscribe(std::function<std::string(int eventValue)> callback) override
+    {
+        sig.connect(callback);
+    }
 
-        void Trigger(int eventValue) {
-            sig(eventValue);
-        }
+    void Trigger(int eventValue) {
+        sig(eventValue);
+    }
 };
 
 class IObserver
