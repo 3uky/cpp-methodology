@@ -1,55 +1,33 @@
 #include "gmock/gmock.h"
 
-#include "my_class.h"
+#include "person.h"
 
 namespace oop_paradigm
 {
-    
-TEST(ClassTest, ShouldBeInitializedStaticaly)
+
+TEST(ClassTest, StaticObjectCreation) 
 {
-    // GIVEN        
-    MyClass myClass(10);
-    
-    // THEN
-    EXPECT_EQ(myClass.get(), 10);
+    Person p1("Alice");  // static instantiation (on the stack)
+
+    EXPECT_EQ(p1.getName(), "Alice");
 }
 
-TEST(ClassTest, ShouldBeInitializedDynamicaly)
+TEST(ClassTest, DynamicObjectCreation) 
 {
-    // GIVEN        
-    MyClass*foo, *bar;
-    
-    // WHEN
-    foo = new MyClass(10);
-    bar = new MyClass[2]{ {*foo}, {20} };
+    Person* p2 = new Person("Bob");  // dynamic instantiation (on the heap)
 
-    // THEN
-    EXPECT_EQ(foo->get(), 10);
-    EXPECT_EQ(bar[0].get(), 10);
-    EXPECT_EQ(bar[1].get(), 20);
+    EXPECT_EQ(p2->getName(), "Bob");
 
-
-    // CLEANUP
-    delete foo;
-    delete[] bar;
+    delete p2;
 }
 
-TEST(ClassTest, ShouldBeAccessedThroughPointer)
+TEST(ClassTest, DynamicObjectWithSmartPointer) 
 {
-    // GIVEN        
-    MyClass obj(10);
-    MyClass *pobj;
+    std::unique_ptr<Person> p3 = std::make_unique<Person>("Charlie");
 
-    // WHEN
-    pobj = &obj;
+    EXPECT_EQ(p3->getName(), "Charlie");
 
-    // THEN
-    EXPECT_EQ(obj.get(), pobj->get());
-}
-
-TEST(ClassTest, ShouldBeDestructedInOrder)
-{
-    Child obj;
+    // no need to manually delete, smart pointer will automatically clean up
 }
 
 }
