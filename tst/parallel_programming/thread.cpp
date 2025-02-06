@@ -32,5 +32,4 @@ TEST(MutexTest, executeMultipleThreads)
     EXPECT_GE(elapsed_seconds.count(), pause_duration_s);
 }
 
-
 }
