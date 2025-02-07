@@ -5,7 +5,7 @@
 namespace parallel_programming
 {
 
-TEST(MutexTest, executeMultipleThreads)
+TEST(ThreadTest, ExecuteMultipleThreads)
 {
     GTEST_SKIP();
 
