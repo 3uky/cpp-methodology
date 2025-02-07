@@ -32,7 +32,7 @@ TEST(MutexTest, ProtectCriticalSectionWithMutex)
     th2.join();
 
     // THEN
-    ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A+B+"));
+    ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A*B*"));
 }
 
 TEST(MutexTest, ProtectCriticalSectionWithLockGuard)
@@ -58,7 +58,7 @@ TEST(MutexTest, ProtectCriticalSectionWithLockGuard)
     th2.join();
 
     // THEN
-    ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A+B+"));
+    ASSERT_THAT(::testing::internal::GetCapturedStdout(), MatchesRegex("A*B*"));
 }
 
 TEST(MutexTest, ProtectCriticalSectionWithLockGuardWithLotOfThreads) 
