@@ -3,6 +3,9 @@
 #include <iostream>
 #include <cmath>
 
+namespace ocp_compliant_geometry
+{
+
 class Shape
 {
 public:
@@ -59,3 +62,5 @@ public:
         return shape.getArea();
     }
 };
+
+}

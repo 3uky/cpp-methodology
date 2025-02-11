@@ -2,8 +2,8 @@
 #include <memory>
 #include <iostream>
 
-#include "open_closed_principle_payment_solution.h"
 #include "open_closed_principle_payment_violation.h"
+#include "open_closed_principle_payment_compliant.h"
 
 // new payment method require modification of switch (and potentialy every usage)
 TEST(OpenClosedPrincipleTest, TestPrincipleViolationPayment)
@@ -33,7 +33,7 @@ TEST(OpenClosedPrincipleTest, TestPrincipleViolationPayment)
 }
 
 // new payment method doesnt require modification of usage
-TEST(OpenClosedPrincipleTest, TestPrincipleViolationSolutionPayment) 
+TEST(OpenClosedPrincipleTest, TestPrincipleComplyPayment) 
 {
     // GIVEN
     int totalPrice = 50;

@@ -3,6 +3,9 @@
 #include <iostream>
 #include <cmath>
 
+namespace ocp_violated_geometry
+{
+
 class Circle 
 {
 public:
@@ -43,3 +46,5 @@ public:
         return rectangle.getArea();
     }
 };
+
+}
