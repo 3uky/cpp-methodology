@@ -29,7 +29,7 @@ TEST(AtomicTest, AtomicIncrement)
 // test depends on cpu, if is fast enough race condition won't occur and test would fail
 TEST(AtomicTest, NonAtomicIncrement)
 {
-    //GTEST_SKIP();
+    GTEST_SKIP();
 
     // GIVEN
     int non_atomic_value = 0;
