@@ -18,6 +18,7 @@ bool dfs(Node* node, std::unordered_set<Node*>& visiting, std::unordered_set<Nod
         return false;
 
     visiting.insert(node);
+
     for (auto child : node->children) 
     {
         if (dfs(child, visiting, visited))
@@ -26,6 +27,7 @@ bool dfs(Node* node, std::unordered_set<Node*>& visiting, std::unordered_set<Nod
 
     visiting.erase(node);
     visited.insert(node);
+    
     return false;
 }
 
