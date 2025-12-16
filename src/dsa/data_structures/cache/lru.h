@@ -1,7 +1,6 @@
 // LRU Least Recently Used
-//#include <bits/stdc++.h>
+
 #include <unordered_map>
-//using namespace std;
 
 struct Node 
 {
@@ -32,8 +31,8 @@ class LRUCache
     }
 
     // Function to get the value for a given key
-    int get(int key) {
-      
+    int get(int key) 
+    { 
         if (cacheMap.find(key) == cacheMap.end())
             return -1;
   
@@ -46,6 +45,7 @@ class LRUCache
     // Function to put a key-value pair into the cache
     void put(int key, int value) 
     {
+        // replace older node
         if (cacheMap.find(key) != cacheMap.end()) 
         {
             Node *oldNode = cacheMap[key];
@@ -54,10 +54,12 @@ class LRUCache
           
         }
 
+        // add new node
         Node *node = new Node(key, value);
         cacheMap[key] = node;
         add(node); 
        
+        // remove last used node
         if (cacheMap.size() > capacity) 
         {
             Node *nodeToDelete = tail->prev;
