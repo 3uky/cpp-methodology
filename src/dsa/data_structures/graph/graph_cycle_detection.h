@@ -12,9 +12,9 @@ bool dfs(Node* node, std::unordered_set<Node*>& visiting, std::unordered_set<Nod
 {
     if (!node) 
         return false;
-    if (visiting.count(node)) 
+    if (visiting.contains(node)) 
         return true;
-    if (visited.count(node)) 
+    if (visited.contains(node)) 
         return false;
 
     visiting.insert(node);
