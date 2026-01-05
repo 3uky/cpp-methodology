@@ -7,9 +7,7 @@ public:
     TrieNode() 
     {
         isEndOfWord = false;
-    }
-
-   
+    } 
     
     bool isEndOfWord;
     std::unordered_map<char, TrieNode*> children;
