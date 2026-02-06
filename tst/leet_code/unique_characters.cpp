@@ -15,4 +15,16 @@ namespace leet_code
         // THEN
         EXPECT_EQ(result, "Helo, Wrd!");
     }
+
+        TEST(UniqueCharactersTest, ShouldReturnLongestUniqueSubstring)
+        {
+            // GIVEN
+            std::string test_string = "abcabcda";
+
+            // WHEN
+            const auto result = UniqueCharacters::GetLongestUniqueSubstring(test_string);
+
+            // THEN
+            EXPECT_EQ(result, "abcd");
+        }
 }
