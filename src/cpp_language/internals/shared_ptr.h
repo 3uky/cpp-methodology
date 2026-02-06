@@ -12,9 +12,16 @@ class MySharedPtr
 public:
 	MySharedPtr() : ptr(nullptr), refCount(nullptr) {}
 	MySharedPtr(T val) : ptr(new T(val)), refCount(new unsigned int(1)) {}
-	MySharedPtr(T* ptr) : ptr(ptr), refCount(ptr ? new unsigned int(1) : nullptr) {}
+	MySharedPtr(T* ptr) = delete;
 
-	// copy constructor: MySharedPtr<int> bar = foo;
+	// copy constructor
+	// 1. MySharedPtr<int> bar = foo; // copy existing object during initialization
+	// 2. MySharedPtr<int> bar(foo); // equivalent to 1.
+	// 3. MySharedPtr myFunction() {
+	//	  return bar; } // copy when returning from function
+	// 4. void myFunction(MySharedPtr in) {} // copy when object is passed to function as value
+	//    myFunction(bar);
+	
 	MySharedPtr(const MySharedPtr& obj) 
 	{
 		ptr = obj.ptr;
@@ -23,7 +30,9 @@ public:
 			(*refCount)++;
 	}
 	
-	// copy assignment: foo = bar;
+	
+	// copy assignment : foo = bar; 
+	// assignment is always working with existing aleready initialized object
 	MySharedPtr& operator=(const MySharedPtr& obj) 
 	{
 		Reset();
@@ -36,7 +45,9 @@ public:
 		return *this;
 	}
 
-	// move constructor: MySharedPtr<int> b = MySharedPtr(new int(3));
+	// move constructor: 
+	// MySharedPtr<int> b = std::move(foo);
+	// MySharedPtr<int> b = MySharedPtr(3);
 	MySharedPtr(MySharedPtr&& dyingObj)
 	{
 		ptr = dyingObj.ptr; // share the underlying pointer
@@ -46,7 +57,10 @@ public:
 		dyingObj.refCount = nullptr; // clean the dying object
 	}
 
-	MySharedPtr& operator=(MySharedPtr&& dyingObj) // move assignment: bar = std::move(foo);
+	// move assignment: 
+	// bar = std::move(foo); // move existing object
+	// bar = MySharedPtr<int>(99);  // init with temporary object
+	MySharedPtr& operator=(MySharedPtr&& dyingObj) 
 	{
 		Reset(); // cleanup any existing data
 
